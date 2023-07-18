@@ -342,3 +342,11 @@
 
 - 환자 : 소셜일 때 테이블 고려
 - 치료사 : 치료가 하나 이상인데 연결이 잘못 됨
+
+### 23.07.18
+
+- 명세서 수정
+  https://www.notion.so/60e17ab801344b8bb0e71cc3ec8f7845?pvs=4
+
+- 와이어 프레임 수정
+  https://www.figma.com/file/4eUuvq4cYsk4WrxFi3NlzA/Join-it-%ED%99%98%EC%9E%90-%ED%99%94%EB%A9%B4?type=design&node-id=8%3A3684&mode=design&t=7HWoSLp25R2bR31i-1
