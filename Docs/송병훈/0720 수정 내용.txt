@@ -1,0 +1,11 @@
+230720 작업 내용
+
+MatterMost - GitLab 연동
+MatterMost - JIRA 연동
+GitLab - JIRA 연동
+
+ERD 수정
+- 공통코드 타입 char(1) -> char(3)
+  - 공통코드는 한자리고, 디테일 코드는 3자리일 것이다.
+- SMS 수신 동의 컬럼 추가
+- Email 수신 동의 컬럼 추가 
