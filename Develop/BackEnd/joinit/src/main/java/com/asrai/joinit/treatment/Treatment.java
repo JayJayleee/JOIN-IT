@@ -18,6 +18,6 @@ public class Treatment {
 	@Column(name = "patient_phone")
 	private String patientPhone;
 
-	
+
 
 }
