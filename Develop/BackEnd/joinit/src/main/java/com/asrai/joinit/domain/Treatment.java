@@ -1,4 +1,4 @@
-package com.asrai.joinit.treatment;
+package com.asrai.joinit.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
