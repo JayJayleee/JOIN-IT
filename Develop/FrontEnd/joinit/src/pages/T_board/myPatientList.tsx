@@ -1,12 +1,16 @@
 import React from 'react';
 import './myPatientList.css';
-import completeCare from './myPatientList/completeCare';
-import notCompleteCare from './myPatientList/notCompleteCare';
+import CompleteCare from './myPatientList/completeCare';
+import NotCompleteCare from './myPatientList/notCompleteCare';
 
 
 function MyPatientList() {
   return (
-    <div>myPatientList</div>
+    <div>
+      <h1>myPatientList</h1>
+      <CompleteCare />
+      <NotCompleteCare />
+    </div>
   )
 }
 

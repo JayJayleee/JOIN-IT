@@ -5,7 +5,10 @@ import PatientCareList from './pateintProfileDetail/patientCareList';
 
 function PatientProfile() {
   return (
-    <div>patientProfile</div>
+    <div>
+      <h1>patientProfile</h1>
+      <PatientCareList />
+    </div>
   )
 }
 

@@ -1,5 +1,5 @@
-import React from 'react';
-import './T_board.css';
+import React, { useState } from 'react';
+import './T_board/T_board.css';
 import Nav from './T_board/nav';
 import MyCareList from './T_board/myCareList';
 import MyPatientList from './T_board/myPatientList';
@@ -7,6 +7,8 @@ import CareDetail from './T_board/careDetail';
 
 
 function T_board() {
+  const [] = useState();
+
   return (
     <div>
       <h1>물리 치료사 치료 대시보드</h1>
@@ -17,6 +19,7 @@ function T_board() {
       </div>
       <div className='row'>
         <Nav />
+        <MyCareList />
       </div>
     </div>
   )

@@ -13,7 +13,19 @@ import FNotCompleteMeet from './recipeList/FNotCompleteMeet';
 
 function RecipeList() {
   return (
-    <div>recipeList</div>
+    <div>
+      <h1>recipeList</h1>
+      <TCompleteCoach />
+      <TNotCompleteCoach />
+      <TCompleteMeet />
+      <TNotCompleteMeet />
+      <PCompleteCoach />
+      <PNotCompleteCoach />
+      <PCompleteMeet />
+      <PNotCompleteMeet />
+      <FNotCompleteCoach />
+      <FNotCompleteMeet />
+    </div>
   )
 }
 
