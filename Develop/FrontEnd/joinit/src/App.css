@@ -1,0 +1,13 @@
+.navdiv {
+    margin-bottom: 100px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
