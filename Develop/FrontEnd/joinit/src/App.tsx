@@ -1,14 +1,12 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
-import Home from './pages/Home';
-import About from './pages/About';
+import T_board from './pages/T_board';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
+    <div>
+      <T_board />
+    </div>
   );
 }
 
