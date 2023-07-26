@@ -22,7 +22,7 @@ pipeline{
         stage('Build') {
             steps {
                 script{
-                    sh "cp ./Dockerfile ~/../../var/lib/docker/tmp/**/Dockerfile"
+                    sh "cp Dockerfile ~/../../var/lib/docker/tmp/**/Dockerfile"
                     sh "docker build -t ${BACK_NAME} ."
                     sh "docker push ${BACK_NAME}"
                 }
