@@ -23,7 +23,7 @@ pipeline{
             steps {
                 script{
                      sh "docker build -t ${FRONT_NAME} . -f /var/lib/jenkins/workspace/Dev-Fe-Test-Pipeline/Develop/FrontEnd/joinit/Dockerfile"
-                    sh "docker push byeonghunsong:react-img"
+                    sh "docker push ${FRONT_NAME}"
 
                 }
             }
