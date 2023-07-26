@@ -1,12 +1,11 @@
-.videodiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.videoTitlediv {
+  position: absolute;
+  top : 350px;
+  left : 150px;
 }
 
 .main1div {
-  margin-top: 50px;
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +14,6 @@
 .main2div {
   margin-top: 150px;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 }
@@ -46,7 +44,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   margin-left: 250px;
 }
 
@@ -75,3 +73,49 @@
   width: 50px;
   border: 2px solid black;
 }
+
+
+.maintitle1 {
+ font-size: 50px; 
+ font-weight: 1000; 
+ margin: 0px;
+ color: white;
+}
+
+.maintitle2 {
+  font-size: 50px;
+  font-weight: 1000; 
+  margin: 0px;
+  color: white;
+ }
+
+ .maintitle3 {
+  font-size: 140px; 
+  font-weight: 1000;
+  margin: 0px;
+  color: white;
+  text-shadow: 5px 5px 15px #1E1E1E;
+ }
+
+ .MainBtn1{
+  background-color: #58867A;
+  width: 200px;
+  height: 50px;
+  margin-right: 20px;
+  opacity: 95%;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+ }
+
+ .MainBtn2{
+  background-color: #0F5953;
+  width: 200px;
+  height: 50px;
+  opacity: 95%;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+ }
