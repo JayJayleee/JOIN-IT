@@ -22,8 +22,9 @@ pipeline{
         stage('Build') {
             steps {
                 script{
-                    sh "docker build -t ${FRONT_NAME} ."
+                     sh "docker build -t ${FRONT_NAME} . -f /var/lib/jenkins/workspace/Dev-Fe-Test-Pipeline/Develop/FrontEnd/joinit/Dockerfile"
                     sh "docker push ${FRONT_NAME}"
+
                 }
             }
         }
