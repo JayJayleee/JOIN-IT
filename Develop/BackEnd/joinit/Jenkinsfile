@@ -3,7 +3,7 @@ pipeline{
     environment {
        BACK_CONTAINER_NAME="spring-container"
        BACK_NAME="byeonghunsong/project:spring-img"
-       READ_PATH="/var/lib/docker/tmp/buildkit-*/Dockerfile"
+       READ_PATH="/var/lib/docker/tmp/buildkit-**/Dockerfile"
     }
     stages {
         stage('Clean'){
