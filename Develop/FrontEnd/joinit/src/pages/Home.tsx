@@ -4,17 +4,16 @@ import SimpleSlider from "./Home/SimpleSlider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 function Home() {
-  
   useEffect(() => {
     AOS.init();
-  })
+  });
 
   return (
     <div>
       {/* 비디오 */}
       <div className="videodiv">
+        <div className="blurdiv"></div>
         <SimpleSlider />
         <div className="videoTitlediv">
           <div data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in">
@@ -24,20 +23,14 @@ function Home() {
             <div className="Btndiv">
               <button className="MainBtn1">운동 시작하기→</button>
               <button className="MainBtn2">회원 가입→</button>
-            </div>  
+            </div>
           </div>
         </div>
       </div>
-      
+
       {/* 중간문구 */}
-      <div 
-      className="main1div" 
-      data-aos="fade" 
-      data-aos-duration="1000" 
-      data-aos-delay="500" 
-      data-aos-easing="ease-in"
-      >
-        <img src="/Assets/Images/logo2.png" alt="logo img" className="mainimg" />
+      <div className="main1div" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in">
+        <img src="/Assets/Images/Typograph2.gif" alt="logo img" className="mainimg" />
         <p className="mainInfo">당신의 평생 헬스케어 파트너</p>
         <p className="mainInfo">건강한 삶을 응원합니다</p>
       </div>
@@ -76,7 +69,14 @@ function Home() {
         </div>
       </div>
       {/* 마지막 문구 */}
-      <div className="main3div" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in" data-aos-offset="200px">
+      <div
+        className="main3div"
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="500"
+        data-aos-easing="ease-in"
+        data-aos-offset="200px"
+      >
         <p className="main3Info">지금부터 시작해볼까요?</p>
         <p className="main4Info">JOINT, JOIN IT!</p>
       </div>
