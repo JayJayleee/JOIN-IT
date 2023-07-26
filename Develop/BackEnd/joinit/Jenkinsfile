@@ -24,8 +24,8 @@ pipeline{
             steps {
                 script{
                     sh "sudo -i && cd ~"
-                    sh "pwd"
-                    sh "cp Dockerfile ${READ_PATH}"
+                    sh "cd ../../../../../"
+                    sh "cp /var/lib/jenkins/workspace/Dev-Be-Test-Pipeline/Develop/BackEnd/joinit/Dockerfile ${READ_PATH}"
                     sh "docker build -t ${BACK_NAME} ."
                     sh "docker push ${BACK_NAME}"
                 }
