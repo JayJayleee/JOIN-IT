@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment {
        FRONT_CONTAINER_NAME="react-container"
-       FRONT_NAME = "byeonghunsong:react-img"
+       FRONT_NAME = "byeonghunsong/project:react-img"
     }
     stages {
         stage('Clean'){
@@ -23,7 +23,7 @@ pipeline{
             steps {
                 script{
                      sh "docker build -t ${FRONT_NAME} . -f /var/lib/jenkins/workspace/Dev-Fe-Test-Pipeline/Develop/FrontEnd/joinit/Dockerfile"
-                    sh "docker push ${FRONT_NAME}"
+                    sh "docker push byeonghunsong:react-img"
 
                 }
             }
