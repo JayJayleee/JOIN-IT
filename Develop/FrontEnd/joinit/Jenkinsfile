@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment {
        FRONT_CONTAINER_NAME="react-container"
-       FRONT_NAME = "byeonghunsong/project:react-img"
+       FRONT_NAME = "byeonghunsong:react-img"
     }
     stages {
         stage('Clean'){
