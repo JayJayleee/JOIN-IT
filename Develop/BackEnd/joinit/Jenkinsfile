@@ -25,8 +25,8 @@ pipeline{
                 script{
                     // sh "sudo -i && cd ~"
                     // sh "cd ../../../../../"
-                    // sh "cp /var/lib/jenkins/workspace/Dev-Be-Test-Pipeline@tmp/**/Dockerfile > ${READ_PATH}"
-                    sh "docker build -t ${BACK_NAME} . -f /var/lib/jenkins/workspace/Dev-Be-Test-Pipeline@tmp/Develop/BackEnd/joinit/Dockerfile"
+                    // sh "cp /var/lib/jenkins/workspace/Dev-Be-Test-Pipeline/Develop/BackEnd/joinit/Dockerfile > ${READ_PATH}"
+                    sh "docker build -t ${BACK_NAME} . -f /var/lib/jenkins/workspace/Dev-Be-Test-Pipeline/Develop/BackEnd/joinit/Dockerfile"
                     sh "docker push ${BACK_NAME}"
                 }
 
