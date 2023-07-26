@@ -23,7 +23,7 @@ pipeline{
         stage('Build') {
             steps {
                 script{
-                    sh "docker build -t ${BACK_NAME} . -f Dockerfile"
+                    sh "docker build . -f Dockerfile -t ${BACK_NAME}"
                     sh "docker push ${BACK_NAME}"
                 }
             }
