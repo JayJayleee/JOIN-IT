@@ -1,6 +1,6 @@
 FROM node:alpine as builder
 WORKDIR '/usr/src/app'
-COPY package.json
+COPY /Develop/FrontEnd/joinit/package.json
 RUN npm install
 COPY ./ ./
 CMD ["npm","run","build"]
