@@ -23,7 +23,7 @@ pipeline{
         stage('Build') {
             steps {
                 script{
-                    sh "docker build /var/lib/jenkins/workspace/Dev-Be-Test-Pipeline/Develop/BackEnd/joinit/Dockerfile -f Dockerfile -t ${BACK_NAME}"
+                    sh "docker build var/lib/jenkins/workspace/Dev-Be-Test-Pipeline/Develop/BackEnd/joinit/Dockerfile -t ${BACK_NAME}"
                     sh "docker push ${BACK_NAME}"
                 }
             }
