@@ -7,8 +7,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter @Setter
 public class Joint {
 
 	@Id @GeneratedValue
@@ -19,5 +22,5 @@ public class Joint {
 	private String jointName;
 
 	@OneToMany(mappedBy = "joint")
-	private List<JointTrainingType> jointTrainingTypes = new ArrayList<>(;)
+	private List<JointTrainingType> jointTrainingTypes = new ArrayList<>();
 }

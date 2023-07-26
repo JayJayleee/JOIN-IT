@@ -7,8 +7,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import java.sql.Timestamp;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter @Setter
 public class Treatment {
 
 	@Id @GeneratedValue
@@ -70,99 +73,4 @@ public class Treatment {
 	@Column(name = "end_time")
 	private java.sql.Timestamp endTime;
 
-	public Long getTreatmentId() {
-		return treatmentId;
-	}
-
-	public void setTreatmentId(Long treatmentId) {
-		this.treatmentId = treatmentId;
-	}
-
-	public String getJointName() {
-		return jointName;
-	}
-
-	public void setJointName(String jointName) {
-		this.jointName = jointName;
-	}
-
-	public String getPatientName() {
-		return patientName;
-	}
-
-	public void setPatientName(String patientName) {
-		this.patientName = patientName;
-	}
-
-	public String getPatientPhone() {
-		return patientPhone;
-	}
-
-	public void setPatientPhone(String patientPhone) {
-		this.patientPhone = patientPhone;
-	}
-
-	public String getAccidentDetail() {
-		return accidentDetail;
-	}
-
-	public void setAccidentDetail(String accidentDetail) {
-		this.accidentDetail = accidentDetail;
-	}
-
-	public String getTreatmentSignificant() {
-		return treatmentSignificant;
-	}
-
-	public void setTreatmentSignificant(String treatmentSignificant) {
-		this.treatmentSignificant = treatmentSignificant;
-	}
-
-	public String getSummary() {
-		return summary;
-	}
-
-	public void setSummary(String summary) {
-		this.summary = summary;
-	}
-
-	public String getIsCompleted() {
-		return isCompleted;
-	}
-
-	public void setIsCompleted(String isCompleted) {
-		this.isCompleted = isCompleted;
-	}
-
-	public String getTregitatementCode() {
-		return treatementCode;
-	}
-
-	public void setTreatementCode(String treatementCode) {
-		this.treatementCode = treatementCode;
-	}
-
-	public Timestamp getStartTime() {
-		return startTime;
-	}
-
-	public void setStartTime(Timestamp startTime) {
-		this.startTime = startTime;
-	}
-
-	public Timestamp getUpdateTime() {
-		return updateTime;
-	}
-
-	public void setUpdateTime(Timestamp updateTime) {
-		this.updateTime = updateTime;
-	}
-
-	public Timestamp getEndTime() {
-		return endTime;
-	}
-
-	public void setEndTime(Timestamp endTime) {
-		this.endTime = endTime;
-	}
 }
