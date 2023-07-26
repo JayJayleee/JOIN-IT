@@ -13,19 +13,7 @@ function Home() {
     <div>
       {/* 비디오 */}
       <div className="videodiv">
-        <div className="blurdiv"></div>
         <SimpleSlider />
-        <div className="videoTitlediv">
-          <div data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in">
-            <p className="maintitle1">언제 어디서나</p>
-            <p className="maintitle2">당당하게 걷기</p>
-            <p className="maintitle3">나를 움직이는 힘</p>
-            <div className="Btndiv">
-              <button className="MainBtn1">운동 시작하기→</button>
-              <button className="MainBtn2">회원 가입→</button>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* 중간문구 */}

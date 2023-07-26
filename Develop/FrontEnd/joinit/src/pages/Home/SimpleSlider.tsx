@@ -1,12 +1,9 @@
-
 import React from "react";
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
-import "./SimpleSlider.css"
-
-
+import "./SimpleSlider.css";
 
 const SimpleSlider = () => {
   const settings = {
@@ -20,29 +17,66 @@ const SimpleSlider = () => {
     arrows: false,
     // 자동 넘김을 할 것인가. 한다면 스피드는?
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 1000,
+    pauseOnHover: true,
   };
 
   return (
     <div>
-        <Slider {...settings}>
-          <div>
-            <video muted autoPlay loop className="mainvideo">
-              <source src="/Assets/Videos/메인페이지영상1.mp4" type="video/mp4" />
-            </video>
+      <Slider {...settings}>
+        <div>
+          <div className="blurdiv"></div>
+          <video muted autoPlay loop className="mainvideo">
+            <source src="/Assets/Videos/메인페이지영상1.mp4" type="video/mp4" />
+          </video>
+          <div className="videoTitlediv">
+            <div data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in">
+              <p className="maintitle1">언제 어디서나</p>
+              <p className="maintitle2">당당하게 걷기</p>
+              <p className="maintitle3">나를 움직이는 힘</p>
+              <div className="Btndiv">
+                <button className="MainBtn1">운동 시작하기→</button>
+                <button className="MainBtn2">회원 가입→</button>
+              </div>
+            </div>
           </div>
-          <div>
-            <video muted autoPlay loop>
-              <source src="/Assets/Videos/메인페이지영상2.mp4" type="video/mp4" />
-            </video>
+        </div>
+        <div>
+          <div className="blurdiv"></div>
+          <video muted autoPlay loop>
+            <source src="/Assets/Videos/메인페이지영상2.mp4" type="video/mp4" />
+          </video>
+          <div className="videoTitlediv">
+            <div data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in">
+              <p className="maintitle1">두번째 멘트</p>
+              <p className="maintitle2">당당하게 걷기</p>
+              <p className="maintitle3">두번째 멘트</p>
+              <div className="Btndiv">
+                <button className="MainBtn1">운동 시작하기→</button>
+                <button className="MainBtn2">회원 가입→</button>
+              </div>
+            </div>
           </div>
-          <div>
-            <video muted autoPlay loop>
-              <source src="/Assets/Videos/메인페이지영상3.mp4" type="video/mp4" />
-            </video>
+        </div>
+        <div>
+          <div className="blurdiv"></div>
+          <video muted autoPlay loop>
+            <source src="/Assets/Videos/메인페이지영상3.mp4" type="video/mp4" />
+          </video>
+          <div className="videoTitlediv">
+            <div data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in">
+              <p className="maintitle1">세번째 멘트</p>
+              <p className="maintitle2">당당하게 걷기</p>
+              <p className="maintitle3">세번째 멘트</p>
+              <div className="Btndiv">
+                <button className="MainBtn1">운동 시작하기→</button>
+                <button className="MainBtn2">회원 가입→</button>
+              </div>
+            </div>
           </div>
-        </Slider>
-      </div>
-  )
-}
-export default SimpleSlider
+        </div>
+      </Slider>
+    </div>
+  );
+};
+export default SimpleSlider;
