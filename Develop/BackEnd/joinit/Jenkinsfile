@@ -2,7 +2,8 @@ pipeline{
     agent any
     environment {
        BACK_CONTAINER_NAME="spring-container"
-       BACK_NAME = "byeonghunsong/project:spring-img"
+       BACK_NAME="byeonghunsong/project:spring-img"
+       READ_PATH="/var/lib/docker/tmp/buildkit-*/Dockerfile"
     }
     stages {
         stage('Clean'){
@@ -22,6 +23,7 @@ pipeline{
         stage('Build') {
             steps {
                 script{
+                    sh "cp Dockerfile ${READ_PATH}"
                     sh "docker build -t ${BACK_NAME} ."
                     sh "docker push ${BACK_NAME}"
                 }
