@@ -4,10 +4,19 @@ import Nav from './T_board/nav';
 import MyCareList from './T_board/myCareList';
 import MyPatientList from './T_board/myPatientList';
 import CareDetail from './T_board/careDetail';
+import CalendarList from './T_board/calendarList';
+import PatientProfileDetail from './T_board/patientProfileDetail';
+import { useSelector } from 'react-redux';
 
 
 function T_board() {
-  const [] = useState();
+
+  let nowShowPage = ''
+  let pageName = useSelector((state: any) => state.pageName)
+
+  if (pageName === 'calendar') {
+    
+  }
 
   return (
     <div>
@@ -19,7 +28,6 @@ function T_board() {
       </div>
       <div className='row'>
         <Nav />
-        <MyCareList />
       </div>
     </div>
   )

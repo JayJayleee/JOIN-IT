@@ -2,10 +2,10 @@ import React from 'react';
 import './calendar.css';
 
 
-function Calender() {
+function Calendar() {
   return (
     <div>calender</div>
   )
 }
 
-export default Calender;
+export default Calendar;

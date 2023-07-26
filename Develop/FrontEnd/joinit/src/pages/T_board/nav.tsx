@@ -5,6 +5,7 @@ import MiniProfile from './nav/miniProfile';
 
 
 function Nav() {
+
   return (
     <div className='col'>
       <h1>nav 바</h1>
