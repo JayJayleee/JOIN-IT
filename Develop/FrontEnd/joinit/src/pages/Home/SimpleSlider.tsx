@@ -17,7 +17,7 @@ const SimpleSlider = () => {
     arrows: false,
     // 자동 넘김을 할 것인가. 한다면 스피드는?
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 10000,
     pauseOnHover: true,
   };
 
