@@ -1,17 +1,17 @@
-package com.asrai.joinit.Training;
+package com.asrai.joinit.admin;
 
 
+import com.asrai.joinit.Training.JointTrainingMapping;
 import com.asrai.joinit.domain.JointTrainingType;
 import com.asrai.joinit.domain.Training;
 import com.asrai.joinit.domain.TrainingTypeTraining;
-
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import java.util.List;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class TrainingRepository {
+public class AdminRepository {
 
 	@PersistenceContext
 	private EntityManager em;

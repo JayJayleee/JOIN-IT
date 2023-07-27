@@ -10,9 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
-@Getter @Setter
+@Getter @Setter @ToString
 public class Training {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
