@@ -1,6 +1,6 @@
-package com.asrai.joinit.admin;
+package com.asrai.joinit.Training;
 
-import com.asrai.joinit.domain.Joint;
+import com.asrai.joinit.admin.AdminRepository;
 import com.asrai.joinit.domain.JointTrainingType;
 import com.asrai.joinit.domain.Training;
 import com.asrai.joinit.domain.TrainingTypeTraining;
@@ -12,20 +12,20 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class AdminService {
+public class TrainingService {
 
 	//생성자 주입
-	private final AdminRepository adminRepository;
+	private final TrainingRepository trainingRepository;
 
 	public int saveTraining(Training training, int[] mappingId) {
-		adminRepository.saveTraining(training); //운동 객체 등록
+		trainingRepository.saveTraining(training); //운동 객체 등록
 
 		for(int id: mappingId) {
-			JointTrainingType jointTrainingType = adminRepository.findJointTrainingType(id); //매핑id로 JointTrainingType(환부_운동종류) 조회
+			JointTrainingType jointTrainingType = trainingRepository.findJointTrainingType(id); //매핑id로 JointTrainingType(환부_운동종류) 조회
 			TrainingTypeTraining trainingTypeTraining = new TrainingTypeTraining(); //TrainingTypeTraining(운동종류_운동) 객체 생성
 			trainingTypeTraining.setTraining(training);
 			trainingTypeTraining.setJointTrainingType(jointTrainingType);
-			adminRepository.saveTrainingTypeTraining(trainingTypeTraining); //TrainingTypeTraining 객체 등록
+			trainingRepository.saveTrainingTypeTraining(trainingTypeTraining); //TrainingTypeTraining 객체 등록
 		}
 
 		return training.getTrainingId();
@@ -34,7 +34,7 @@ public class AdminService {
 
 	@Transactional(readOnly = true)
 	public List<Training> findTrainingList() {
-		return adminRepository.findTrainingList();
+		return trainingRepository.findTrainingList();
 	}
 	//운동 리스트 조회
 
