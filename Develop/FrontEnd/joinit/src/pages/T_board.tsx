@@ -1,12 +1,23 @@
-import React from 'react';
-import './T_board.css';
+import React, { useState } from 'react';
+import './T_board/T_board.css';
 import Nav from './T_board/nav';
 import MyCareList from './T_board/myCareList';
 import MyPatientList from './T_board/myPatientList';
 import CareDetail from './T_board/careDetail';
+import CalendarList from './T_board/calendarList';
+import PatientProfileDetail from './T_board/patientProfileDetail';
+import { useSelector } from 'react-redux';
 
 
 function T_board() {
+
+  let nowShowPage = ''
+  let pageName = useSelector((state: any) => state.pageName)
+
+  if (pageName === 'calendar') {
+    
+  }
+
   return (
     <div>
       <h1>물리 치료사 치료 대시보드</h1>
