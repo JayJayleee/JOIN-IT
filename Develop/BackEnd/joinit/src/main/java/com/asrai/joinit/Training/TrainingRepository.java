@@ -1,4 +1,4 @@
-package com.asrai.joinit.admin;
+package com.asrai.joinit.Training;
 
 
 import com.asrai.joinit.domain.JointTrainingType;
@@ -10,7 +10,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class AdminRepository {
+public class TrainingRepository {
 
 	@PersistenceContext
 	private EntityManager em;
