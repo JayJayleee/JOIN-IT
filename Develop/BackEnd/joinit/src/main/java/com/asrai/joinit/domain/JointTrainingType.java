@@ -1,5 +1,6 @@
 package com.asrai.joinit.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,10 +25,12 @@ public class JointTrainingType {
 	private int mappingId;
 
 	@ManyToOne
+//	@JsonIgnore
 	@JoinColumn(name = "joint_id")
 	private Joint joint;
 
 	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name = "training_type_id")
 	private TrainingType trainingType;
 

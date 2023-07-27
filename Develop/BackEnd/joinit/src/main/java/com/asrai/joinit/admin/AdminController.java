@@ -1,8 +1,7 @@
 package com.asrai.joinit.admin;
 
+import com.asrai.joinit.domain.Admin;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,18 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/admin")
 public class AdminController {
 
-	
-	//환부_운동종류 리스트 조회
+	//생성자 주입
+	private AdminService adminService;
 
-	//운동 등록
-//	@PostMapping(/)
-
-	//운동 리스트 조회
 
 	@PostMapping("/login")
-	public String adminLogin(@RequestBody AdminLoginVO adminLoginVO){
-		System.out.println("Asd");
-		System.out.println(adminLoginVO);
-		return "123123";
+	public String adminLogin(@RequestBody Admin admin){
+		if(adminService.findAdminAccount(admin)){
+			return "관리자 로그인 성공..";
+		}else {
+			return "관리자 로그인 실패..";
+		}
+
 	}
+	//관리자 로그인.. 반환값이 뭐 없음
 }
