@@ -1,5 +1,6 @@
 package com.asrai.joinit.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Getter @Setter
@@ -40,5 +42,6 @@ public class Training {
 	private String description;
 
 	@OneToMany(mappedBy = "training")
+	@JsonIgnore
 	private List<TrainingTypeTraining> trainingTypeTrainings = new ArrayList<>();
 }
