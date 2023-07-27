@@ -16,6 +16,7 @@ public class JointController {
 
 	@GetMapping
 	public List<Joint> getJointList() {
+//		return null;
 		return jointService.findJointList();
 	}
 	//환부 전체 리스트 조회
