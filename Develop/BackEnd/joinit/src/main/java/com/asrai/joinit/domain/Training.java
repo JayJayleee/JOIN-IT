@@ -3,6 +3,7 @@ package com.asrai.joinit.domain;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import java.util.ArrayList;
@@ -14,9 +15,9 @@ import lombok.Setter;
 @Getter @Setter
 public class Training {
 
-	@Id @GeneratedValue
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "training_id")
-	private Long trainingId;
+	private int trainingId;
 
 	@Column(name = "training_name")
 	private String trainingName;
@@ -33,7 +34,8 @@ public class Training {
 	@Column(name = "end_point")
 	private int endPoint;
 
-	private int difficultly;
+	@Column(name = "difficulty")
+	private int difficulty;
 
 	private String description;
 

@@ -3,6 +3,7 @@ package com.asrai.joinit.domain;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -14,9 +15,9 @@ import lombok.Setter;
 @Getter @Setter
 public class Treatment {
 
-	@Id @GeneratedValue
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "treatment_id")
-	private Long treatmentId;
+	private int treatmentId;
 
 	//치료사id
 //	private Therapist therapist;
