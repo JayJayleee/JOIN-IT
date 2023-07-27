@@ -19,6 +19,7 @@ const SimpleSlider = () => {
     autoplay: true,
     autoplaySpeed: 10000,
     pauseOnHover: true,
+    // variableWidth : true,
   };
 
   return (

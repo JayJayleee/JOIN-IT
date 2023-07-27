@@ -36,7 +36,7 @@ function Home() {
           <h2 className="content1">전문 치료사와 화상 코칭을 시작해보세요.</h2>
         </div>
       </div>
-      <div className="main2div" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in" data-aos-offset="1500px">
+      <div className="main2div" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in" data-aos-offset="1500px">
         <div className="main2Infoleft">
           <h1 className="numbering">02</h1>
           <div className="hrline"></div>
@@ -65,7 +65,7 @@ function Home() {
       {/* 마지막 문구 */}
       <div
         className="main3div"
-        data-aos="zoom-out"
+        data-aos="fade"
         data-aos-duration="1000"
         data-aos-delay="500"
         data-aos-easing="ease-in"
