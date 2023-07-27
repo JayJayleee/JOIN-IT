@@ -1,36 +1,28 @@
 import React from 'react';
 import './miniRecipeBox.css';
 
-type RecipeProps = {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
-
-function RecipeBoxDetail(props: any) {
-
-  return (
-    <div className='row recipe-box-detail'>
-      <div>
-        <img src="patient_image.png" alt="patient" />
-      </div>
-      <div className='col'>
-        <p>{props.title}</p>
-        <p>{props.userId}</p>
-        <p>{props.id}</p>
-      </div>
-    </div>
-  )
-}
-
 
 function MiniRecipeBox(props: any) {
-  return <div className='col mini-recipe-box'>
-    {props.posts.forEach((data: RecipeProps) => {
-      <RecipeBoxDetail userId={data.userId} id={data.id} title={data.title} body={data.body} />
-    })}
+  return (
+  <div className='col mini-recipe-box'>
+    {props.posts.map((data: any) => (
+      <div className='row recipe-box-detail' key={data.id}>
+        <div className='recipe-box-detail-image'>
+          <img src="patient_image.png" alt="patient" style={{width: '35px', height: '35px'}}/>
+        </div>
+        <div className='col recipe-box-detail-text'>
+          <div className='col'>
+            <p style={{fontWeight: 'bold', fontSize: '20px'}}>{data.title}</p>
+            <p style={{fontSize: '15px'}}>{data.userId}</p>
+          </div>
+          <div className='recipe-box-detail-text-description'>
+            <p>{data.id}</p>
+          </div>
+        </div>
+      </div>
+    ))}
   </div>
+  );
 }
 
 export default MiniRecipeBox

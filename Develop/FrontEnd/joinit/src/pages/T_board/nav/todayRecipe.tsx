@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './todayRecipe.css';
 import axios from 'axios';
 import MiniRecipeBox from './todayRecipe/miniRecipeBox';
+import Pagination from './todayRecipe/pagination';
 
 function TodayRecipe() {
 
@@ -9,7 +10,7 @@ function TodayRecipe() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(3);
+  const [postsPerPage] = useState(3);
 
 
   useEffect(() => {
@@ -28,7 +29,10 @@ function TodayRecipe() {
     fetchData();
   }, [posts.length]);
 
-  console.log(posts)
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  }
 
 
   const indexOfLastPost = currentPage * postsPerPage;
@@ -39,16 +43,20 @@ function TodayRecipe() {
     return currentPosts
   }
 
-  console.log(currentPosts(posts))
+
 
   return (
     <div className='col todayRecipe'>
       <div className='row todayRecipe_title'>
-        <div className='todayRecipe_title_text'>
+        <div className='row todayRecipe_title_text'>
           <p>Today</p>
         </div>
-        <div className='todayRecipe_title_button'>
-          <p>button</p>
+        <div>
+          <Pagination
+          itemsPerPage={postsPerPage}
+          totalPages={posts.length}
+          handlePageChange={handlePageChange}
+          currentPage={currentPage} />
         </div>
       </div>
       {!isEmptyArray ? <p>오늘의 치료 일정이 없어요.</p> : <MiniRecipeBox posts={currentPosts(posts)} />}
