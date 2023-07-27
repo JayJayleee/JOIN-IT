@@ -11,30 +11,31 @@ java {
 	sourceCompatibility = JavaVersion.VERSION_17
 
 
-configurations {
-	compileOnly {
-		extendsFrom(configurations.annotationProcessor.get())
+	configurations {
+		compileOnly {
+			extendsFrom(configurations.annotationProcessor.get())
+		}
 	}
-}
 
-repositories {
-	mavenCentral()
-}
+	repositories {
+		mavenCentral()
+	}
 
-dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter-mail")
+	dependencies {
+		implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+		implementation("org.springframework.boot:spring-boot-starter-mail")
 //	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 //	implementation("org.springframework.boot:spring-boot-starter-security")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.boot:spring-boot-devtools")
-	compileOnly("org.projectlombok:lombok")
-	runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
-	annotationProcessor("org.projectlombok:lombok")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.springframework.security:spring-security-test")
-}
+		implementation("org.springframework.boot:spring-boot-starter-web")
+		implementation("org.springframework.boot:spring-boot-devtools")
+		compileOnly("org.projectlombok:lombok")
+		runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
+		annotationProcessor("org.projectlombok:lombok")
+		testImplementation("org.springframework.boot:spring-boot-starter-test")
+		testImplementation("org.springframework.security:spring-security-test")
+	}
 
-tasks.withType<Test> {
-	useJUnitPlatform()
+	tasks.withType<Test> {
+		useJUnitPlatform()
+	}
 }
