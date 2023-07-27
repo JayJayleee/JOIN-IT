@@ -1,5 +1,5 @@
 import React from 'react';
-import './careState.css';
+import './careStat.css';
 
 function CareStat() {
   return (

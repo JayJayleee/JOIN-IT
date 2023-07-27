@@ -1,0 +1,39 @@
+pipeline{
+    agent any
+    environment {
+       FRONT_CONTAINER_NAME="react-container"
+       FRONT_NAME = "byeonghunsong/project:react-img"
+    }
+    stages {
+        stage('Clean'){
+            steps{
+                script {
+                    try{
+                        sh "docker kill ${FRONT_CONTAINER_NAME}"
+                        sleep 1
+                        sh "docker rm ${FRONT_CONTAINER_NAME}"
+                        sh "docker image rm ${FRONT_NAME}"
+                    }catch(e){
+                        sh 'exit 0'
+                    }
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                script{
+                     sh "docker build -t ${FRONT_NAME} . -f /var/lib/jenkins/workspace/Dev-Fe-Test-Pipeline/Develop/FrontEnd/joinit/Dockerfile"
+                    sh "docker push ${FRONT_NAME}"
+
+                }
+            }
+        }
+        stage('Deploy'){
+            steps {
+                
+                sh "docker run -d --name ${FRONT_CONTAINER_NAME} -p 3000:3000 ${FRONT_NAME}"
+                sh "docker image prune --force"
+            }
+        }
+    }
+}

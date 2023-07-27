@@ -1,10 +1,64 @@
+@font-face {
+  font-family: "Pretendard-Black";
+  font-weight: 50;
+  src: url("/public/Assets/Fonts/Pretendard-Black.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  font-weight: 50;
+  src: url("/public/Assets/Fonts/Pretendard-Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  font-weight: 50;
+  src: url("/public/Assets/Fonts/Pretendard-ExtraBold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-ExtraLight";
+  font-weight: 50;
+  src: url("/public/Assets/Fonts/Pretendard-ExtraLight.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  font-weight: 50;
+  src: url("/public/Assets/Fonts/Pretendard-Light.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Medium";
+  font-weight: 50;
+  src: url("/public/Assets/Fonts/Pretendard-Medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-weight: 50;
+  src: url("/public/Assets/Fonts/Pretendard-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  font-weight: 50;
+  src: url("/public/Assets/Fonts/Pretendard-SemiBold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Thin";
+  font-weight: 50;
+  src: url("/public/Assets/Fonts/Pretendard-Thin.otf") format("truetype");
+}
+
+* {
+  font-family: Pretendard-Light;
+}
+
+.navdiv {
+  margin-bottom: 100px;
+}
 
 .row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .col {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }

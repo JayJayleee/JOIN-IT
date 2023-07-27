@@ -6,7 +6,11 @@ import NotCompleteCare from './myCareList/notCompleteCare';
 
 function MyCareList() {
   return (
-    <div>myCareList</div>
+    <div>
+      <h1>MyCareList</h1>
+      <CompleteCare />
+      <NotCompleteCare />
+    </div>
   )
 }
 
