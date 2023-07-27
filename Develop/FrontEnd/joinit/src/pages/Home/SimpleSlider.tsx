@@ -30,7 +30,7 @@ const SimpleSlider = () => {
             <source src="/Assets/Videos/메인페이지영상1.mp4" type="video/mp4" />
           </video>
           <div className="videoTitlediv">
-            <div data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in">
+            <div >
               <p className="maintitle1">언제 어디서나</p>
               <p className="maintitle2">당당하게 걷기</p>
               <p className="maintitle3">나를 움직이는 힘</p>
