@@ -22,7 +22,7 @@ const SimpleSlider = () => {
   };
 
   return (
-    <div>
+    <div className="sliderdiv">
       <Slider {...settings}>
         <div>
           <div className="blurdiv"></div>
