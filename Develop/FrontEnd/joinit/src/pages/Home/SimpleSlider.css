@@ -1,0 +1,56 @@
+.maintitle1 {
+    font-size: 40px;
+    margin: 0px;
+    color: white;
+    font-family: "Pretendard-Medium";
+  }
+  
+  .maintitle2 {
+    font-size: 40px;
+    margin: 0px;
+    margin-top: 10px;
+    color: white;
+    font-family: "Pretendard-Medium";
+  }
+  
+  .maintitle3 {
+    font-size: 120px;
+    font-family: "Pretendard-Bold";
+    margin: 0px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    color: white;
+    /* text-shadow: 5px 5px 15px #1e1e1e; */
+  }
+  
+  .MainBtn1 {
+    background-color: #58867a;
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
+    opacity: 95%;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  
+  .MainBtn2 {
+    background-color: #0f5953;
+    width: 200px;
+    height: 50px;
+    opacity: 95%;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  
+  .blurdiv {
+    position: absolute;
+    z-index: 2;
+    width: 1920px;
+    height: 1080px;
+    background-color: black;
+    opacity: 20%;
+  }

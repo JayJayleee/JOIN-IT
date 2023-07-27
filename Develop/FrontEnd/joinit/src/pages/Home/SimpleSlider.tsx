@@ -31,12 +31,12 @@ const SimpleSlider = () => {
           </video>
           <div className="videoTitlediv">
             <div >
-              <p className="maintitle1">언제 어디서나</p>
-              <p className="maintitle2">당당하게 걷기</p>
-              <p className="maintitle3">나를 움직이는 힘</p>
+              <p className="maintitle1">혼자라서 힘들 때,</p>
+              <p className="maintitle2">함께하는 건강한 습관</p>
+              <p className="maintitle3">지금 시작해볼까요?</p>
               <div className="Btndiv">
-                <button className="MainBtn1">운동 시작하기→</button>
-                <button className="MainBtn2">회원 가입→</button>
+                <button className="MainBtn1">운동 시작하기 →</button>
+                <button className="MainBtn2">회원 가입 →</button>
               </div>
             </div>
           </div>
