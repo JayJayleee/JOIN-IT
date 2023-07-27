@@ -1,5 +1,6 @@
 package com.asrai.joinit.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,7 +14,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Getter @Setter @ToString
+@Getter @Setter
 public class Training {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,5 +42,6 @@ public class Training {
 	private String description;
 
 	@OneToMany(mappedBy = "training")
+	@JsonIgnore
 	private List<TrainingTypeTraining> trainingTypeTrainings = new ArrayList<>();
 }

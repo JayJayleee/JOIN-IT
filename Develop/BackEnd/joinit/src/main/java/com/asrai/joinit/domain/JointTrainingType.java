@@ -1,5 +1,6 @@
 package com.asrai.joinit.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,17 +25,19 @@ public class JointTrainingType {
 	private int mappingId;
 
 	@ManyToOne
+//	@JsonIgnore
 	@JoinColumn(name = "joint_id")
 	private Joint joint;
 
 	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name = "training_type_id")
 	private TrainingType trainingType;
 
 	private int count; // 트레이닝 수
 
-	@OneToMany(mappedBy = "jointTrainingType")
-	private List<TrainingTypeTraining> trainingTypeTrainings = new ArrayList<>();
+//	@OneToMany(mappedBy = "jointTrainingType")
+//	private List<TrainingTypeTraining> trainingTypeTrainings = new ArrayList<>();
 	//환부_운동종류와 운동 매핑
 	//다대다 관계 매핑 테이블을 엔티티로 분리하고 각각 ManyToOne으로 해줌
 	//근데 어디 쪽에 리스트가 들어가야하는지 헷갈려서 일단 양쪽 다 넣어둠
