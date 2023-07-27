@@ -24,6 +24,7 @@ public class TrainingController {
 
 	//운동 리스트 조회
 
+	//dnsehd
 	@GetMapping("/list/{mappingId}")
 	public List<Training> getTrainingList(@PathVariable("mappingId") int mappingId){
 

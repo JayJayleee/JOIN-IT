@@ -22,6 +22,6 @@ public class Joint {
 	@Column(name = "joint_name")
 	private String jointName;
 
-	@OneToMany(mappedBy = "joint")
-	private List<JointTrainingType> jointTrainingTypes = new ArrayList<>();
+//	@OneToMany(mappedBy = "joint")
+//	private List<JointTrainingType> jointTrainingTypes = new ArrayList<>();
 }

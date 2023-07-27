@@ -21,7 +21,7 @@ class TrainingServiceTest {
 
     @Test
     public void testtest(){
-        List<Training> temp = trainingRepository.findTrainingList(10);
+        List<Training> temp = trainingRepository.findTrainingList(11);
         for (Training traing: temp
         ) {
             System.out.println(traing.toString());

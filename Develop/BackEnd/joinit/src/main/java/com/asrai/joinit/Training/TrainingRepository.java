@@ -39,9 +39,12 @@ public class TrainingRepository {
 	//운동 리스트 조회 (api 운동 1번)
 
 	public List<Training> findTrainingList(int mappingId) {
-		return em.createQuery(
-				 "select t from Training t where t.trainingId in (select tyt.training.trainingId from TrainingTypeTraining tyt where tyt.jointTrainingType.mappingId = "+mappingId+")", Training.class)
+		System.out.println("#################################################");
+		List<Training> temp = em.createQuery(
+				"select t from Training t where t.trainingId in (select tyt.training.trainingId from TrainingTypeTraining tyt where tyt.jointTrainingType.mappingId = "+mappingId+")", Training.class)
 			.getResultList();
+		System.out.println(temp);
+		return temp;
 	}
 	//운동 리스트 조회 (api 운동 2번)
 
