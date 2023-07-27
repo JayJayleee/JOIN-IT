@@ -1,6 +1,6 @@
 FROM openjdk:17
 
-ARG JAR_FILE=target/*.jar
+ARG JAR_FILE=build/lib/*.jar
 
 COPY ${JAR_FILE} app.jar
 
