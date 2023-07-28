@@ -1,8 +1,8 @@
 .patientInfo1 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+  /* justify-content: space-between; */
+  width: 600px;
 }
 
 .container {
@@ -27,10 +27,10 @@
 
 .ck-editor__editable {
   min-height: 200px;
-  margin-bottom: 100px;
+  margin-bottom: 5%;
 }
 .CKEditorBox {
-  width: 95%;
+  width: 100%;
 }
 
 .widthForInput {
@@ -50,8 +50,32 @@
   box-shadow: 0px 0px 20px -18px;
 }
 
+.buttonContainer {
+  width: 600px;
+  display: flex;
+}
+
+.buttonsizeBig {
+  width: 70%;
+  background: #0f5953;
+}
+
+.buttonsizeSmall {
+  width: 30%;
+  background: #d93f3f;
+}
+.buttonsizeBig > .eff-2 {
+  width: 100%;
+  height: 50px;
+  top: -50px;
+  background: #08302c;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
 .whiteSpace {
-  width: 10%;
+  width: 30px;
 }
 .labels {
   margin-bottom: 10px;

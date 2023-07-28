@@ -148,3 +148,27 @@
 .button-2:hover a {
   color: white;
 }
+
+.buttonContainer {
+  width: 600px;
+  display: flex;
+}
+
+.buttonsizeBig {
+  width: 70%;
+  background: #0f5953;
+}
+
+.buttonsizeSmall {
+  width: 30%;
+  background: #d93f3f;
+}
+.buttonsizeBig > .eff-2 {
+  width: 100%;
+  height: 50px;
+  top: -50px;
+  background: #08302c;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}

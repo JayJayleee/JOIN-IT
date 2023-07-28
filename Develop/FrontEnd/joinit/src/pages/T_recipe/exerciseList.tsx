@@ -1,8 +1,6 @@
-import { useState } from "react";
-import "./careCreate.css";
-import Editor from "./Editor";
+import React from "react";
 
-function CareCreate() {
+function exerciseList() {
   return (
     <div className="background">
       <div className="container">
@@ -49,4 +47,4 @@ function CareCreate() {
   );
 }
 
-export default CareCreate;
+export default exerciseList;
