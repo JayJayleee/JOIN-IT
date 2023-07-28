@@ -1,0 +1,15 @@
+.mini-recipe-box {
+  width: 90%;
+  height: 280px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.recipe-box-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  background-color: #58867a;
+}

@@ -1,33 +1,55 @@
 import React, { useState } from 'react';
 import './T_board/T_board.css';
-import Nav from './T_board/nav';
+import Navbar from './T_board/nav';
 import MyCareList from './T_board/myCareList';
 import MyPatientList from './T_board/myPatientList';
 import CareDetail from './T_board/careDetail';
 import CalendarList from './T_board/calendarList';
 import PatientProfileDetail from './T_board/patientProfileDetail';
-import { useSelector } from 'react-redux';
+
+
+function TabContent(props :any) {
+  const calendarListPage = <CalendarList />
+  const careListPage = <MyCareList />
+  const patientListPage = <MyPatientList />
+  const careDetailPage = <CareDetail />
+  const patientProfileDetailPage = <PatientProfileDetail />
+
+
+  return [ calendarListPage, careListPage, patientListPage, careDetailPage, patientProfileDetailPage ][props.pageNum]
+}
 
 
 function T_board() {
 
-  let nowShowPage = ''
-  let pageName = useSelector((state: any) => state.pageName)
 
-  if (pageName === 'calendar') {
-    
+  const fixPageNum = 0
+  const [nowPage, changePage] = useState(fixPageNum);
+
+  let TherapistName = '치료사';
+
+  const eventChangeFtn = (num :number) => {
+    changePage(num);
   }
 
+
   return (
-    <div>
+    <div className='board'>
       <h1>물리 치료사 치료 대시보드</h1>
-      <nav>상단 로고와 프로필 버튼 들어오는 곳</nav>
-      <div className='row' style={{ justifyContent : 'space-between' }}>
-        <p>오늘도 좋은 하루 보내세요, 치료사 님!</p>
-        <button>치료 시작하기</button>
+      <div className='row uppertitle'>
+        <p className='welcomeMsg'>오늘도 좋은 하루 보내세요, <span className='therapistName'>{TherapistName}</span> 님!</p>
+        <div className="button-2" onClick={()=> {alert('치료 시작하기 페이지로 갑니다.')}}>
+            <div className="eff-2"></div>
+            <a href="#"> 치료 시작하기 </a>
+          </div>
       </div>
-      <div className='row'>
-        <Nav />
+      <div className='row dashboardDivide'>
+        <div className='dashboardDivide_left'>
+          <Navbar eventChangeFtn={eventChangeFtn} nowPage={nowPage} />
+        </div>
+        <div className='dashboardDivide_right'>
+          <TabContent pageNum={nowPage}/>
+        </div>
       </div>
     </div>
   )
