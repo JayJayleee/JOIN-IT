@@ -51,13 +51,11 @@ function TodayRecipe() {
         <div className='row todayRecipe_title_text'>
           <p>Today</p>
         </div>
-        <div>
-          <Pagination
-          itemsPerPage={postsPerPage}
-          totalPages={posts.length}
-          handlePageChange={handlePageChange}
-          currentPage={currentPage} />
-        </div>
+        <Pagination
+        itemsPerPage={postsPerPage}
+        totalPages={posts.length}
+        handlePageChange={handlePageChange}
+        currentPage={currentPage} />
       </div>
       {!isEmptyArray ? <p>오늘의 치료 일정이 없어요.</p> : <MiniRecipeBox posts={currentPosts(posts)} />}
     </div>
