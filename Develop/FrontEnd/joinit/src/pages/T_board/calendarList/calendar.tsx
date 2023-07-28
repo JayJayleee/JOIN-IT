@@ -4,7 +4,9 @@ import './calendar.css';
 
 function Calendar() {
   return (
-    <div>calender</div>
+    <div className='calendarBox'>
+      calender
+    </div>
   )
 }
 

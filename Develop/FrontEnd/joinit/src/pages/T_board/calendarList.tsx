@@ -6,8 +6,7 @@ import SelectDay from './calendarList/selectDay';
 
 function CalendarList() {
   return (
-    <div>
-      <h1>CalendarList</h1>
+    <div className='col'>
       <Calendar />
       <SelectDay />
     </div>
