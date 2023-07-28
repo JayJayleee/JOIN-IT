@@ -6,7 +6,7 @@
 }
 
 .main1div {
-  margin-top: 150px;
+  margin-top: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,14 +20,16 @@
 }
 .main3div {
   margin-top: 150px;
+  margin-bottom: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .mainimg {
-  width: 700px;
+  width: 1200px;
   height: auto;
+  margin-bottom: 100px;
 }
 
 .main2img {
@@ -36,8 +38,9 @@
 }
 
 .mainInfo {
+  margin: 0;
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .main2Infoleft {
@@ -47,6 +50,7 @@
   justify-content: center;
   align-items: flex-end;
   margin-left: 250px;
+  color: #0F5953;
 }
 
 .main2Inforight {
@@ -57,74 +61,46 @@
   /* align-items: center; */
   margin-right: 250px;
   padding-left: 100px;
+  color: #0F5953;
 }
 
 .main3Info {
-  font-size: 70px;
+  font-size: 50px;
   font-weight: 800;
   margin: 0px;
+  color: #0F5953;
+  margin-top: 200px;
 }
 
 .main4Info {
-  font-size: 60px;
-  font-weight: 600;
+  font-size: 70px;
+  font-family: "Pretendard-bold";
+  color: #0F5953;
 }
 
 .hrline {
   width: 50px;
-  border: 2px solid black;
+  border: 3px solid #5D6569;
+  margin-bottom: 30px;
 }
 
-.maintitle1 {
+.numbering {
   font-size: 50px;
-  font-weight: 1000;
-  margin: 0px;
-  color: white;
+  font-family: "Pretendard-Medium";
+  margin: 0;
 }
-
-.maintitle2 {
+.titleh1{
+  margin: 0;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.titleh2{
+  margin: 0;
   font-size: 50px;
-  font-weight: 1000;
-  margin: 0px;
-  color: white;
+  font-family: "Pretendard-Medium";
+  margin-bottom: 70px;
 }
-
-.maintitle3 {
-  font-size: 140px;
-  font-weight: 1000;
-  margin: 0px;
-  color: white;
-  /* text-shadow: 5px 5px 15px #1e1e1e; */
-}
-
-.MainBtn1 {
-  background-color: #58867a;
-  width: 200px;
-  height: 50px;
-  margin-right: 20px;
-  opacity: 95%;
-  border: none;
-  color: white;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.MainBtn2 {
-  background-color: #0f5953;
-  width: 200px;
-  height: 50px;
-  opacity: 95%;
-  border: none;
-  color: white;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.blurdiv {
-  position: absolute;
-  z-index: 2;
-  width: 1920px;
-  height: 1080px;
-  background-color: black;
-  opacity: 20%;
+.content1{
+  margin: 0;
+  color: #5D6569;
 }
