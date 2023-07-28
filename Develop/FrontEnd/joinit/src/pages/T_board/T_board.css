@@ -10,6 +10,7 @@
 
 .board {
   margin: 0 300px;
+  /* position: inherit; */
 }
 
 .uppertitle {
@@ -78,11 +79,11 @@
 }
 
 .dashboardDivide_left{
+  position: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 250px;
-  position: fixed;
 }
 
 .dashboardDivide_right {

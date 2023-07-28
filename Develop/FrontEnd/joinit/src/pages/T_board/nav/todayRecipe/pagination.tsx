@@ -13,9 +13,6 @@ function Pagination({itemsPerPage, totalPages, handlePageChange, currentPage}: P
 
   const pageNumber = Math.ceil(totalPages / itemsPerPage);
 
-  const handlePageChangeClick = (page: number) => {
-    handlePageChange(page);
-  }
 
   return (
     <ul className="row pagination">
