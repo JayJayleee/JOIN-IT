@@ -17,7 +17,7 @@ import lombok.Setter;
 @Getter @Setter
 public class LogLogin {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "log_id")
     private Integer logId;
 

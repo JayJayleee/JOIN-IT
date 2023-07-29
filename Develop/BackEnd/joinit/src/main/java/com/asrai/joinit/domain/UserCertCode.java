@@ -14,7 +14,7 @@ import lombok.Setter;
 @Getter @Setter
 public class UserCertCode {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "cert_id")
     private Integer certId;
 
