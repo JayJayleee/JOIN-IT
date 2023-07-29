@@ -1,4 +1,4 @@
-package com.asrai.joinit.Training;
+package com.asrai.joinit.dto;
 
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;

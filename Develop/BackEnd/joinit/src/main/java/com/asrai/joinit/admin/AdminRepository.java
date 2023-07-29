@@ -1,7 +1,7 @@
 package com.asrai.joinit.admin;
 
 
-import com.asrai.joinit.Training.JointTrainingMapping;
+import com.asrai.joinit.dto.JointTrainingMapping;
 import com.asrai.joinit.domain.JointTrainingType;
 import com.asrai.joinit.domain.Training;
 import com.asrai.joinit.domain.TrainingTypeTraining;

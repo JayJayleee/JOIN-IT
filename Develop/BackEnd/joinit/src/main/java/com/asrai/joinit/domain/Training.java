@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Entity
 @Getter @Setter
@@ -40,6 +39,8 @@ public class Training {
 	private int difficulty;
 
 	private String description;
+
+	private int rom;
 
 	@OneToMany(mappedBy = "training")
 	@JsonIgnore

@@ -1,9 +1,12 @@
 package com.asrai.joinit.Training;
 
+import com.asrai.joinit.dto.TrainingDto;
 import com.asrai.joinit.domain.Training;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,26 +25,21 @@ public class TrainingController {
 
 	//운동 등록
 	@PostMapping
-	public void createTraining(@RequestBody TrainingForm form) {
-		Training training = new Training();
-		training.setTrainingName(form.getTrainingName());
-		training.setTrainingURL(form.getTrainingURL());
-		training.setStartPoint(form.getStartPoint());
-		training.setMiddlePoint(form.getMiddlePoint());
-		training.setEndPoint(form.getEndPoint());
-		training.setDifficulty(form.getDifficulty());
-		training.setDescription(form.getDescription());
-
-//		for(int mappingId: form.getMappingIds()) {
-//			training.setTrainingTypeTrainings(mappingId);
-//		}
-
-		trainingService.saveTraining(training, form.getMappingIds());
+	public void createTraining(@RequestBody TrainingDto form) {
+		trainingService.saveTraining(form);
 	}
 
 	//운동 전체 리스트 조회
-//	@GetMapping()
-//	public
+	@GetMapping("/list")
+	public List<Training> getTrainingList() {
+		return trainingService.findTrainingList();
+	}
+
+	//운동 상세 조회
+	@GetMapping("/{trainingId}")
+	public Training getTrainingDetail(@PathVariable("trainingId") int trainingId) {
+		return trainingService.findTrainingDetail(trainingId);
+	}
 
 	@GetMapping("/list/{mappingId}")
 	public List<Training> getTrainingList(@PathVariable("mappingId") int mappingId){
@@ -49,4 +47,17 @@ public class TrainingController {
 
 		return trainingService.findTrainingList(mappingId);
 	}
+
+	@PutMapping("/{trainingId}")
+	public void modifyTraining(@PathVariable("trainingId") int trainingId, @RequestBody TrainingDto form) {
+		trainingService.updateTraining(trainingId, form);
+	}
+	//운동 수정
+
+	@DeleteMapping("/{trainingId}")
+	public void removeTraining(@PathVariable("trainingId") int trainingId) {
+
+	}
+	//운동 삭제
+
 }
