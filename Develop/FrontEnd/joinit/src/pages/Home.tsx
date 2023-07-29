@@ -110,7 +110,7 @@ function Home() {
       {/* 마지막 문구 */}
       <div
         className="main3div"
-        data-aos="zoom-out"
+        data-aos="fade"
         data-aos-duration="1000"
         data-aos-delay="500"
         data-aos-easing="ease-in"
