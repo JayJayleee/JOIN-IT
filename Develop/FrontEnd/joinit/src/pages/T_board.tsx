@@ -35,7 +35,6 @@ function T_board() {
 
   return (
     <div className='board'>
-      <h4>상단 Nav bar 자리입니다.</h4>
       <div className='row uppertitle'>
         <p className='welcomeMsg'>오늘도 좋은 하루 보내세요, <span className='therapistName'>{TherapistName}</span> 님!</p>
         <div className="button-2" onClick={()=> {alert('치료 시작하기 페이지로 갑니다.')}}>

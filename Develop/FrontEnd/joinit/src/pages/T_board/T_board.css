@@ -9,6 +9,7 @@
 }
 
 .board {
+  padding-top: 70px;
   margin: 0 300px;
   /* position: inherit; */
 }
