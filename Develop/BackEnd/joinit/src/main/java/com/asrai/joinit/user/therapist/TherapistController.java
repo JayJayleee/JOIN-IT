@@ -76,10 +76,14 @@ public class TherapistController {
 
     //치료사에게 할당된 환자리스트 조회
     @GetMapping("/patient/{therapistId}")
-    public ResponseEntity getTherapistPatientList() {}
+    public ResponseEntity getTherapistPatientList() {
+        return new ResponseEntity(HttpStatus.OK);
+    }
 
     //치료사가 환자 상세 정보 조회
     @GetMapping("/patient/detail/{therapistId}")
-    public ResponseEntity getTherapistPatientDetail() {}
+    public ResponseEntity getTherapistPatientDetail() {
+        return new ResponseEntity(HttpStatus.OK);
+    }
 
 }
