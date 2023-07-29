@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Nav from "./Components/Nav/Nav";
 import { Route, Routes, Link } from "react-router-dom";
@@ -20,25 +20,34 @@ import AD_Board from "./pages/AD_board/AD_nav";
 
 import T_board from "./pages/T_board";
 import Login from "./pages/Login";
-
+import { useLocation } from 'react-router'
 
 
 
 
 
 function App() {
+
   // 특정 페이지에서 헤더 보이지 않도록 처리(ex 관리자)
-  const Header: any = () => {
-    if (window.location.pathname === "/AD_Board") return null;
-    return <Nav />;
-  };
+  const [ShowNavBar, ChangePageNavBar] = useState(true);
+  const { pathname } = useLocation();
+
+  const NotShowPageList = ['/Carecreate', '/AD_Board', '/CareUpdate'];
+
+  useEffect(() => {
+
+    if (NotShowPageList.includes(pathname)) {
+      ChangePageNavBar(false)
+    } else {
+      
+    }
+  }, [pathname])
+
+
+
   return (
     <div>
-      {/* <div className="navdiv"> */}
-      {Header}
-      {/* </div> */}
-      {/* <Home /> */}
-      {/* <CareCreate /> */}
+      {!ShowNavBar? <div /> : <Nav />}
 
       <Routes>
         <Route path="/" element={<Home />} />
