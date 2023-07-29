@@ -16,12 +16,18 @@ import MeetDetail from "./pages/T_recipe/meetDetail";
 import MeetUpdate from "./pages/T_recipe/meetUpdate";
 import RecipeSelect from "./pages/T_recipe/recipeSelect";
 import CareUpdate from "./pages/T_care/careUpdate";
+import AD_Board from "./pages/AD_board/AD_nav";
 
 function App() {
+  // 특정 페이지에서 헤더 보이지 않도록 처리(ex 관리자)
+  const Header: any = () => {
+    if (window.location.pathname === "/AD_Board") return null;
+    return <Nav />;
+  };
   return (
     <div>
       {/* <div className="navdiv"> */}
-      <Nav />
+      {Header}
       {/* </div> */}
       {/* <Home /> */}
       {/* <CareCreate /> */}
@@ -41,6 +47,7 @@ function App() {
         <Route path="/MeetCreate" element={<MeetCreate />} />
         <Route path="/MeetDetail" element={<MeetDetail />} />
         <Route path="/MeetUpdate" element={<MeetUpdate />} />
+        <Route path="/AD_Board" element={<AD_Board />} />
       </Routes>
     </div>
   );
