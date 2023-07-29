@@ -45,20 +45,21 @@ public class TrainingRepository {
 	}
 	//운동 리스트 조회 (api 운동 1번)
 
+
 	public List<Training> findTrainingList(int mappingId) {
-		return em.createQuery(
+		List<Training> temp = em.createQuery(
 				"select t from Training t where t.trainingId in (select tyt.training.trainingId from TrainingTypeTraining tyt where tyt.jointTrainingType.mappingId = "+mappingId+")", Training.class)
 			.getResultList();
+		return temp;
 	}
-	//운동 리스트 조회 (api 운동 2번)
+	//환부-운동종류 선택 후 운동조회 (api 운동 2번)
 
 	public List<JointTrainingMapping> findJointTrainingTypeList() {
-		return null;
-//		return em.createQuery(
-//				"select new com.asrai.joinit.dto.JointTrainingMapping(jtt.mappingId, j.jointName, tt.trainingTypeName) from JointTrainingType jtt, Joint j, TrainingType tt where jtt.joint.jointId = j.jointId and jtt.trainingType.trainingTypeId = tt.trainingTypeId", JointTrainingMapping.class)
-//			.getResultList();
+		return em.createQuery(
+				"select new com.asrai.joinit.Training.JointTrainingMapping(jtt.mappingId, j.jointName, tt.trainingTypeName) from JointTrainingType jtt, Joint j, TrainingType tt where jtt.joint.jointId = j.jointId and jtt.trainingType.trainingTypeId = tt.trainingTypeId", JointTrainingMapping.class)
+			.getResultList();
 	}
-	//운동 리스트 조회 (api 운동 2번)
+	//환부_운동 종류_매핑 리스트 조회 (api 운동 2번)
 
 	public Training findTrainingDetail(int trainingId) {
 		return em.find(Training.class, trainingId);
