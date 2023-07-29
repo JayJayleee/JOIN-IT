@@ -4,7 +4,7 @@ import './miniProfile.css';
 
 function MiniProfile() {
   const Therapist_profile = {
-    img : "Therapist_image.png",
+    img : "/Assets/Images/Therapist_image.png",
     name : "치료사",
     hospital : "꽤나 괜찮은 병원"
   }

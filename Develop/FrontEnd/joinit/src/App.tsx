@@ -18,6 +18,14 @@ import RecipeSelect from "./pages/T_recipe/recipeSelect";
 import CareUpdate from "./pages/T_care/careUpdate";
 import AD_Board from "./pages/AD_board/AD_nav";
 
+import T_board from "./pages/T_board";
+import Login from "./pages/Login";
+
+
+
+
+
+
 function App() {
   // 특정 페이지에서 헤더 보이지 않도록 처리(ex 관리자)
   const Header: any = () => {
