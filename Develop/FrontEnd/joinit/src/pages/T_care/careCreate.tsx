@@ -1,46 +1,49 @@
 import { useState } from "react";
 import "./careCreate.css";
-import { CKEditor } from "@ckeditor/ckeditor5-react";
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import Editor from "./Editor";
 
 function CareCreate() {
   return (
     <div className="background">
       <div className="container">
+        <img
+          className="smallLogo"
+          src="/Assets/Images/Logo.png"
+          alt="logo img"
+        />
         <h3>치료를 시작해볼까요?</h3>
 
         <div className="patientInfo1">
-          <div className="patientName">
-            <p>환자 이름</p>
-            <input type="text" />
+          <div className="patientName widthForInput">
+            <h4 className="labels">환자 이름</h4>
+            <input className="input" type="text" />
           </div>
-          <div className="patientPain">
-            <p>환부</p>
-            <select name="bodypart" id="">
-              <option value="choose">옵션을 선택해주세요.</option>
+          <div className="whiteSpace"></div>
+          <div className="patientPain widthForInput">
+            <h4 className="labels">환부</h4>
+            <select className="select" name="bodypart" id="">
+              <option value="choose">please</option>
               <option value="neck">목</option>
               <option value="back">등</option>
             </select>
           </div>
         </div>
-        <CKEditor
-          editor={ClassicEditor}
-          data="<p>Hello from CKEditor 5!</p>"
-          onReady={(editor) => {
-            // You can store the "editor" and use when it is needed.
-            console.log("Editor is ready to use!", editor);
-          }}
-          onChange={(event, editor) => {
-            const data = editor.getData();
-            console.log({ event, editor, data });
-          }}
-          onBlur={(event, editor) => {
-            console.log("Blur.", editor);
-          }}
-          onFocus={(event, editor) => {
-            console.log("Focus.", editor);
-          }}
-        />
+        <div className="widthForInput">
+          <h4 className="labels">환자 연락처</h4>
+          <input className="input" type="text" />
+          <h4 className="labels">진료 시작일</h4>
+          <input className="input" type="date" />
+          <h4 className="labels">치료 요약</h4>
+          <input className="input" type="text" />
+          <h4 className="labels">사고 경위</h4>
+          <input className="input" type="text" />
+          <h4 className="labels">특이 사항</h4>
+          <textarea className="textareEdit " />
+          <div className="button-2">
+            <div className="eff-2"></div>
+            <a href="#"> Touch me </a>
+          </div>
+        </div>
       </div>
     </div>
   );
