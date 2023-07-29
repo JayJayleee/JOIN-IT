@@ -1,11 +1,21 @@
 import React from "react";
 import "./App.css";
-
 import Nav from "./Components/Nav/Nav";
+import { Route, Routes, Link } from "react-router-dom";
+import CareCreate from "./pages/T_care/careCreate";
 import Home from "./pages/Home";
-// import { Route, Routes } from "react-router-dom";
-
-// import CareCreate from "./pages/T_care/careCreate";
+import CoachCreate from "./pages/T_recipe/coachCreate";
+import CoachDetail from "./pages/T_recipe/coachDetail";
+import CoachUpdate from "./pages/T_recipe/coachUpdate";
+import ExerciseDetail from "./pages/T_recipe/exerciseDetail";
+import ExerciseList from "./pages/T_recipe/exerciseList";
+import ExerciseSelect from "./pages/T_recipe/exerciseSelect";
+import ExerciseUpdate from "./pages/T_recipe/exerciseUpdate";
+import MeetCreate from "./pages/T_recipe/meetCreate";
+import MeetDetail from "./pages/T_recipe/meetDetail";
+import MeetUpdate from "./pages/T_recipe/meetUpdate";
+import RecipeSelect from "./pages/T_recipe/recipeSelect";
+import CareUpdate from "./pages/T_care/careUpdate";
 
 function App() {
   return (
@@ -13,8 +23,25 @@ function App() {
       {/* <div className="navdiv"> */}
       <Nav />
       {/* </div> */}
-      <Home />
+      {/* <Home /> */}
       {/* <CareCreate /> */}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/CareCreate" element={<CareCreate />} />
+        <Route path="/CareUpdate" element={<CareUpdate />} />
+        <Route path="/CoachCreate" element={<CoachCreate />} />
+        <Route path="/CoachUpdate" element={<CoachUpdate />} />
+        <Route path="/CoachDetail" element={<CoachDetail />} />
+        <Route path="/ExerciseDetail" element={<ExerciseDetail />} />
+        <Route path="/ExerciseList" element={<ExerciseList />} />
+        <Route path="/ExerciseSelect" element={<ExerciseSelect />} />
+        <Route path="/ExerciseUpdate" element={<ExerciseUpdate />} />
+        <Route path="/RecipeSelect" element={<RecipeSelect />} />
+        <Route path="/MeetCreate" element={<MeetCreate />} />
+        <Route path="/MeetDetail" element={<MeetDetail />} />
+        <Route path="/MeetUpdate" element={<MeetUpdate />} />
+      </Routes>
     </div>
   );
 }
