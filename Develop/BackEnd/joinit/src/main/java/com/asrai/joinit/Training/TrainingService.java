@@ -39,13 +39,15 @@ public class TrainingService {
 
 	@Transactional(readOnly = true)
 	public List<Training> findTrainingList(int mappingId){
-		return trainingRepository.findTrainingList();
+		return trainingRepository.findTrainingList(mappingId);
 
 	}
+	//환부_운동종류 선택 후 운동 조회
 
 	@Transactional(readOnly = true)
 	public List<JointTrainingMapping> findJointTrainingTypeList(){
 		return trainingRepository.findJointTrainingTypeList();
 
 	}
+	//환부_운동 종류_매핑 리스트 조회
 }

@@ -43,10 +43,23 @@ public class TrainingController {
 //	@GetMapping()
 //	public
 
+	//환부_운동종류 선택 후 운동 조회
 	@GetMapping("/list/{mappingId}")
 	public List<Training> getTrainingList(@PathVariable("mappingId") int mappingId){
 		System.out.println(mappingId);
+		List<Training> list = trainingService.findTrainingList(mappingId);
+		for (Training training: list
+		) {
+			System.out.println("cont"+training.toString());
+		}
+		return list;
+	}
 
-		return trainingService.findTrainingList(mappingId);
+	//환부_운동 종류_매핑 리스트 조회
+	@GetMapping("/jointMapping")
+	public List<JointTrainingMapping> getTrainingList(){
+
+		List<JointTrainingMapping> list = trainingService.findJointTrainingTypeList();
+		return list;
 	}
 }
