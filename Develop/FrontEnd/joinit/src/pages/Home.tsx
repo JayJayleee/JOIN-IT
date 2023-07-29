@@ -3,6 +3,7 @@ import "./Home/Home.css";
 import SimpleSlider from "./Home/SimpleSlider";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Route, Routes, Link } from "react-router-dom";
 
 function Home() {
   useEffect(() => {
@@ -17,15 +18,37 @@ function Home() {
       </div>
 
       {/* 중간문구 */}
-      <div className="main1div" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in" data-aos-offset="1000px">
-        <img src="/Assets/Images/Typograph2.gif" alt="logo img" className="mainimg" />
+      <div
+        className="main1div"
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="500"
+        data-aos-easing="ease-in"
+        data-aos-offset="1000px"
+      >
+        <img
+          src="/Assets/Images/Typograph2.gif"
+          alt="logo img"
+          className="mainimg"
+        />
         <p className="mainInfo">당신의 평생 헬스케어 파트너</p>
         <p className="mainInfo">건강한 삶을 응원합니다.</p>
       </div>
       {/* 그림문구 */}
-      <div className="main2div" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in" data-aos-offset="1500px">
+      <div
+        className="main2div"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="500"
+        data-aos-easing="ease-in"
+        data-aos-offset="1500px"
+      >
         <div className="main2Infoleft">
-          <img src="/Assets/Images/main.png" alt="main img" className="main2img" />
+          <img
+            src="/Assets/Images/main.png"
+            alt="main img"
+            className="main2img"
+          />
         </div>
         <div className="main2Inforight">
           <h1 className="numbering">01</h1>
@@ -36,7 +59,14 @@ function Home() {
           <h2 className="content1">전문 치료사와 화상 코칭을 시작해보세요.</h2>
         </div>
       </div>
-      <div className="main2div" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in" data-aos-offset="1500px">
+      <div
+        className="main2div"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-delay="500"
+        data-aos-easing="ease-in"
+        data-aos-offset="1500px"
+      >
         <div className="main2Infoleft">
           <h1 className="numbering">02</h1>
           <div className="hrline"></div>
@@ -46,12 +76,27 @@ function Home() {
           <h2 className="content1">건강한 재활 운동을 시작하세요.</h2>
         </div>
         <div className="main2Inforight">
-          <img src="/Assets/Images/main2.png" alt="main img" className="main2img" />
+          <img
+            src="/Assets/Images/main2.png"
+            alt="main img"
+            className="main2img"
+          />
         </div>
       </div>
-      <div className="main2div" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in" data-aos-offset="2000px">
+      <div
+        className="main2div"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-delay="500"
+        data-aos-easing="ease-in"
+        data-aos-offset="2000px"
+      >
         <div className="main2Infoleft">
-          <img src="/Assets/Images/main3.png" alt="main img" className="main2img" />
+          <img
+            src="/Assets/Images/main3.png"
+            alt="main img"
+            className="main2img"
+          />
         </div>
         <div className="main2Inforight">
           <h1 className="numbering">03</h1>

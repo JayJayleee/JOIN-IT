@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./careCreate.css";
+import "./careUpdate.css";
 import Editor from "./Editor";
 
-function CareCreate() {
+function CareUpdate() {
   return (
     <div className="background">
       <div className="container">
@@ -39,9 +39,16 @@ function CareCreate() {
           <input className="input" type="text" />
           <h4 className="labels">특이 사항</h4>
           <textarea className="textareEdit " />
-          <div className="button-2">
-            <div className="eff-2"></div>
-            <a href="#"> Touch me </a>
+          <div className="buttonContainer">
+            <div className="button-2 buttonsizeBig">
+              <div className="eff-2"></div>
+              <a href="#"> 수정 완료 </a>
+            </div>
+            <div style={{ width: "10px" }}></div>
+            <div className="button-2 buttonsizeSmall">
+              <div className="eff-2"></div>
+              <a href="#"> 치료</a>
+            </div>
           </div>
         </div>
       </div>
@@ -49,4 +56,4 @@ function CareCreate() {
   );
 }
 
-export default CareCreate;
+export default CareUpdate;
