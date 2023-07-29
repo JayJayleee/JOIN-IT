@@ -65,6 +65,8 @@ function App() {
         <Route path="/MeetDetail" element={<MeetDetail />} />
         <Route path="/MeetUpdate" element={<MeetUpdate />} />
         <Route path="/AD_Board" element={<AD_Board />} />
+        <Route path="/Tboard" element={<T_board />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </div>
   );
