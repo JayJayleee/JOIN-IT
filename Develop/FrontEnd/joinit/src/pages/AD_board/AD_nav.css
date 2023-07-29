@@ -1,0 +1,48 @@
+.AD_nav {
+  width: 18vw;
+  background-color: #353535;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AD_nav > hr {
+  width: 100%;
+}
+
+.AD_nav > img {
+  width: 60%;
+  margin: 40px;
+}
+
+.spacefornav > a,
+h2 {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.marginfornav {
+  margin: 40px;
+}
+
+.spacefornav {
+  align-self: baseline;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.icon {
+  width: 30px;
+  margin: 15px;
+}
+
+.flexing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

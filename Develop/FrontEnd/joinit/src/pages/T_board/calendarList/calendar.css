@@ -1,0 +1,10 @@
+.calendarBox {
+  margin-top: 20px;
+  width: 950px;
+  height: 3500px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
