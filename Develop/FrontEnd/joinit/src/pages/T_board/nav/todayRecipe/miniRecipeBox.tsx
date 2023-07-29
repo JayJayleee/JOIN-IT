@@ -8,7 +8,7 @@ function MiniRecipeBox(props: any) {
     {props.posts.map((data: any) => (
       <div className='row recipe-box-detail' key={data.id}>
         <div className='recipe-box-detail-image'>
-          <img src="patient_image.png" alt="patient" style={{width: '35px', height: '35px'}}/>
+          <img src="/Assets/Images/patient_image.png" alt="patient" style={{width: '35px', height: '35px'}}/>
         </div>
         <div className='col recipe-box-detail-text'>
           <div className='col'>
