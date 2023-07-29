@@ -1,7 +1,6 @@
 package com.asrai.joinit.survey;
 
 
-import com.asrai.joinit.Training.JointTrainingMapping;
 import com.asrai.joinit.domain.AfterSurvey;
 import com.asrai.joinit.domain.BeforeSurvey;
 import com.asrai.joinit.domain.JointTrainingType;

@@ -1,15 +1,10 @@
 package com.asrai.joinit.admin;
 
 
-import com.asrai.joinit.Training.JointTrainingMapping;
 import com.asrai.joinit.domain.Admin;
-import com.asrai.joinit.domain.JointTrainingType;
-import com.asrai.joinit.domain.Training;
-import com.asrai.joinit.domain.TrainingTypeTraining;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Repository;
 
