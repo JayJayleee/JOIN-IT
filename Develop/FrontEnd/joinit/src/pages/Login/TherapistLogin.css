@@ -1,13 +1,13 @@
 .therapist-loginInput {
   width: 40%;
-  height: 450px;
+  height: 480px;
   justify-content: space-between;
   align-items: center;
 }
 
 .loginForm {
   width: 100%;
-  height: 85%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

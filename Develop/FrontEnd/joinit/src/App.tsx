@@ -23,7 +23,8 @@ function App() {
       {/* </div> */}
       {/* <Home /> */}
       {/* <CareCreate /> */}
-      <Login />
+      {/* <Login /> */}
+      <T_board />
     </div>
   );
 }
