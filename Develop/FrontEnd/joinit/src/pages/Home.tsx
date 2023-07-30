@@ -4,6 +4,7 @@ import SimpleSlider from "./Home/SimpleSlider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Route, Routes, Link } from "react-router-dom";
+import Footer from "./Home/Footer/Footer";
 
 function Home() {
   useEffect(() => {
@@ -123,6 +124,7 @@ function Home() {
           <button className="MainBtn2">회원 가입→</button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
