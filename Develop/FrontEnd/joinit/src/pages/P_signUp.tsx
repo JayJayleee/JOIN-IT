@@ -12,11 +12,43 @@ function PatientContent(props: any) {
   const [firstPw, setPassword] = useState('');
   const [secondPw, setCheckPassword] = useState('');
 
-  let comment = "비밀번호가 일치하지 않습니다."
+  const [privatechecked, setPrivateCheck] = useState(false);
+  const [essentialchecked, setEssentialCheck] = useState(false);
+  const [emailchecked, setEmailCheck] = useState(false);
+  const [smschecked, setSmsCheck] = useState(false);
 
-  if (firstPw === secondPw) {
-    comment = "✔ 비밀번호가 일치합니다."
+
+  let comment = ""
+  
+  if (firstPw.length !== 0) {
+    if (firstPw === secondPw) {
+      comment = "✔ 비밀번호가 일치합니다."
+    } else {
+      comment = "비밀번호가 일치하지 않습니다."
+    }
   }
+
+  const patientInputCheckHandler = () => {
+    if (nameInput === '' || idInput === '' || EmailInput === '' || phoneNumberInput === '' || firstPw === '' || secondPw === '') {
+      alert('필수 입력 칸은 전부 입력해주세요.')
+      setName('');
+      setid('');
+      setEmail('');
+      setPhoneNumber('');
+      setPassword('');
+      setCheckPassword('');
+      return 
+    } else if (!privatechecked) {
+      alert('개인 정보 제공에 동의해주세요')
+      return
+    } else if (!essentialchecked) {
+      alert('필수 약관에 동의해주세요')
+      return
+    } else {
+      props.changeSignupPage()
+    }
+  }
+  
 
   const firstSignup = <div className='col patient-signupPage-first'>
     <p style={{fontSize: '22px', fontWeight: 'bold', marginBottom: '20px'}}>환자 회원가입</p>
@@ -65,23 +97,24 @@ function PatientContent(props: any) {
     </div>
     <div className='col patient-signupPage-choosebtn'>
       <div className='row checklist-first'>
-        <div className='checkboxInner'>
-          <input type="checkbox" name='Privacy Policy' id='Privacy Policy'/>개인 정보 제공에 동의합니다.
-        </div>
-        <div className='checkboxInner'>
-          <input type="checkbox" name='smsOk' id='smsOk' />SMS 수신여부
-        </div>
+        <label className='checkboxInner'>
+          <input type="checkbox" checked={privatechecked} name='privateOk' id='privateOk' onChange={() => {setPrivateCheck(!privatechecked)}}/>개인 정보 제공에 동의합니다.
+        </label>
+        <label className='checkboxInner'>
+          <input type="checkbox" checked={smschecked} name='smsOk' id='smsOk' onChange={() => {setSmsCheck(!smschecked)}}/>SMS 수신여부
+        </label>
       </div>
       <div className='row checklist-second'>
-        <div className='checkboxInner'>
-          <input type="checkbox" name='essentialterm' id='essentialterm'/>필수 약관에 동의합니다.
-        </div>
-        <div className='checkboxInner'>
-          <input type="checkbox" name="emailok" id="emailok" />이메일 수신여부
-        </div>
+        <label className='checkboxInner'>
+          <input type="checkbox" checked={essentialchecked} name='essentialterm' id='essentialterm' onChange={() => {setEssentialCheck(!essentialchecked)}}/>필수 약관에 동의합니다.
+        </label>
+        <label className='checkboxInner'>
+          <input type="checkbox" checked={emailchecked} name="emailok" id="emailok" onChange={() => {setEmailCheck(!emailchecked)}}/>이메일 수신여부
+        </label>
       </div>
     </div>
-    <div className='patient-signupPage-submit-button' onClick={props.changeSignupPage}>
+    <p style={{width: '100%', textAlign: 'right', color:'#0F5953', fontWeight:'bold'}}>*표시는 필수 입력 칸입니다.</p>
+    <div className='patient-signupPage-submit-button' onClick={patientInputCheckHandler}>
       <div className='patient-signupPage-submit-button-inner' />
       <p>회원 가입 완료</p>
     </div>
@@ -107,4 +140,4 @@ function P_signUp() {
   )
 }
 
-export default P_signUp
+export default P_signUp;

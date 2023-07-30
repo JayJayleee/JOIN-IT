@@ -49,11 +49,10 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
 }
 
-.tboardbutton-2 a {
+.tboardbutton-2 p {
   font-family: arial;
   font-size: 16px;
   color: white;
-  text-decoration: none;
   line-height: 50px;
   transition: all 0.5s ease;
   z-index: 2;
@@ -74,7 +73,7 @@
     top: 0;
 }
 
-.tboardbutton-2:hover a {
+.tboardbutton-2:hover p {
     color: white;
 }
 
