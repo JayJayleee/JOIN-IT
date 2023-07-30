@@ -37,8 +37,8 @@ function T_board() {
     <div className='board'>
       <div className='row uppertitle'>
         <p className='welcomeMsg'>오늘도 좋은 하루 보내세요, <span className='therapistName'>{TherapistName}</span> 님!</p>
-        <div className="button-2" onClick={()=> {alert('치료 시작하기 페이지로 갑니다.')}}>
-            <div className="eff-2"></div>
+        <div className="tboardbutton-2" onClick={()=> {alert('치료 시작하기 페이지로 갑니다.')}}>
+            <div className="tboardeff-2"></div>
             <a href="#"> 치료 시작하기 </a>
           </div>
       </div>
