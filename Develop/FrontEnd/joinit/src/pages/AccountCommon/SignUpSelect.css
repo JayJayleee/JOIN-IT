@@ -6,6 +6,7 @@
 
 .selectLogoImg {
   width: 500px;
+  cursor: pointer;
 }
 
 .signupSelectorboard {

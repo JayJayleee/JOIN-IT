@@ -6,6 +6,10 @@ function SignUpSelect() {
   
   const moveSelectTypeSignupPage = useNavigate();
 
+  const moveMainPage = () => {
+    moveSelectTypeSignupPage('/')
+  }
+
   const movePatientSignupPage  = () => {
     moveSelectTypeSignupPage('/SignUp/patient')
   }
@@ -16,7 +20,7 @@ function SignUpSelect() {
 
   return (
     <div className='col selectPage'>
-      <img src="/Assets/Images/Logo.png" alt="Logo" className='selectLogoImg' />
+      <img src="/Assets/Images/Logo.png" alt="Logo" className='selectLogoImg' onClick={moveMainPage} title='메인 페이지로 이동하기'/>
       <div className='col signupSelectorboard'>
         <p>회원가입</p>
         <div className='row selectbuttongroup'>

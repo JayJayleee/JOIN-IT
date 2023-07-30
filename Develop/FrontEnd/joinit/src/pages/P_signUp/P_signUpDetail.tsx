@@ -1,5 +1,5 @@
-import React from 'react'
-import './P_signUpDetail.css'
+import React from 'react';
+import './P_signUpDetail.css';
 
 function P_signUpDetail() {
   return (

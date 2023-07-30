@@ -16,6 +16,10 @@ function Login() {
 
   const movePage = useNavigate();
 
+  const moveHomePage = () => {
+    movePage('/');
+  }
+
   const moveFindIdPage = () => {
     movePage('/FindId');
   }
@@ -37,9 +41,9 @@ function Login() {
 
   return (
     <div className='row'>
-      <img src="/Assets/Images/Login.jpg" alt="login" className='LoginLeftImg' />
+      <img src="/Assets/Images/Login.jpg" alt="login" className='LoginLeftImg'/>
       <div className='col LoginRight'>
-        <img src="/Assets/Images/Logo.png" alt="Logo" className='LoginLogoImg'/>
+        <img src="/Assets/Images/Logo.png" alt="Logo" className='LoginLogoImg' onClick={moveHomePage} />
         <div className='row LoginPageSelector'>
           <div className={`LoginPagePatient ${CurrentLoginPage ===0? 'choose' : ''}`} onClick={() => ChangePageHandler(0)} >
             <p>일반 회원</p>

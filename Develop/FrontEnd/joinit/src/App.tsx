@@ -37,7 +37,7 @@ function App() {
   const [ShowNavBar, ChangePageNavBar] = useState(true);
   const { pathname } = useLocation();
 
-  const NotShowPageList = ['/carecreate', '/ad_board', '/careupdate', '/login', '/findid', '/changepw', '/signup'];
+  const NotShowPageList = ['/carecreate', '/ad_board', '/careupdate', '/login', '/findid', '/changepw', '/signup/patient', ];
 
   useEffect(() => {
 
