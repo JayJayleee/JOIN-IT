@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-function ExerciseCreate() {
+function AdExerciseUpdate() {
   const { trainingId } = useParams();
-
   const navigate = useNavigate();
   const [exerciseCategory, setExerciseCategory] = useState<string[]>([]);
   const [exerciseCategorynum, setExerciseCategorynum] = useState<number[]>([]);
@@ -61,8 +60,16 @@ function ExerciseCreate() {
     }
   };
 
-  const backToList = () => {
-    navigate(`/AdExerciseDetail/${trainingId}`);
+  const Delete = async () => {
+    try {
+      if (window.confirm("게시글을 삭제하시겠습니까?")) {
+        await axios.delete(`/api/training/${trainingId}`);
+      }
+    } catch (error) {
+      console.error("오류 발생:", error);
+    }
+    alert("Delete Success");
+    navigate("/AdBoard");
   };
 
   const {
@@ -277,11 +284,11 @@ function ExerciseCreate() {
             <option value="20">20</option>
           </select>
         </div>
-        <button onClick={saveBoard}> 등록하기 </button>
-        <button onClick={backToList}> 뒤로가기 </button>
+        <button onClick={saveBoard}> 수정하기 </button>
+        <button onClick={Delete}> 삭제하기 </button>
       </div>
     </div>
   );
 }
 
-export default ExerciseCreate;
+export default AdExerciseUpdate;

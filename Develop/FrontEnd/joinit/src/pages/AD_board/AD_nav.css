@@ -1,5 +1,5 @@
 .AD_nav {
-  width: 18vw;
+  width: 30vw;
   background-color: #353535;
   height: 100vh;
   display: flex;
@@ -16,11 +16,10 @@
   margin: 40px;
 }
 
-.spacefornav > a,
-h2 {
+.ADfont {
   font-size: 20px;
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
 
 .marginfornav {
@@ -45,4 +44,9 @@ h2 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.adboardcontainer {
+  display: flex;
+  flex-direction: row;
 }
