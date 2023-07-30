@@ -1,0 +1,263 @@
+.patient-signupPage {
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.patientLogoImg {
+  width: 400px;
+}
+
+.patient-signupPage-first {
+  margin-top: 30px;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.patient-signupPage-name {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.patient-signupPage-name-input {
+  position: relative;
+  margin-top: 10px;
+  width: 564px;
+}
+
+.patient-signupPage-name-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+  outline: 1px solid #E6E6E6;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.patient-signupPage-name-input input:focus {
+  outline: 2px solid #0F5953;
+}
+
+.patient-signupPage-id-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #58867A;
+  color: white;
+  font-weight: 250;
+  width: 90px;
+  height: 30px;
+  top: 10px;
+  right: 0px;
+  cursor: pointer;
+}
+
+
+.patient-signupPage-id {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.patient-signupPage-id-input {
+  position: relative;
+  margin-top: 10px;
+  width: 564px;
+}
+
+.patient-signupPage-id-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+  outline: 1px solid #E6E6E6;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.patient-signupPage-id-input input:focus {
+  outline: 2px solid #0F5953;
+}
+
+.patient-signupPage-id-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #58867A;
+  color: white;
+  font-weight: 250;
+  width: 90px;
+  height: 30px;
+  top: 12px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.patient-signupPage-email {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.patient-signupPage-email-input {
+  position: relative;
+  margin-top: 10px;
+  width: 564px;
+}
+
+.patient-signupPage-email-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+  outline: 1px solid #E6E6E6;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.patient-signupPage-email-input input:focus {
+  outline: 2px solid #0F5953;
+}
+
+
+
+.patient-signupPage-phone {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.patient-signupPage-phone-input {
+  position: relative;
+  margin-top: 10px;
+  width: 564px;
+}
+
+.patient-signupPage-phone-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+  outline: 1px solid #E6E6E6;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.patient-signupPage-phone-input input:focus {
+  outline: 2px solid #0F5953;
+}
+
+.patient-signupPage-phone-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #58867A;
+  color: white;
+  font-weight: 250;
+  width: 90px;
+  height: 30px;
+  top: 12px;
+  right: 0px;
+  cursor: pointer;
+}
+
+
+.patient-signupPage-pw {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.patient-signupPage-pw-input {
+  position: relative;
+  margin-top: 10px;
+  width: 564px;
+}
+
+.patient-signupPage-pw-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+  outline: 1px solid #E6E6E6;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.patient-signupPage-pw-input input:focus {
+  outline: 2px solid #0F5953;
+}
+
+
+.patient-signupPage-pw-input.green input:focus {
+  outline: 2px solid #0F5953;
+}
+
+
+.patient-signupPage-pw-input.red input:focus {
+  outline: 2px solid red;
+}
+
+.checklist-first {
+  width: 480px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.checklist-second {
+  width: 480px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.checkboxInner {
+  width: 43%;
+  text-align: left;
+}
+
+.patient-signupPage-submit-button {
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 20px;
+  background: #58867a;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+.patient-signupPage-submit-button p {
+  margin: 10px 0px;
+  font-size: 23px;
+  font-weight: lighter;
+  color: white;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.patient-signupPage-submit-button-inner {
+  width: 100%;
+  height: 50px;
+  top: -50px;
+  background: #0f5953;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.patient-signupPage-submit-button:hover .patient-signupPage-submit-button-inner {
+  top: 0;
+}
+
+.patient-signupPage-submit-button:hover p {
+  color: white;
+}
