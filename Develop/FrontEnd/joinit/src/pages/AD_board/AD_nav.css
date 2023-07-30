@@ -1,5 +1,5 @@
 .AD_nav {
-  width: 30vw;
+  width: 15vw;
   background-color: #353535;
   height: 100vh;
   display: flex;
@@ -11,7 +11,7 @@
   width: 100%;
 }
 
-.AD_nav > img {
+.smallLogo {
   width: 60%;
   margin: 40px;
 }
@@ -27,11 +27,13 @@
 }
 
 .spacefornav {
+  border-radius: 5px;
+  width: 80%;
   align-self: baseline;
-  margin-left: 30px;
   display: flex;
   flex-direction: row;
   margin-top: 20px;
+  margin-left: 20px;
 }
 
 .icon {
@@ -49,4 +51,10 @@
 .adboardcontainer {
   display: flex;
   flex-direction: row;
+}
+
+.tabcontent {
+  margin-left: 8%;
+  margin-right: 10%;
+  margin-top: 4%;
 }

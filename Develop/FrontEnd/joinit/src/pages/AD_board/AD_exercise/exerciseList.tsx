@@ -34,32 +34,35 @@ function ExerciseList() {
   return (
     <div className="exerciseLists">
       <div>
-        <h1>전체 운동 리스트</h1>
-        <div onClick={createPage}>
-          <img src="/Assets/Images/plus.png" alt="plus" />
-          <h3>운동 추가하기</h3>
+        <div className="titlecontainer">
+          <h1 className="exerciseLists_title">전체 운동 리스트</h1>
+          <div className="addcontainer" onClick={createPage}>
+            <img src="/Assets/Images/plus.png" alt="plus" />
+            <div style={{ width: "20px" }}></div>
+            <h2>운동 추가하기</h2>
+          </div>
+        </div>
+        <div className="searchbar">
+          <select className="select" id="">
+            <option value="1">환부-운동 분류</option>
+            <option value="2">목-어디</option>
+            <option value="3">손목-어디</option>
+            <option value="4">허리-어디</option>
+          </select>
+          <div style={{ width: "20px" }}></div>
+          <div className="button-2">
+            <div className="eff-2"></div>
+            <a href="#"> 선택 </a>
+          </div>
         </div>
         <div>
-          <select name="painpoint" id="">
-            <option value="1">환부</option>
-            <option value="2">목</option>
-            <option value="3">손목</option>
-            <option value="4">허리</option>
-          </select>
-          <select name="exercise" id="">
-            <option value="1">운동 분류</option>
-            <option value="2">목</option>
-            <option value="3">손목</option>
-            <option value="4">허리</option>
-          </select>
-          <button>검색</button>
-        </div>
-        <div>
-          <h3>호흡</h3>
-          <hr />
-          {exerciseList.map((a, e) => {
-            return <ExerciseCard key={a.trainingId} props={a} />;
-          })}
+          <h1>호흡</h1>
+          <hr className="hr" />
+          <div className="exerciseList_container">
+            {exerciseList.map((a, e) => {
+              return <ExerciseCard key={a.trainingId} props={a} />;
+            })}
+          </div>
         </div>
       </div>
     </div>

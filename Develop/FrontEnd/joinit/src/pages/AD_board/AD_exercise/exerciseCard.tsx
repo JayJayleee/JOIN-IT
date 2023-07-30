@@ -6,13 +6,23 @@ function exerciseCard(props: any) {
   console.log(props);
   return (
     <div className="exerciseCard">
-      <Link to={`/AdExerciseDetail/${props.props.trainingId}`}>
-        <div>
-          <img src="/Assets/Images/exercise.png" alt="" />
-          <p>LV.{props.props.difficulty}</p>
-          <p>{props.props.trainingName}</p>
-        </div>
-      </Link>
+      <div>
+        <Link
+          className="link"
+          to={`/AdExerciseDetail/${props.props.trainingId}`}
+        >
+          <div>
+            <img className="preview" src="/Assets/Images/exercise.png" alt="" />
+
+            <div className="exerciseName">
+              <div className="level">
+                <p className="levelText">LV.{props.props.difficulty}</p>
+              </div>
+              <h2 className="nameText">{props.props.trainingName}</h2>
+            </div>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }

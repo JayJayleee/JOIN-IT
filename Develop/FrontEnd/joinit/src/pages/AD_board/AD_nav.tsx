@@ -27,11 +27,19 @@ function AdBoard() {
             사이트로 바로가기
           </a>
         </div>
-        <h2 style={{ alignSelf: "baseline", color: "#858585" }}>사이트 관리</h2>
+        <h2
+          style={{
+            alignSelf: "baseline",
+            color: "#858585",
+            marginLeft: "10px",
+          }}
+        >
+          사이트 관리
+        </h2>
         <div
           className="spacefornav"
           onClick={() => setNavsection(0)}
-          style={{ backgroundColor: navSection === 0 ? "grey" : "#353535" }}
+          style={{ backgroundColor: navSection === 0 ? "#0F5953" : "#353535" }}
         >
           <img
             className="icon"
@@ -43,7 +51,7 @@ function AdBoard() {
         <div
           className="spacefornav"
           onClick={() => setNavsection(1)}
-          style={{ backgroundColor: navSection === 1 ? "grey" : "#353535" }}
+          style={{ backgroundColor: navSection === 1 ? "#0F5953" : "#353535" }}
         >
           <img
             className="icon"
@@ -55,7 +63,7 @@ function AdBoard() {
         <div
           className="spacefornav"
           onClick={() => setNavsection(2)}
-          style={{ backgroundColor: navSection === 2 ? "#grey" : "#353535" }}
+          style={{ backgroundColor: navSection === 2 ? "#0F5953" : "#353535" }}
         >
           <img
             className="icon"
@@ -65,8 +73,9 @@ function AdBoard() {
           <h2 className="ADfont">환자 리스트 관리</h2>
         </div>
       </div>
-
-      <TabContent navSection={navSection} />
+      <div className="tabcontent">
+        <TabContent className="tabcontent" navSection={navSection} />
+      </div>
     </div>
   );
 }
