@@ -51,7 +51,7 @@ public class User {
     @Column(name = "email_agree", length = 1)
     private String emailAgree;
 
-    @Column(name = "create_time")
+    @Column(name = "create_time", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false, nullable = false)
     private Timestamp createTime;
 
     @Column(name = "update_time")

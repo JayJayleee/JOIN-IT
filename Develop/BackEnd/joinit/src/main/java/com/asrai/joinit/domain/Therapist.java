@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Lob;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import java.sql.Clob;
@@ -34,7 +35,8 @@ public class Therapist {
     @Column(name = "hospital_number", length = 30)
     private String hospitalNumber;
 
+    @Lob
     @Column(name = "introduce")
-    private String introduce;
+    private Clob introduce;
 
 }

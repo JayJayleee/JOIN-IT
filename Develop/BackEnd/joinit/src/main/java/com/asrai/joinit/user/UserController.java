@@ -1,7 +1,9 @@
 package com.asrai.joinit.user;
 
+import com.asrai.joinit.domain.EmailCertCode;
+import com.asrai.joinit.domain.PhoneCertCode;
 import com.asrai.joinit.domain.User;
-import com.asrai.joinit.domain.UserCertCode;
+import com.asrai.joinit.exception.UserTypeException;
 import java.util.Map;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,14 +26,19 @@ public class UserController {
     //회원가입
     @PostMapping()
     public ResponseEntity<String> signUp(@RequestBody User user) {
-        String userId = userService.signUp(user);
+        String userId;
+        try {
+            userId = userService.signUp(user);
+        } catch (UserTypeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
         return ResponseEntity.ok(userId);
     }
 
     //ID 중복검사
     @PostMapping("/duplicate")
     public ResponseEntity<Boolean> duplicateCheckById(@RequestBody String loginId) {
-        boolean duplicated = userService.duplicateCheckById(loginId);
+        boolean duplicated = userService.notDuplicatedLoginId(loginId);
         return ResponseEntity.ok(duplicated);
     }
 
@@ -49,8 +56,8 @@ public class UserController {
 
     // 휴대폰 인증번호 확인
     @PostMapping("/check/phone")
-    public ResponseEntity<Boolean> checkPhoneCode(@RequestBody UserCertCode userCertCode) {
-        boolean check = userService.checkPhoneCode(userCertCode);
+    public ResponseEntity<Boolean> checkPhoneCode(@RequestBody PhoneCertCode phoneCertCode) {
+        boolean check = userService.checkPhoneCode(phoneCertCode);
         return ResponseEntity.ok(check);
     }
 
@@ -68,16 +75,17 @@ public class UserController {
 
     // 이메일 인증번호 확인
     @PostMapping("/check/email")
-    public ResponseEntity<Boolean> checkEmailCode(@RequestBody UserCertCode userCertCode) {
-        boolean check = userService.checkEmailCode(userCertCode);
+    public ResponseEntity<Boolean> checkEmailCode(@RequestBody EmailCertCode emailCertCode) {
+        boolean check = userService.checkEmailCode(emailCertCode);
         return ResponseEntity.ok(check);
     }
 
     //일반 로그인
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody User user, @RequestBody(required = false) String accessToken) {
-        String userId = userService.login(user, accessToken);
-        return ResponseEntity.ok(userId);
+    public ResponseEntity<Map<String, String>> login(@RequestBody User user
+        , @RequestBody(required = false) String accessToken, @RequestBody(required = false) String refreshToken) {
+        Map<String, String> userInfo = userService.login(user, accessToken, refreshToken);
+        return ResponseEntity.ok(userInfo);
     }
 
     //소셜로그인
@@ -88,9 +96,14 @@ public class UserController {
 
     //인증번호 확인 후 ID 알려주기
     @PostMapping("/cert/id")
-    public ResponseEntity responseIdAfterCert(@RequestBody UserCertCode userCertCode) {
-        String loginId = userService.responseIdAfterCert(userCertCode);
-        return ResponseEntity.ok(loginId);
+    public ResponseEntity responseIdAfterCert(@RequestBody EmailCertCode emailCertCode) {
+        boolean check = userService.checkEmailCode(emailCertCode);
+        if (!check) {
+            return ResponseEntity.badRequest().body(false);
+        } else {
+            String loginId = userService.responseIdAfterCert(emailCertCode.getEmail());
+            return ResponseEntity.ok(loginId);
+        }
     }
 
     //PW 찾기 전, 인증번호 확인
