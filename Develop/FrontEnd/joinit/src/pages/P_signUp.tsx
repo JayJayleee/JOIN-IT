@@ -64,7 +64,22 @@ function PatientContent(props: any) {
       <p style={{color: firstPw === secondPw ? 'green' : 'red', fontSize: '15px', marginTop: '10px'}}>{comment}</p>
     </div>
     <div className='col patient-signupPage-choosebtn'>
-      <p>버튼 잔뜩</p>
+      <div className='row checklist-first'>
+        <div className='checkboxInner'>
+          <input type="checkbox" name='Privacy Policy' id='Privacy Policy'/>개인 정보 제공에 동의합니다.
+        </div>
+        <div className='checkboxInner'>
+          <input type="checkbox" name='smsOk' id='smsOk' />SMS 수신여부
+        </div>
+      </div>
+      <div className='row checklist-second'>
+        <div className='checkboxInner'>
+          <input type="checkbox" name='essentialterm' id='essentialterm'/>필수 약관에 동의합니다.
+        </div>
+        <div className='checkboxInner'>
+          <input type="checkbox" name="emailok" id="emailok" />이메일 수신여부
+        </div>
+      </div>
     </div>
     <div className='patient-signupPage-submit-button' onClick={props.changeSignupPage}>
       <div className='patient-signupPage-submit-button-inner' />
@@ -82,7 +97,6 @@ function P_signUp() {
 
   const changeSignupPageHandler = () => {
     changeSignupPage(1);
-    console.log(nowPatientSignup);
   }
 
   return (

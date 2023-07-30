@@ -23,7 +23,7 @@
 .patient-signupPage-name-input {
   position: relative;
   margin-top: 10px;
-  width: 100%;
+  width: 564px;
 }
 
 .patient-signupPage-name-input input {
@@ -65,7 +65,7 @@
 .patient-signupPage-id-input {
   position: relative;
   margin-top: 10px;
-  width: 100%;
+  width: 564px;
 }
 
 .patient-signupPage-id-input input {
@@ -106,7 +106,7 @@
 .patient-signupPage-email-input {
   position: relative;
   margin-top: 10px;
-  width: 100%;
+  width: 564px;
 }
 
 .patient-signupPage-email-input input {
@@ -133,7 +133,7 @@
 .patient-signupPage-phone-input {
   position: relative;
   margin-top: 10px;
-  width: 100%;
+  width: 564px;
 }
 
 .patient-signupPage-phone-input input {
@@ -175,7 +175,7 @@
 .patient-signupPage-pw-input {
   position: relative;
   margin-top: 10px;
-  width: 100%;
+  width: 564px;
 }
 
 .patient-signupPage-pw-input input {
@@ -202,6 +202,22 @@
   outline: 2px solid red;
 }
 
+.checklist-first {
+  width: 480px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.checklist-second {
+  width: 480px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.checkboxInner {
+  width: 43%;
+  text-align: left;
+}
 
 .patient-signupPage-submit-button {
   border-radius: 5px;
@@ -213,7 +229,7 @@
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
-  margin-top: 40px;
+  margin-top: 20px;
   background: #58867a;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
 }
