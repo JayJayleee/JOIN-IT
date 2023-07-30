@@ -23,7 +23,7 @@ import Login from "./pages/Login";
 import { useLocation } from 'react-router'
 
 
-import AD_login from "./pages/AD_login";
+
 
 
 function App() {
@@ -65,8 +65,6 @@ function App() {
         <Route path="/MeetDetail" element={<MeetDetail />} />
         <Route path="/MeetUpdate" element={<MeetUpdate />} />
         <Route path="/AD_Board" element={<AD_Board />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/AD_login" element={<AD_login />} />
       </Routes>
     </div>
   );
