@@ -32,11 +32,13 @@ function App() {
   const [ShowNavBar, ChangePageNavBar] = useState(true);
   const { pathname } = useLocation();
 
-  const NotShowPageList = ['/Carecreate', '/AD_Board', '/CareUpdate'];
+  const NotShowPageList = ['/carecreate', '/ad_board', '/careupdate', '/login'];
 
   useEffect(() => {
 
-    if (NotShowPageList.includes(pathname)) {
+    const PathNameLower = pathname.toLowerCase()
+
+    if (NotShowPageList.includes(PathNameLower)) {
       ChangePageNavBar(false)
     } else {
       
@@ -65,6 +67,8 @@ function App() {
         <Route path="/MeetDetail" element={<MeetDetail />} />
         <Route path="/MeetUpdate" element={<MeetUpdate />} />
         <Route path="/AD_Board" element={<AD_Board />} />
+        <Route path="/Tboard" element={<T_board />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );
