@@ -7,11 +7,11 @@ function SignUpSelect() {
   const moveSelectTypeSignupPage = useNavigate();
 
   const movePatientSignupPage  = () => {
-    moveSelectTypeSignupPage('/signup/patient')
+    moveSelectTypeSignupPage('/SignUp/patient')
   }
 
   const moveTherapistSignupPage  = () => {
-    moveSelectTypeSignupPage('/signup/therapist')
+    moveSelectTypeSignupPage('/SignUp/therapist')
   }
 
   return (

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Login/Login.css'
 import PatientLogin from './Login/PatientLogin'
 import TherapistLogin from './Login/TherapistLogin'
@@ -12,6 +13,21 @@ function NowLoginPage(prop: any) {
 
 
 function Login() {
+
+  const movePage = useNavigate();
+
+  const moveFindIdPage = () => {
+    movePage('/FindId');
+  }
+
+  const moveChangePwPage = () => {
+    movePage('/ChangePw');
+  }
+
+  const moveSignUpPage = () => {
+    movePage('/SignUp');
+  }
+
 
   const [CurrentLoginPage, ChangeLoginPage] = useState(0);
 
@@ -34,9 +50,9 @@ function Login() {
         </div>
         <NowLoginPage CurrentLoginPage={CurrentLoginPage} />
         <div className='row LoginPageAccountSelector'>
-          <p onClick={() => {alert('아이디 찾기 페이지로 이동합니다.')}}>아이디 찾기</p>
-          <p onClick={() => {alert('비밀번호 찾기 페이지로 이동합니다.')}}>비밀번호 찾기</p>
-          <p onClick={() => {alert('회원가입 페이지로 이동합니다.')}}>회원가입 하기</p>
+          <p onClick={moveFindIdPage}>아이디 찾기</p>
+          <p onClick={moveChangePwPage}>비밀번호 찾기</p>
+          <p onClick={moveSignUpPage}>회원가입 하기</p>
         </div>
       </div>
     </div>

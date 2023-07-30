@@ -20,6 +20,11 @@ import AD_Board from "./pages/AD_board/AD_nav";
 
 import T_board from "./pages/T_board";
 import Login from "./pages/Login";
+import FindId from "./pages/FindId";
+import ChangePw from "./pages/ChangePw";
+import SignUpSelect from "./pages/SignUpSelect";
+import T_signUp from "./pages/T_signUp";
+import P_signUp from "./pages/P_signUp";
 import { useLocation } from 'react-router'
 
 
@@ -32,7 +37,7 @@ function App() {
   const [ShowNavBar, ChangePageNavBar] = useState(true);
   const { pathname } = useLocation();
 
-  const NotShowPageList = ['/carecreate', '/ad_board', '/careupdate', '/login'];
+  const NotShowPageList = ['/carecreate', '/ad_board', '/careupdate', '/login', '/findid', '/changepw', '/signup'];
 
   useEffect(() => {
 
@@ -69,6 +74,11 @@ function App() {
         <Route path="/AD_Board" element={<AD_Board />} />
         <Route path="/Tboard" element={<T_board />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/FindId" element={<FindId />} />
+        <Route path="/ChangePw" element={<ChangePw />} />
+        <Route path="/SignUp" element={<SignUpSelect />} />
+        <Route path="/SignUp/therapist" element={<T_signUp />} />
+        <Route path="/SignUp/patient" element={<P_signUp />} />
       </Routes>
     </div>
   );
