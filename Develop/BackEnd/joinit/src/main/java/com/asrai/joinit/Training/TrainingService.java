@@ -100,7 +100,15 @@ public class TrainingService {
 		findTraining.setDifficulty(form.getDifficulty());
 		findTraining.setDescription(form.getDescription());
 
-		findTraining.getTrainingTypeTrainings().clear();
+//		System.out.println(findTraining.getTrainingTypeTrainings().get(0).getJointTrainingType().getMappingId());
+
+		for(int i = 0; i<findTraining.getTrainingTypeTrainings().size(); i++) {
+			TrainingTypeTraining ttt = new TrainingTypeTraining();
+			ttt.setJointTrainingType(findTraining.getTrainingTypeTrainings().get(i).getJointTrainingType());
+			ttt.setTraining(findTraining);
+			trainingRepository.deleteTrainingTypeTraining(ttt);
+		}
+
 		int[] mappingIds = form.getMappingIds();
 		for(int id: mappingIds) {
 			//찾아서 수정해주는 로직
@@ -113,6 +121,14 @@ public class TrainingService {
 	}
 	//운동 수정
 
+
+	public void deleteTraining(int trainingId) {
+		List<TrainingTypeTraining> ttt = trainingRepository.findTrainingTypeTrainingList(trainingId);
+		for(int i = 0; i<ttt.size(); i++) {
+			trainingRepository.deleteTrainingTypeTraining(ttt.get(i));
+		}
+		trainingRepository.deleteTraining(trainingId);
+	}
 	//운동 삭제
 
 }

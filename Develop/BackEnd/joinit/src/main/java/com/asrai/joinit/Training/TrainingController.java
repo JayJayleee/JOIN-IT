@@ -71,7 +71,7 @@ public class TrainingController {
 
 	@DeleteMapping("/{trainingId}")
 	public void removeTraining(@PathVariable("trainingId") int trainingId) {
-
+		trainingService.deleteTraining(trainingId);
 	}
 	//운동 삭제
 }

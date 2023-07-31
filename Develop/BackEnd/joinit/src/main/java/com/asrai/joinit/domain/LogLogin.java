@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import java.sql.Timestamp;
 import lombok.Getter;
@@ -35,6 +36,6 @@ public class LogLogin {
     @Column(name = "login_browser", length = 255)
     private String loginBrowser;
 
-    @Column(name = "login_time")
+    @Column(name = "login_time", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false, nullable = false)
     private Timestamp loginTime;
 }

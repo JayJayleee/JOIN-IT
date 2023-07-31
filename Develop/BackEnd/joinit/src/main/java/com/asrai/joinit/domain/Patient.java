@@ -3,7 +3,9 @@ package com.asrai.joinit.domain;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
+import java.sql.Clob;
 import java.sql.Timestamp;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,14 +36,17 @@ public class Patient {
     @Column(name = "birth")
     private Timestamp birth;
 
+    @Lob
     @Column(name = "etc")
-    private String etc;
+    private Clob etc;
 
+    @Lob
     @Column(name = "past_accident_details")
-    private String pastAccidentDetails;
+    private Clob pastAccidentDetails;
 
+    @Lob
     @Column(name = "significant")
-    private String significant;
+    private Clob significant;
 
     @Column(name = "profile_color_code", length = 3)
     private String profileColorCode;

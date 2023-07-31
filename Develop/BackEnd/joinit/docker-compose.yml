@@ -1,0 +1,68 @@
+version: '3'
+
+services:
+  nginx-container:
+    image: nginx:latest
+    networks:
+      - asrainetwork
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - "/home/ubuntu/config/nginx-config/default.conf:/etc/nginx/conf.d/default.conf"
+      - "/home/ubuntu/config/nginx-config/certs:/etc/nginx/certs/"
+    #build: 
+    #  context: buildContext
+    #  dockerfile: dockerfile  
+    #command: 
+    depends_on:
+      - spring-container
+      - react-container
+      - openvidu-container
+
+  spring-container:
+    image: byeonghunsong/spring:latest
+    networks:
+      - asrainetwork
+    restart: no
+    ports:
+      - 8081:8081
+    build: 
+      dockerfile: Develop/BackEnd/joinit/Dockerfile
+    #  context: buildContext
+    #command: 
+
+  react-container:
+    image: byeonghunsong/react:latest
+    networks:
+      - asrainetwork
+    restart: no
+    ports:
+      - 3000:80
+    build: 
+      dockerfile: Develop/FrontEnd/joinit/Dockerfile
+    #  context: buildContext
+    #command: 
+
+  openvidu-container:
+    image: openvidu/openvidu-server-kms # 컨테이너에 사용할 이미지 이름과 태그. 태그를 생략하면 자동으로 latest. 이미지가 없으면 자동으로 pull
+    networks:
+      - asrainetwork
+    restart: always # 재시작 정책. 종류: "no", always, on-failure, unless-stopped
+    ports: # 컨테이너와 연결할 포트(들). (호스트포트):(컨테이너 포트)
+      - 5443:5443
+    #volumes: # 마운트하려는 디렉터리(들). {호스트 디렉터리}:{컨테이너 디렉터리}
+    #  - /home/ubuntu/config/openvidu-config:containerPath:ro
+    build: # 이미지를 자체 빌드 후 사용. image 속성 대신 사용. 여기에 사용할 별도의 도커 파일이 필요함
+      dockerfile: /home/ubuntu/config/openvidu-config/Dockerfile.getaroom
+    #  context: buildContext
+    command: 
+      - docker run --rm --name openvidu-server-kms --network=host -e openvidu.publicurl=https://join-it.site:5443 -e server.port=5443 -e openvidu.secret=MY_SECRET openvidu/openvidu-server-kms
+      - docker build -t openvidu-getaroom -f Dockerfile.getaroom .
+      - docker run --rm --name openvidu-getaroom -p 7080:8080 openvidu-getaroom
+
+networks:
+  asrainetwork:
+
+
