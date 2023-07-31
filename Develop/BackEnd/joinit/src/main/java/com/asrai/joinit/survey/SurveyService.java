@@ -2,11 +2,16 @@ package com.asrai.joinit.survey;
 
 import com.asrai.joinit.domain.AfterSurvey;
 import com.asrai.joinit.domain.BeforeSurvey;
+import com.asrai.joinit.domain.Prescription;
+import com.asrai.joinit.dto.AfterSurveyInputDto;
+import com.asrai.joinit.dto.BeforeSurveyDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class SurveyService {
 
 	//생성자 주입
@@ -15,7 +20,15 @@ public class SurveyService {
 
 
 	//전 설문 입력
-	public void createBeforeSurvey(BeforeSurvey beforeSurvey){
+	@Transactional
+	public void createBeforeSurvey(BeforeSurveyDto beforeSurveyDto){
+
+		Prescription prescription = new Prescription();
+		prescription.setPrescriptionId(beforeSurveyDto.getPrescriptionId());
+
+		BeforeSurvey beforeSurvey = new BeforeSurvey();
+		beforeSurvey.setPrescription(prescription);
+		beforeSurvey.setAngle(beforeSurveyDto.getAngle());
 
 		surveyRepository.createBeforeSurvey(beforeSurvey);
 	}
@@ -31,7 +44,19 @@ public class SurveyService {
 
 
 	//후 설문 입력
-	public void createAfterSurvey(AfterSurvey afterSurvey){
+	@Transactional
+	public void createAfterSurvey(AfterSurveyInputDto afterSurveyDto){
+
+		Prescription prescription = new Prescription();
+		prescription.setPrescriptionId(afterSurveyDto.getPrescriptionId());
+
+		AfterSurvey afterSurvey = new AfterSurvey();
+		afterSurvey.setPrescription(prescription);
+		afterSurvey.setDifficulty(afterSurveyDto.getDifficulty());
+		afterSurvey.setPainRelief(afterSurveyDto.getPainRelief());
+		afterSurvey.setSatisfaction(afterSurveyDto.getSatisfaction());
+		afterSurvey.setPainDegree(afterSurveyDto.getPainDegree());
+		afterSurvey.setEtc(afterSurveyDto.getEtc());
 
 		surveyRepository.createAfterSurvey(afterSurvey);
 	}

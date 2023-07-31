@@ -11,7 +11,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @AllArgsConstructor
-public class JointTrainingMapping {
+public class JointTrainingMappingDto {
 
 //    @Column(name = "mapping_id")
     int mappingId;

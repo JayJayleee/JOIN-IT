@@ -1,10 +1,12 @@
 package com.asrai.joinit.Training;
 
-import com.asrai.joinit.dto.JointTrainingMapping;
+import com.asrai.joinit.dto.JointNameAndTrainingType;
+import com.asrai.joinit.dto.JointTrainingMappingDto;
 import com.asrai.joinit.dto.TrainingInputDto;
 import com.asrai.joinit.domain.JointTrainingType;
 import com.asrai.joinit.domain.Training;
 import com.asrai.joinit.domain.TrainingTypeTraining;
+import com.asrai.joinit.dto.TrainingOutputDto;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -59,20 +61,36 @@ public class TrainingService {
 	//환부_운동종류 선택 후 운동 조회
 
 	@Transactional(readOnly = true)
-	public List<JointTrainingMapping> findJointTrainingTypeList(){
+	public List<JointTrainingMappingDto> findJointTrainingTypeList(){
 		return trainingRepository.findJointTrainingTypeList();
 	}
 	//환부_운동 종류_매핑 리스트 조회
 
 	@Transactional(readOnly = true)
-	public Training findTrainingDetail(int trainingId) {
+	public TrainingOutputDto findTrainingDetail(int trainingId) {
 
-		return trainingRepository.findTrainingDetail(trainingId);
+		TrainingOutputDto trainingOutputDto = new TrainingOutputDto();
+		Training training = trainingRepository.findTrainingDetail(trainingId);
+		trainingOutputDto.setTrainingID(trainingId);
+		trainingOutputDto.setTrainingURL(training.getTrainingURL());
+		trainingOutputDto.setTrainingName(training.getTrainingName());
+		trainingOutputDto.setDescription(training.getDescription());
+		trainingOutputDto.setDifficulty(training.getDifficulty());
+		trainingOutputDto.setStartPoint(training.getStartPoint());
+		trainingOutputDto.setMiddlePoint(training.getMiddlePoint());
+		trainingOutputDto.setEndPoint(training.getEndPoint());
+		trainingOutputDto.setRom(training.getRom());
+
+		System.out.println(trainingOutputDto);
+
+		List<JointNameAndTrainingType> list = trainingRepository.findTrainingJointTrainingType(trainingId);
+		trainingOutputDto.setJointNameAndTrainingTypeList(list);
+
+		return trainingOutputDto;
 	}
 	//운동 상세 조회
 
 	public void updateTraining(int trainingId, TrainingInputDto form) {
-
 		Training findTraining = trainingRepository.findTrainingDetail(trainingId);
 		findTraining.setTrainingName(form.getTrainingName());
 		findTraining.setTrainingURL(form.getTrainingURL());

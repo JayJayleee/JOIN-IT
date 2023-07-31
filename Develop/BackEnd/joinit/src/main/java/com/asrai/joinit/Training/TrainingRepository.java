@@ -1,7 +1,8 @@
 package com.asrai.joinit.Training;
 
 
-import com.asrai.joinit.dto.JointTrainingMapping;
+import com.asrai.joinit.dto.JointNameAndTrainingType;
+import com.asrai.joinit.dto.JointTrainingMappingDto;
 import com.asrai.joinit.domain.JointTrainingType;
 import com.asrai.joinit.domain.Training;
 import com.asrai.joinit.domain.TrainingTypeTraining;
@@ -9,6 +10,7 @@ import com.asrai.joinit.domain.TrainingTypeTraining;
 import jakarta.persistence.EntityManager;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -54,9 +56,9 @@ public class TrainingRepository {
 	}
 	//환부-운동종류 선택 후 운동조회 (api 운동 2번)
 
-	public List<JointTrainingMapping> findJointTrainingTypeList() {
+	public List<JointTrainingMappingDto> findJointTrainingTypeList() {
 		return em.createQuery(
-				"select new com.asrai.joinit.Training.JointTrainingMapping(jtt.mappingId, j.jointName, tt.trainingTypeName) from JointTrainingType jtt, Joint j, TrainingType tt where jtt.joint.jointId = j.jointId and jtt.trainingType.trainingTypeId = tt.trainingTypeId", JointTrainingMapping.class)
+				"select new com.asrai.joinit.dto.JointTrainingMappingDto(jtt.mappingId, j.jointName, tt.trainingTypeName) from JointTrainingType jtt, Joint j, TrainingType tt where jtt.joint.jointId = j.jointId and jtt.trainingType.trainingTypeId = tt.trainingTypeId", JointTrainingMappingDto.class)
 			.getResultList();
 	}
 	//환부_운동 종류_매핑 리스트 조회 (api 운동 2번)
@@ -71,6 +73,13 @@ public class TrainingRepository {
 	}
 	//운동 삭제
 
+	public List<JointNameAndTrainingType> findTrainingJointTrainingType(int trainingId){
+		return em.createQuery("select new com.asrai.joinit.dto.JointNameAndTrainingType(j.jointName, tt.trainingTypeName) "
+			+ "from JointTrainingType jtt, TrainingType tt, Joint j "
+			+ "where jtt.joint.jointId = j.jointId and jtt.trainingType.trainingTypeId = tt.trainingTypeId and jtt.mappingId in (select ttt.jointTrainingType.mappingId from TrainingTypeTraining ttt where ttt.training.trainingId = "
+			+ trainingId+")", JointNameAndTrainingType.class).getResultList();
+
+	}
 	public void deleteTrainingTypeTraining(TrainingTypeTraining ttt) { em.remove(em.find(TrainingTypeTraining.class, ttt)); }
 	//운동 매핑 테이블 삭제 (운동 수정, 삭제 시 사용)
 
