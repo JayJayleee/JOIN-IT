@@ -6,9 +6,11 @@ import com.asrai.joinit.domain.BeforeSurvey;
 import com.asrai.joinit.domain.JointTrainingType;
 import com.asrai.joinit.domain.Training;
 import com.asrai.joinit.domain.TrainingTypeTraining;
+import com.asrai.joinit.dto.BeforeSurveyStatisticsSourceDto;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import java.util.List;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -32,6 +34,10 @@ public class SurveyRepository {
 	}
 
 	//전 설문 통계 데이터 조회
+//	public List<BeforeSurveyStatisticsSourceDto> findBeforeSurveyStatistics(int treatmentId){
+//		em.createNativeQuery("")
+//
+//	}
 
 
 	//후 설문 입력

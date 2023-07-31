@@ -1,8 +1,9 @@
 package com.asrai.joinit.Training;
 
-import com.asrai.joinit.dto.JointTrainingMapping;
-import com.asrai.joinit.dto.TrainingDto;
+import com.asrai.joinit.dto.JointTrainingMappingDto;
+import com.asrai.joinit.dto.TrainingInputDto;
 import com.asrai.joinit.domain.Training;
+import com.asrai.joinit.dto.TrainingOutputDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/training")
 @RequiredArgsConstructor
-
 public class TrainingController {
 
 	private final TrainingService trainingService;
@@ -26,7 +26,7 @@ public class TrainingController {
 
 	//운동 등록
 	@PostMapping
-	public void createTraining(@RequestBody TrainingDto form) {
+	public void createTraining(@RequestBody TrainingInputDto form) {
 		trainingService.saveTraining(form);
 	}
 
@@ -37,8 +37,9 @@ public class TrainingController {
 	}
 
 	//운동 상세 조회
+	// 운동 정보 + 운동이 영향을 미치는 환부/운동 종류 리스트 반환
 	@GetMapping("/{trainingId}")
-	public Training getTrainingDetail(@PathVariable("trainingId") int trainingId) {
+	public TrainingOutputDto getTrainingDetail(@PathVariable("trainingId") int trainingId) {
 		return trainingService.findTrainingDetail(trainingId);
 	}
 
@@ -56,14 +57,14 @@ public class TrainingController {
 
 	//환부_운동 종류_매핑 리스트 조회
 	@GetMapping("/jointMapping")
-	public List<JointTrainingMapping> getJointTrainingTypeList(){
+	public List<JointTrainingMappingDto> getJointTrainingTypeList(){
 
-		List<JointTrainingMapping> list = trainingService.findJointTrainingTypeList();
+		List<JointTrainingMappingDto> list = trainingService.findJointTrainingTypeList();
 		return list;
 	}
 
 	@PutMapping("/{trainingId}")
-	public void modifyTraining(@PathVariable("trainingId") int trainingId, @RequestBody TrainingDto form) {
+	public void modifyTraining(@PathVariable("trainingId") int trainingId, @RequestBody TrainingInputDto form) {
 		trainingService.updateTraining(trainingId, form);
 	}
 	//운동 수정
@@ -73,5 +74,4 @@ public class TrainingController {
 
 	}
 	//운동 삭제
-
 }

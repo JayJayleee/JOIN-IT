@@ -3,6 +3,8 @@ package com.asrai.joinit.survey;
 import com.asrai.joinit.domain.AfterSurvey;
 import com.asrai.joinit.domain.BeforeSurvey;
 import com.asrai.joinit.domain.Prescription;
+import com.asrai.joinit.dto.AfterSurveyInputDto;
+import com.asrai.joinit.dto.BeforeSurveyDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,14 +22,11 @@ public class SurveyController {
 	//RequeiredArgsConstructor로 생성자 주입
 	private final SurveyService surveyService;
 
-
-
-
 	//전 설문 등록
 	@PostMapping("/before")
-	public void createBeforeSurvey(@RequestBody BeforeSurvey beforeSurvey) {
+	public void createBeforeSurvey(@RequestBody BeforeSurveyDto beforeSurveyDto) {
 
-		surveyService.createBeforeSurvey(beforeSurvey);
+		surveyService.createBeforeSurvey(beforeSurveyDto);
 	}
 
 	//전 설문 조회
@@ -49,9 +48,9 @@ public class SurveyController {
 
 	//후 설문 등록
 	@PostMapping("/after")
-	public void createAfterSurvey(@RequestBody AfterSurvey afterSurvey) {
+	public void createAfterSurvey(@RequestBody AfterSurveyInputDto afterSurveyDto) {
 
-		surveyService.createAfterSurvey(afterSurvey);
+		surveyService.createAfterSurvey(afterSurveyDto);
 	}
 
 	//
