@@ -16,8 +16,10 @@ import MeetDetail from "./pages/T_recipe/meetDetail";
 import MeetUpdate from "./pages/T_recipe/meetUpdate";
 import RecipeSelect from "./pages/T_recipe/recipeSelect";
 import CareUpdate from "./pages/T_care/careUpdate";
-import AD_Board from "./pages/AD_board/AD_nav";
-
+import AdBoard from "./pages/AD_board/AD_nav";
+import ExerciseCreate from "./pages/AD_board/AD_exercise/exerciseCreate";
+import AdExerciseDetail from "./pages/AD_board/AD_exercise/exerciseDetail";
+import AdExerciseUpdate from "./pages/AD_board/AD_exercise/exerciseUpdate";
 import T_board from "./pages/T_board";
 import Login from "./pages/Login";
 import FindId from "./pages/FindId";
@@ -32,7 +34,6 @@ import { useLocation } from 'react-router'
 
 
 function App() {
-
   // 특정 페이지에서 헤더 보이지 않도록 처리(ex 관리자)
   const [ShowNavBar, ChangePageNavBar] = useState(true);
   const { pathname } = useLocation();
@@ -46,15 +47,12 @@ function App() {
     if (NotShowPageList.includes(PathNameLower)) {
       ChangePageNavBar(false)
     } else {
-      
     }
-  }, [pathname])
-
-
+  }, [pathname]);
 
   return (
     <div>
-      {!ShowNavBar? <div /> : <Nav />}
+      {!ShowNavBar ? <div /> : <Nav />}
 
       <Routes>
         <Route path="/" element={<Home />} />
