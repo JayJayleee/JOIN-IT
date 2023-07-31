@@ -8,7 +8,8 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 public class TreatmentRepository {
 
-	private final EntityManager em;
+	private final EntityManager em; 
+	
 
 
 
