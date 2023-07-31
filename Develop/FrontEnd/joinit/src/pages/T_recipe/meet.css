@@ -1,0 +1,174 @@
+.patientInfo1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+}
+
+.background {
+  background-color: #a4b0b0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.smallLogo {
+  width: 300px;
+}
+
+.ck-editor__editable {
+  min-height: 200px;
+  margin-bottom: 100px;
+}
+.CKEditorBox {
+  width: 95%;
+}
+
+.widthForInput {
+  width: 600px;
+}
+
+.textareEdit {
+  width: 98%;
+  height: 100px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 0;
+  border-radius: 12px;
+  border: 1.5px solid lightgrey;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.whiteSpace {
+  width: 10%;
+}
+.labels {
+  margin-bottom: 10px;
+  font-family: "Pretendard-Bold";
+}
+
+.input {
+  box-sizing: border-box;
+  width: 96%;
+  height: 25px;
+  padding-block: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 12px;
+  border: 1.5px solid lightgrey;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+  box-sizing: content-box;
+  margin-bottom: 0px;
+}
+
+.input:hover {
+  border: 2px solid lightgrey;
+  box-shadow: 0px 0px 20px -17px;
+}
+
+.input:active {
+  transform: scale(0.98);
+}
+
+.input:focus {
+  border: 1px solid grey;
+}
+
+.select {
+  width: 100%;
+  height: 55px;
+  padding-block: 12px;
+  border-radius: 12px;
+  border: 1.5px solid lightgrey;
+  outline: none;
+
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.select:hover {
+  border: 2px solid lightgrey;
+  box-shadow: 0px 0px 20px -17px;
+}
+
+.select:focus {
+  border: 2px solid grey;
+}
+.input-container {
+  width: 1000px;
+}
+.button-2 {
+  border-radius: 10px;
+  width: 600px;
+  height: 50px;
+  /* border: 2px solid #34495e; */
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 10px;
+  background: #0f5953;
+}
+.button-2 a {
+  font-family: arial;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  line-height: 50px;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+.eff-2 {
+  width: 600px;
+  height: 50px;
+  top: -50px;
+  background: #08302c;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+.button-2:hover .eff-2 {
+  top: 0;
+}
+.button-2:hover a {
+  color: white;
+}
+
+.buttonContainer {
+  width: 600px;
+  display: flex;
+}
+
+.buttonsizeBig {
+  width: 70%;
+  background: #0f5953;
+}
+
+.buttonsizeSmall {
+  width: 30%;
+  background: #d93f3f;
+}
+.buttonsizeBig > .eff-2 {
+  width: 100%;
+  height: 50px;
+  top: -50px;
+  background: #08302c;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}

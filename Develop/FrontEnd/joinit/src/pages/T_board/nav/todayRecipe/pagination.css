@@ -1,0 +1,33 @@
+.pagination {
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageBoxBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 21px;
+  height: 21px;
+  border-radius: 5px;
+  background-color: #dbf2f1;
+  cursor: pointer;
+}
+
+.pageBoxBtn p {
+  color: #1e1e1e;
+  font-weight: bolder;
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+
+.page-link {
+  text-align: center;
+}
+
+.pageBoxPageNum {
+  font-weight: bold;
+}

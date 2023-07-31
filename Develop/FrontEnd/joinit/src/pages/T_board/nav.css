@@ -1,0 +1,48 @@
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	width: 100%;
+	color: white;
+	border-radius: 10px;
+	background-color: #0f5953;
+	padding: 20px 10px 20px 10px;
+}
+
+.nav-list {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.divbtn {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.selectedPagetab {
+	height: 40px;
+	width: 80%;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	text-align: center;
+	margin-right: 0px;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+.h_Line {
+	border-top: 1px solid white;
+	width: 70%;
+}
+
+p {
+	margin: 0px;
+}
