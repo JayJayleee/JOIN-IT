@@ -1,7 +1,7 @@
 package com.asrai.joinit.Training;
 
 import com.asrai.joinit.dto.JointTrainingMapping;
-import com.asrai.joinit.dto.TrainingDto;
+import com.asrai.joinit.dto.TrainingInputDto;
 import com.asrai.joinit.domain.Training;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,7 +26,7 @@ public class TrainingController {
 
 	//운동 등록
 	@PostMapping
-	public void createTraining(@RequestBody TrainingDto form) {
+	public void createTraining(@RequestBody TrainingInputDto form) {
 		trainingService.saveTraining(form);
 	}
 
@@ -63,14 +63,14 @@ public class TrainingController {
 	}
 
 	@PutMapping("/{trainingId}")
-	public void modifyTraining(@PathVariable("trainingId") int trainingId, @RequestBody TrainingDto form) {
+	public void modifyTraining(@PathVariable("trainingId") int trainingId, @RequestBody TrainingInputDto form) {
 		trainingService.updateTraining(trainingId, form);
 	}
 	//운동 수정
 
 	@DeleteMapping("/{trainingId}")
 	public void removeTraining(@PathVariable("trainingId") int trainingId) {
-
+		trainingService.deleteTraining(trainingId);
 	}
 	//운동 삭제
 

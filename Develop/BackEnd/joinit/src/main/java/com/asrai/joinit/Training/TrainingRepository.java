@@ -71,4 +71,14 @@ public class TrainingRepository {
 	}
 	//운동 삭제
 
+	public void deleteTrainingTypeTraining(TrainingTypeTraining ttt) { em.remove(em.find(TrainingTypeTraining.class, ttt)); }
+	//운동 매핑 테이블 삭제 (운동 수정, 삭제 시 사용)
+
+	public List<TrainingTypeTraining> findTrainingTypeTrainingList(int trainingId) {
+		return em.createQuery("select ttt from TrainingTypeTraining ttt where ttt.training.trainingId = "+trainingId+"", TrainingTypeTraining.class).getResultList();
+	}
+	//trainingId로 TrainingTypeTraining테이블 조회 (운동 삭제 시 사용)
+
+
+
 }

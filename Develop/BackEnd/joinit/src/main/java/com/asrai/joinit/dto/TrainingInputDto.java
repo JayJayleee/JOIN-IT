@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-public class TrainingDto {
+public class TrainingInputDto {
 
 	private int trainingID;
 	private String trainingName;

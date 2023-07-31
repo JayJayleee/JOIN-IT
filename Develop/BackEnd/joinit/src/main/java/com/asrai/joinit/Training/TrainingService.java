@@ -1,7 +1,7 @@
 package com.asrai.joinit.Training;
 
 import com.asrai.joinit.dto.JointTrainingMapping;
-import com.asrai.joinit.dto.TrainingDto;
+import com.asrai.joinit.dto.TrainingInputDto;
 import com.asrai.joinit.domain.JointTrainingType;
 import com.asrai.joinit.domain.Training;
 import com.asrai.joinit.domain.TrainingTypeTraining;
@@ -18,7 +18,7 @@ public class TrainingService {
 	//생성자 주입
 	private final TrainingRepository trainingRepository;
 
-	public int saveTraining(TrainingDto form) {
+	public int saveTraining(TrainingInputDto form) {
 
 		Training training = new Training();
 		training.setTrainingName(form.getTrainingName());
@@ -71,7 +71,8 @@ public class TrainingService {
 	}
 	//운동 상세 조회
 
-	public void updateTraining(int trainingId, TrainingDto form) {
+	public void updateTraining(int trainingId, TrainingInputDto form) {
+
 		Training findTraining = trainingRepository.findTrainingDetail(trainingId);
 		findTraining.setTrainingName(form.getTrainingName());
 		findTraining.setTrainingURL(form.getTrainingURL());
@@ -81,7 +82,15 @@ public class TrainingService {
 		findTraining.setDifficulty(form.getDifficulty());
 		findTraining.setDescription(form.getDescription());
 
-		findTraining.getTrainingTypeTrainings().clear();
+//		System.out.println(findTraining.getTrainingTypeTrainings().get(0).getJointTrainingType().getMappingId());
+
+		for(int i = 0; i<findTraining.getTrainingTypeTrainings().size(); i++) {
+			TrainingTypeTraining ttt = new TrainingTypeTraining();
+			ttt.setJointTrainingType(findTraining.getTrainingTypeTrainings().get(i).getJointTrainingType());
+			ttt.setTraining(findTraining);
+			trainingRepository.deleteTrainingTypeTraining(ttt);
+		}
+
 		int[] mappingIds = form.getMappingIds();
 		for(int id: mappingIds) {
 			//찾아서 수정해주는 로직
@@ -94,6 +103,14 @@ public class TrainingService {
 	}
 	//운동 수정
 
+
+	public void deleteTraining(int trainingId) {
+		List<TrainingTypeTraining> ttt = trainingRepository.findTrainingTypeTrainingList(trainingId);
+		for(int i = 0; i<ttt.size(); i++) {
+			trainingRepository.deleteTrainingTypeTraining(ttt.get(i));
+		}
+		trainingRepository.deleteTraining(trainingId);
+	}
 	//운동 삭제
 
 }
