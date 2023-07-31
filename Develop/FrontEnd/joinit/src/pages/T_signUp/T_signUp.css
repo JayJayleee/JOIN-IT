@@ -1,0 +1,263 @@
+.therapist-signupPage {
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.therapistLogoImg {
+  width: 400px;
+}
+
+.therapist-signupPage-first {
+  margin-top: 30px;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.therapist-signupPage-name {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.therapist-signupPage-name-input {
+  position: relative;
+  margin-top: 10px;
+  width: 564px;
+}
+
+.therapist-signupPage-name-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+  outline: 1px solid #E6E6E6;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.therapist-signupPage-name-input input:focus {
+  outline: 2px solid #0F5953;
+}
+
+.therapist-signupPage-id-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #58867A;
+  color: white;
+  font-weight: 250;
+  width: 90px;
+  height: 30px;
+  top: 10px;
+  right: 0px;
+  cursor: pointer;
+}
+
+
+.therapist-signupPage-id {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.therapist-signupPage-id-input {
+  position: relative;
+  margin-top: 10px;
+  width: 564px;
+}
+
+.therapist-signupPage-id-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+  outline: 1px solid #E6E6E6;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.therapist-signupPage-id-input input:focus {
+  outline: 2px solid #0F5953;
+}
+
+.therapist-signupPage-id-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #58867A;
+  color: white;
+  font-weight: 250;
+  width: 90px;
+  height: 30px;
+  top: 12px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.therapist-signupPage-email {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.therapist-signupPage-email-input {
+  position: relative;
+  margin-top: 10px;
+  width: 564px;
+}
+
+.therapist-signupPage-email-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+  outline: 1px solid #E6E6E6;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.therapist-signupPage-email-input input:focus {
+  outline: 2px solid #0F5953;
+}
+
+
+
+.therapist-signupPage-phone {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.therapist-signupPage-phone-input {
+  position: relative;
+  margin-top: 10px;
+  width: 564px;
+}
+
+.therapist-signupPage-phone-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+  outline: 1px solid #E6E6E6;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.therapist-signupPage-phone-input input:focus {
+  outline: 2px solid #0F5953;
+}
+
+.therapist-signupPage-phone-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #58867A;
+  color: white;
+  font-weight: 250;
+  width: 90px;
+  height: 30px;
+  top: 12px;
+  right: 0px;
+  cursor: pointer;
+}
+
+
+.therapist-signupPage-pw {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.therapist-signupPage-pw-input {
+  position: relative;
+  margin-top: 10px;
+  width: 564px;
+}
+
+.therapist-signupPage-pw-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+  outline: 1px solid #E6E6E6;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.therapist-signupPage-pw-input input:focus {
+  outline: 2px solid #0F5953;
+}
+
+
+.therapist-signupPage-pw-input.green input:focus {
+  outline: 2px solid #0F5953;
+}
+
+
+.therapist-signupPage-pw-input.red input:focus {
+  outline: 2px solid red;
+}
+
+.checklist-first {
+  width: 480px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.checklist-second {
+  width: 480px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.checkboxInner {
+  width: 43%;
+  text-align: left;
+}
+
+.therapist-signupPage-submit-button {
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 20px;
+  background: #58867a;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+.therapist-signupPage-submit-button p {
+  margin: 10px 0px;
+  font-size: 23px;
+  font-weight: lighter;
+  color: white;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.therapist-signupPage-submit-button-inner {
+  width: 100%;
+  height: 50px;
+  top: -50px;
+  background: #0f5953;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.therapist-signupPage-submit-button:hover .therapist-signupPage-submit-button-inner {
+  top: 0;
+}
+
+.therapist-signupPage-submit-button:hover p {
+  color: white;
+}
