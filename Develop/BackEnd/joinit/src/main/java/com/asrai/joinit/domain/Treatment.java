@@ -19,7 +19,8 @@ public class Treatment {
 	private int treatmentId;
 
 	//치료사id
-//	private Therapist therapist;
+	@ManyToOne()
+	private Therapist therapist;
 
 	//환부id
 	@ManyToOne
@@ -31,8 +32,8 @@ public class Treatment {
 	private String jointName;
 
 	//환자id
-//	@ManyToOne
-//	private Patient patient;
+	@ManyToOne
+	private Patient patient;
 	
 	//환자 명
 	@Column(name = "patient_name")
