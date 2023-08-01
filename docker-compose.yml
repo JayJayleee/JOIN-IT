@@ -1,0 +1,92 @@
+version: '3'
+
+services:
+    nginx:
+        image: nginx:1.15-alpine
+        # ---
+        container_name: nginx-container
+        networks:
+            - asrainetwork
+        environment:
+            - TZ=Asia/Seoul
+        depends_on:
+            - spring
+            - react
+        # ---
+        restart: unless-stopped
+        volumes:
+            - ~/data/nginx:/etc/nginx/conf.d
+            - ~/data/certbot/conf:/etc/letsencrypt
+            - ~/data/certbot/www:/var/www/certbot
+        ports:
+            - "80:80"
+            - "443:443"
+        command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    certbot:
+        image: certbot/certbot
+        container_name: cerbot-container
+        networks:
+            - asrainetwork
+        restart: unless-stopped
+        volumes:
+            - ~/data/certbot/conf:/etc/letsencrypt
+            - ~/data/certbot/www:/var/www/certbot
+        entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+    spring:
+        image: byeonghunsong/spring:latest
+        container_name: spring-container
+        networks:
+            - asrainetwork
+        restart: always
+        expose: # 컨테이너 내부에서 도커 네트워크에게 열어주는 포트
+            - "5000"
+        #ports: # 외부에서 host로 누구나 접근할 수 있는 포트
+        #    - "5000:5000"
+        volumes:
+            - ~/config/spring:/Develop/BackEnd/joinit/src/main/resources:ro
+        #build: 
+        #    context: /var/lib/jenkins/workspace/MASTER-BUILD/Develop/BackEnd/joinit/
+        #    dockerfile: Dockerfile
+        #command: 
+
+    react:
+        image: byeonghunsong/react:latest
+        container_name: react-container
+        networks:
+            - asrainetwork
+        restart: always
+        expose:
+            - "3000"
+        #ports:
+        #    - "3000:3000"
+        volumes:
+            - ~/config/react/setupProxy.js:/Develop/FrontEnd/joinit/src/setupProxy.js:ro
+        #    - ~/config/react/nginx:/etc/nginx/conf.d
+        #build: 
+        #    context: ~/var/lib/jenkins/workspace/MASTER-BUILD/Develop/FrontEnd/joinit/
+        #    dockerfile: Dockerfile
+        #command: 
+
+networks:
+    asrainetwork:
+
+    #openvidu:
+    #    image: openvidu/openvidu-server-kms # 컨테이너에 사용할 이미지 이름과 태그. 태그를 생략하면 자동으로 latest. 이미지가 없으면 자동으로 pull
+    #    container_name: openvidu-container
+    #    networks:
+    #        - asrainetwork
+    #    restart: always # 재시작 정책. 종류: "no", always, on-failure, unless-stopped
+    #    ports: # 컨테이너와 연결할 포트(들). (호스트포트):(컨테이너 포트)
+    #        - "5443:5443"
+        #volumes: # 마운트하려는 디렉터리(들). {호스트 디렉터리}:{컨테이너 디렉터리}
+        #  - ./config/openvidu-config:containerPath:ro
+        #build: # 이미지를 자체 빌드 후 사용. image 속성 대신 사용. 여기에 사용할 별도의 도커 파일이 필요함
+        #dockerfile: ./config/openvidu-config/Dockerfile.getaroom
+        #  context: buildContext
+        #command: 
+        #    - docker run --rm --name openvidu-server-kms --network=host -e openvidu.publicurl=https://join-it.site:5443 -e server.port=5443 -e openvidu.secret=MY_SECRET openvidu/openvidu-server-kms
+        #    - docker build -t openvidu-getaroom -f Dockerfile.getaroom .
+        #    - docker run --rm --name openvidu-getaroom -p 7080:8080 openvidu-getaroom
+
+
