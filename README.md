@@ -4,7 +4,7 @@
 
 ---
 
-<p align="center">
+<p style="text-align:center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,figma" /><br>
     <img src="https://skillicons.dev/icons?i=java,spring,gradle,idea,mysql,aws" /><br>
@@ -363,7 +363,31 @@ jwt:
 
 ---
 
-<!-- #### 프로젝트 사용 방법 및 화면 구성 -->
+#### 프로젝트 사용 방법 및 화면 구성
+
+- 치료사가 치료 및 처방 생성 (목, 운동과 코칭)
+![Imgur](https://i.imgur.com/q2uqG0t.gif)
+
+- 환자가 치료코드 입력
+![Imgur](https://i.imgur.com/pfUHGFm.gif)
+
+- 화상운동진행(환자)
+![Imgur](https://i.imgur.com/RCEAHi8.gif)
+
+- 실시간코칭(환자)
+![Imgur](https://i.imgur.com/2sCL7w4.gif)
+
+- 치료사 실시간 코칭 진행
+![Imgur](https://i.imgur.com/1mlOWNy.gif)
+
+- 치료사 실시간 코칭 진행2
+![Imgur](https://i.imgur.com/HOtQYyW.gif)
+
+- 완료처방조회(운동)
+![Imgur](https://i.imgur.com/jVi6K10.gif)
+
+- 환자 대시보드
+![Imgur](https://i.imgur.com/kvnoVaA.gif)
 
 
 #### 주요 기능
