@@ -3,26 +3,17 @@ import "./exerciseCard.css";
 import { Link } from "react-router-dom";
 
 function exerciseCard(props: any) {
-  console.log(props);
+  // console.log(props);
   return (
-    <div className="exerciseCard">
-      <div>
-        <Link
-          className="link"
-          to={`/AdExerciseDetail/${props.props.trainingId}`}
-        >
-          <div>
-            <img className="preview" src="/Assets/Images/exercise.png" alt="" />
+    <div className="exerciseCardSection">
+      <Link className="link" to={`/AdExerciseDetail/${props.props.trainingId}`}>
+        <img className="preview" src={props.props.thumbnailImgRoute} alt="" />
 
-            <div className="exerciseName">
-              <div className="level">
-                <p className="levelText">LV.{props.props.difficulty}</p>
-              </div>
-              <h2 className="nameText">{props.props.trainingName}</h2>
-            </div>
-          </div>
-        </Link>
-      </div>
+        <div className="exerciseName">
+          <div className="adlevelBox">LV.{props.props.difficulty}</div>
+          <h1 className="adexercise-name-box">{props.props.trainingName}</h1>
+        </div>
+      </Link>
     </div>
   );
 }

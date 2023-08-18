@@ -1,26 +1,23 @@
 package com.asrai.joinit.dto;
 
+import jakarta.persistence.SqlResultSetMapping;
+import java.time.LocalDate;
 import java.util.List;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+
+
+@Getter
+@Setter
 public class BeforeSurveyStatisticsOutputDto {
 
-
-    private int trainingId;
-
-    private String trainingName;
+    private LocalDate date;
 
     private double rom;
 
-    private List<DailyTrainingResult> dailyTrainingResultList;
 
-    @Getter
-    @Setter
-    private class DailyTrainingResult {
-        private String date;
-        private double angle;
-        private double targetAngle;
-
-    }
+    private double angle;
+    private double targetAngle;
 }

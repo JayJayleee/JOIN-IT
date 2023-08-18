@@ -8,18 +8,14 @@ function TodayRecipe() {
 
   const [isEmptyArray, setEmptyArray] = useState(false);
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(3);
 
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
-      const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      const res = await axios.get(`/api/prescription/daily/coaching/${localStorage.getItem('userPk')}`);
       setPosts(res.data);
-      setLoading(false);
-
       if (posts.length === 0) {
         setEmptyArray(false);
       } else {
@@ -57,7 +53,7 @@ function TodayRecipe() {
         handlePageChange={handlePageChange}
         currentPage={currentPage} />
       </div>
-      {!isEmptyArray ? <p>오늘의 치료 일정이 없어요.</p> : <MiniRecipeBox posts={currentPosts(posts)} />}
+      {!isEmptyArray ? <div className='col mini-recipe-box' style={{color:'black', fontSize: '1.6rem', justifyContent: 'center', alignItems: 'center'}}><p>오늘의 치료 일정이 없어요.</p></div> : <MiniRecipeBox posts={currentPosts(posts)} />}
     </div>
   )
 }

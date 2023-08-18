@@ -1,0 +1,82 @@
+.Navbar {
+  width: 40rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #E1E1E1; */
+  /* border-radius: 10px 10px 0px 0px; */
+}
+.PatientStatus_Nav1 {
+  width: 33.3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #58867a;
+  border-radius: 10px 0px 0px 0px;
+}
+.PatientStatus_Nav2 {
+  width: 33.3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #58867a;
+}
+.PatientStatus_Nav3 {
+  width: 33.3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #58867a;
+  border-radius: 0px 10px 0px 0px;
+}
+.Commentdiv {
+  padding-top: 10px;
+  width: 40rem;
+  height: 17rem;
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+  margin-bottom: 10px;
+}
+.commentdiv_title {
+  width: 20%;
+  background-color: #0f5953;
+  margin: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.commentdiv_comment {
+  width: 73%;
+  background-color: #e1e1e1;
+  margin: 2px;
+  padding: 4px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.commentdiv_detail2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.commentdiv_comment2 {
+  width: 95%;
+  background-color: #e1e1e1;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

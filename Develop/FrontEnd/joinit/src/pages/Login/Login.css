@@ -1,49 +1,50 @@
 .LoginLeftImg {
-  width: 670px;
-  height: 927px;
+  height: 93.05rem;
 }
 
 .LoginRight {
-  width: 100%;
+  width: 129.967rem;
   justify-content: center;
   align-items: center;
 }
 
 .LoginLogoImg {
-  width: 500px;
-  margin-bottom: 20px;
+  width: 50rem;
+  margin-bottom: 4rem;
   cursor: pointer;
 }
 
 .LoginPageSelector {
-  width: 40%;
-  height: 130px;
+  width: 51.986rem;
+  height: 13rem;
   justify-content: space-between;
   align-items: center;
 }
 
 .LoginPagePatient {
-  width: 49.8%;
-  height: 80%;
+  width: 25.887rem;
+  height: 9.1rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #858585;
-  font-size: 25px;
+  font-size: 2.5rem;
   background-color: #e0e0e0;
+  border-radius: .5rem;
 }
 
 .LoginPageTherapist {
-  width: 49.8%;
-  height: 80%;
+  width: 25.887rem;
+  height: 9.1rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #858585;
-  font-size: 25px;
+  font-size: 2.5rem;
   background-color: #e0e0e0;
+  border-radius: .5rem;
 }
 
 .choose {
@@ -52,14 +53,14 @@
 }
 
 .LoginPageAccountSelector {
-  width: 40%;
+  width: 51.986rem;
   justify-content: space-between;
 }
 
 .LoginPageAccountSelector p {
   cursor: pointer;
   color: #0F5953;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .LoginPageAccountSelector p:hover {

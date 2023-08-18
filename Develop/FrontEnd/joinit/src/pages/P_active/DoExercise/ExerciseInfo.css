@@ -1,0 +1,75 @@
+.ExerciseInfodiv {
+  margin-top: 1rem;
+  background-color: #ffffff;
+  width: 66rem;
+  height: 20.5rem;
+  border-radius: 10px;
+}
+.ExerciseInfo_Navbar {
+  color: #0f5953;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 4rem;
+  margin-top: 1rem;
+}
+.ExerciseInfo_Nav1 {
+  margin-right: 1rem;
+}
+
+.ExerciseInfo_div {
+  padding: 1rem;
+  margin-left: 3rem;
+}
+
+.ExerciseInfo_title {
+  background-color: #0f5953;
+  padding: 1rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.ExerciseInfo_content {
+  height: 12rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.ExerciseInfo_left {
+  width: 80%;
+  overflow-y: auto;
+  margin-bottom: 3rem;
+}
+
+.ExerciseInfo_left::-webkit-scrollbar {
+  width: 10px;
+}
+.ExerciseInfo_left::-webkit-scrollbar-thumb {
+  background-color: #0f5953;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.ExerciseInfo_left::-webkit-scrollbar-track {
+  background-color: #bad7cc;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
+.ExerciseInfo_right {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f5953;
+  color: white;
+  border-radius: 10px;
+}
+.ExerciseInfo_content_angle {
+  font-size: 4rem;
+  font-weight: 1000;
+}

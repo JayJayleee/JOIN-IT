@@ -1,17 +1,17 @@
 package com.asrai.joinit.dto;
 
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
 public class AfterSurveyStatisticsOutputDto {
 
 
-    private int prescriptionId;
+    private String surveyType;
 
-    private int painDegree;
-
-    private int difficulty;
-
-    private int satisfaction;
-
-    private int painRelief;
-
-    private String etc;
+    private List<DailyAfterSurveyValue> date;
 }

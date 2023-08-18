@@ -1,0 +1,114 @@
+.profilebox {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-top: 90rem;
+  margin-bottom: 40rem;
+}
+
+.tprofile-header {
+  width: 100%;
+  height: 30%;
+  margin-top: 7rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tprofile-header-profileImg {
+  width: 100%;
+  height: 20rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImg-box-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DDE1E6;
+  width: 15rem;
+  height:15rem; 
+  border-radius: 50%;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.nicknameAndChangePwd {
+  width: 100%;
+  margin-top: 1rem;
+  height: 4rem;
+  justify-content: space-between;
+}
+
+.password-change-btn {
+  margin-right: 9rem;
+  width: 12rem;
+  height: 4rem;
+  border-radius: .5rem;
+  color: white;
+  font-size: 1.6rem;
+  background-color: #58867a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tprofile-content {
+  width: 80%;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.tprofile-content-header {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #0f5953;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.update-btn {
+  align-items: center;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.tprofile-content-body {
+  margin-top: 3rem;
+  width: 100%;
+  border-top: .3rem solid #E1E1E1;
+  border-bottom: .3rem solid #E1E1E1;
+}
+
+.profile-content-line {
+  width: 100%;
+  height: 6rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.05rem solid #e1e1e1;
+}
+
+.tprofile-real-content-box {
+  height: 100%;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 550;
+}
+
+.tprofile-real-content-box-long {
+  height: 100%;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 550;
+  word-break: break-all;
+}

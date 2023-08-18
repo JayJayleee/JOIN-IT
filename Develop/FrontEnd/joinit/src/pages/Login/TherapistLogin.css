@@ -1,13 +1,13 @@
 .therapist-loginInput {
-  width: 40%;
-  height: 480px;
+  width: 51.985rem;
+  height: 48rem;
   justify-content: space-between;
   align-items: center;
 }
 
 .loginForm {
-  width: 100%;
-  height: 80%;
+  width: 51.985rem;
+  height: 38.4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -16,57 +16,57 @@
 
 .loginForm p{
   color: #0F5953;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: bolder;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .loginForm input{
-  width: 510px;
-  height: 50px;
+  width: 51rem;
+  height: 5rem;
   background-color: #DCDCDC;
-  border-radius: 5px;
-  border: 1px solid #E6E6E6;
+  border-radius: .5rem;
+  border: .1rem solid #E6E6E6;
   margin: 0;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 1rem;
 }
 
 .idSection {
-  width: 100%;
+  width: 51.984rem;
 }
 
 .IdInput {
-  width: 100%;
+  width: 51rem;
 }
 
 .passwordSection {
-  width: 100%;
+  width: 51.984rem;
 }
 
 .PasswordInput {
-  width: 100%;
+  width: 51rem;
 }
 
 .loginButton {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  width: 100%;
-  height: 50px;
+  border-radius: .5rem;
+  width: 51.984rem;
+  height: 5rem;
   float: left;
   text-align: center;
   cursor: pointer;
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
-  margin-top: 40px;
+  margin-top: 4rem;
   background: #58867a;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 .4rem .8rem 0 rgba(0,0,0,0.2), 0 .5rem 1rem 0 rgba(0,0,0,0.19);
 }
 
 .loginButton p {
-  font-size: 23px;
+  font-size: 2.3rem;
   font-weight: lighter;
   margin: auto;
   color: white;
@@ -76,9 +76,9 @@
 }
 
 .loginButton-inner {
-    width: 600px;
-    height: 50px;
-    top: -50px;
+    width: 60rem;
+    height: 5rem;
+    top: -5rem;
     background: #0f5953;
     position: absolute;
     transition: all 0.5s ease;

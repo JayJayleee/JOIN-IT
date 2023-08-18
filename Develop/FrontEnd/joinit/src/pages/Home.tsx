@@ -1,21 +1,68 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Home/Home.css";
 import SimpleSlider from "./Home/SimpleSlider";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Route, Routes, Link } from "react-router-dom";
 import Footer from "./Home/Footer/Footer";
+import AuthLogin from "../store/modules/auth";
+import { useDispatch } from "react-redux";
 
 function Home() {
+  const movePageToClickBtn = useNavigate();
+  const dispatch = useDispatch();
+  const [isLogin, setIsLogin] = useState(false);
+  const [comment, setComment] = useState("");
+
+  const moveSignUpPageHome = () => {
+    if (isLogin) {
+      dispatch(AuthLogin.actions.Logout());
+      window.location.reload();
+    } else {
+      movePageToClickBtn("/Signup");
+    }
+  };
+
+  const moveLoginPageHome = () => {
+    if (isLogin) {
+      // const userPk = localStorage.getItem('userPk')!
+      const userType = localStorage.getItem('userType')!
+      movePageToClickBtn(`/${userType}board`)
+    } else {
+      movePageToClickBtn("/Login");
+    }
+  };
+
+
+  const accessToken = localStorage.getItem('access-token')
+  const userPk = localStorage.getItem('userPk')
+
   useEffect(() => {
+
+    if (accessToken !== null && userPk !== 'admin') {
+      setIsLogin(true);
+      setComment("로그아웃 →");
+    } else {
+      setIsLogin(false);
+      setComment("회원 가입 →");
+    }
     AOS.init();
-  });
+    AOS.refresh();
+    window.onbeforeunload = function pushRefresh() {
+      window.scrollTo(0, 0);
+    };
+  }, [accessToken]);
+
 
   return (
     <div>
       {/* 비디오 */}
       <div className="videodiv">
-        <SimpleSlider />
+        <SimpleSlider
+          moveSignUpPageHome={moveSignUpPageHome}
+          moveLoginPageHome={moveLoginPageHome}
+          comment={comment}
+        />
       </div>
 
       {/* 중간문구 */}
@@ -23,9 +70,8 @@ function Home() {
         className="main1div"
         data-aos="fade"
         data-aos-duration="1000"
-        data-aos-delay="500"
-        data-aos-easing="ease-in"
-        data-aos-offset="1000px"
+        data-aos-delay="1000"
+        data-aos-once="true"
       >
         <img
           src="/Assets/Images/Typograph2.gif"
@@ -37,12 +83,11 @@ function Home() {
       </div>
       {/* 그림문구 */}
       <div
-        className="main2div"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="500"
-        data-aos-easing="ease-in"
-        data-aos-offset="1500px"
+        className="main2div main2_1div"
+        data-aos="fade"
+        data-aos-duration="3000"
+        data-aos-delay="1500"
+        data-aos-once="true"
       >
         <div className="main2Infoleft">
           <img
@@ -61,12 +106,11 @@ function Home() {
         </div>
       </div>
       <div
-        className="main2div"
-        data-aos="fade-left"
-        data-aos-duration="1000"
-        data-aos-delay="500"
-        data-aos-easing="ease-in"
-        data-aos-offset="1500px"
+        className="main2div main2_2div"
+        data-aos="fade"
+        data-aos-duration="3000"
+        data-aos-delay="1500"
+        data-aos-once="true"
       >
         <div className="main2Infoleft">
           <h1 className="numbering">02</h1>
@@ -85,12 +129,11 @@ function Home() {
         </div>
       </div>
       <div
-        className="main2div"
-        data-aos="fade-right"
-        data-aos-duration="1000"
-        data-aos-delay="500"
-        data-aos-easing="ease-in"
-        data-aos-offset="2000px"
+        className="main2div main2_3div"
+        data-aos="fade"
+        data-aos-duration="3000"
+        data-aos-delay="1500"
+        data-aos-once="true"
       >
         <div className="main2Infoleft">
           <img
@@ -112,16 +155,27 @@ function Home() {
       <div
         className="main3div"
         data-aos="fade"
-        data-aos-duration="1000"
-        data-aos-delay="500"
-        data-aos-easing="ease-in"
-        data-aos-offset="2500px"
+        data-aos-duration="3000"
+        data-aos-delay="1500"
+        data-aos-once="true"
       >
         <p className="main3Info">내일의 나를 바꾸는</p>
         <p className="main4Info">건강한 재활 운동</p>
         <div className="Btndiv">
-          <button className="MainBtn1">운동 시작하기→</button>
-          <button className="MainBtn2">회원 가입→</button>
+          <button
+            className="MainBtn1"
+            onClick={moveLoginPageHome}
+            style={{ cursor: "pointer" }}
+          >
+            운동 시작하기 →
+          </button>
+          <button
+            className="MainBtn2"
+            onClick={moveSignUpPageHome}
+            style={{ cursor: "pointer" }}
+          >
+            {comment}
+          </button>
         </div>
       </div>
       <Footer />

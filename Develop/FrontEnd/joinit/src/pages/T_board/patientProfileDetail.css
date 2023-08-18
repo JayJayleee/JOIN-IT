@@ -1,0 +1,120 @@
+.therapist-patient-profile-box {
+  width: 93%;
+  background-color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  margin-top: 52rem;
+  margin-bottom: 1rem;
+}
+
+.therapist-patient-profile-title {
+  width: 90%;
+  height: 7rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0F5953;
+  justify-content: start;
+  align-items: center;
+}
+
+.therapist-patient-profile-default {
+  margin: 1rem 0rem 2rem 0rem;
+  width: 90%;
+  border-top: .3rem solid #E1E1E1;
+  border-bottom: .3rem solid #E1E1E1;
+}
+
+.therapist-patient-profile-content-line {
+  width: 100%;
+  height: 5.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.05rem solid #e1e1e1;
+}
+
+.therapist-patient-profile-real-content-box {
+  height: 100%;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 550;
+  word-break:break-all;
+}
+
+.therapist-patient-profile-addition{
+  margin: 1rem 0rem 2rem 0rem;
+  width: 90%;
+  border-top: .3rem solid #E1E1E1;
+  border-bottom: .3rem solid #E1E1E1;
+}
+
+.therapist-patient-profile-care-title {
+  width: 90%;
+  height: 7rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0F5953;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.profile-carelist-detail {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 48%;
+  color: black;
+  border-radius: 1rem;
+  box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .5rem 1rem 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 1.9%;
+}
+
+.profile-carelist-detail-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13%;
+  height: 90%;
+}
+
+.profile-carelist-detail-text {
+  width: 87%;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.profile-carelist-detail-text-title {
+  height: 40%;
+  margin: 1rem 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.3rem;
+}
+
+.profile-carelist-detail-text-description {
+  width: 100%;
+  height: 40%;
+  margin: 0rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-carelist-detail-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 3rem;
+  font-size: 1.3rem;
+  border-radius: .5rem;
+  height: 90%;
+  width: 18%;
+  box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .5rem 1rem 0 rgba(0, 0, 0, 0.19);
+}

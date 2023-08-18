@@ -12,10 +12,14 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "PHONE_CERT_CODE")
+@SequenceGenerator(name = "phone_cert_code_seq", sequenceName = "phone_cert_code_seq", allocationSize = 5)
 @Getter @Setter
 public class PhoneCertCode {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public PhoneCertCode() {
+    }
+
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "cert_id")
     private Integer certId;
 
@@ -25,5 +29,8 @@ public class PhoneCertCode {
     @Column(name = "phone_cert_code", length = 10)
     private String phoneCertCode;
 
-
+    @Override
+    public String toString() {
+        return "phone: " + this.phone + ", phoneCertCode: " + this.phoneCertCode;
+    }
 }

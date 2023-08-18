@@ -22,7 +22,6 @@ function SignUpSelect() {
     <div className='col selectPage'>
       <img src="/Assets/Images/Logo.png" alt="Logo" className='selectLogoImg' onClick={moveMainPage} title='메인 페이지로 이동하기'/>
       <div className='col signupSelectorboard'>
-        <p>회원가입</p>
         <div className='row selectbuttongroup'>
           <div className='selectbtn' onClick={movePatientSignupPage}>
             <p>환자 회원가입</p>

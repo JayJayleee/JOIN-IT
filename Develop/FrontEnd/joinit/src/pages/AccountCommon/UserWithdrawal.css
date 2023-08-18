@@ -1,0 +1,106 @@
+.withdrawalPage {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rem;
+  font-size: 1.6rem;
+}
+
+
+.withdrawalLogoImg {
+  width: 50rem;
+  margin-bottom: 6rem;
+}
+
+.withdrawal-password {
+  width: 56.4rem;
+  margin-bottom: 1rem;
+}
+
+.withdrawal-password-input {
+  position: relative;
+  margin-top: 1.5rem;
+  width: 56.4rem;
+}
+
+.withdrawal-password-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 0.5rem;
+  outline: 0.1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
+}
+
+.withdrawal-password-input input:focus {
+  outline: 0.2rem solid #0F5953;
+}
+
+.withdrawal-password-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 0.5rem;
+  background-color: #58867A;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 250;
+  width: 9rem;
+  height: 3rem;
+  top: 1.2rem;
+  right: 0rem;
+  cursor: pointer;
+}
+
+
+.withdrawal-submit-button {
+  border-radius: 0.5rem;
+  width: 57.6rem;
+  height: 5rem;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 4rem;
+  background: #58867a;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0,0,0,0.2), 0 0.5rem 1rem 0 rgba(0,0,0,0.19);
+}
+
+.withdrawal-submit-button.grey {
+  background: #858585;
+}
+
+.withdrawal-submit-button p {
+  margin: 1rem 0rem;
+  font-size: 2.3rem;
+  font-weight: lighter;
+  color: white;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.withdrawal-submit-button-inner {
+  width: 57.6rem;
+  height: 5rem;
+  top: -5rem;
+  background: #0f5953;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.withdrawal-submit-button-inner.grey {
+  background: #858585;
+}
+
+.withdrawal-submit-button:hover .withdrawal-submit-button-inner {
+  top: 0;
+}
+
+.withdrawal-submit-button:hover p {
+  color: white;
+}

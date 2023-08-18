@@ -1,0 +1,140 @@
+.chartBox {
+  position: relative;
+  width: 93%;
+  height: 35rem;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  top: 57rem;
+  margin-left: 1.2rem;
+  margin-bottom: 43rem;
+}
+
+.charbox-header {
+  width: 90%;
+  height: 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.charbox-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgba(15, 89, 83, 0.8);
+}
+
+.charbox-selector {
+  width:100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: .5rem;
+  background-color: rgba(15, 89, 83, 0.4);
+  color: white;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.charbox-selector:hover {
+  background-color: rgba(15, 89, 83, 1);
+  transition: background 0.2s ease-in-out;
+}
+
+.wrap-selector {
+  width: 23%;
+  height: 100%;
+}
+
+.charbox-selector-name {
+  margin-left: 1.2rem;
+}
+
+
+@keyframes slide-fade-in-dropdown-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-fade-in-dropdown {
+  overflow: hidden;
+}
+
+.slide-fade-in-dropdown > ul {
+  animation: slide-fade-in-dropdown-animation .5s ease;
+}
+
+/* fade out */
+
+@keyframes slide-fade-out-dropdown-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.slide-fade-out-dropdown {
+  overflow: hidden;
+}
+
+.slide-fade-out-dropdown > ul {
+  animation: slide-fade-out-dropdown-animation 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+.static-components-dropdown {
+  position: absolute;
+  width: 20.7%;
+  height: 20rem;
+  border-radius: .5rem;
+  background-color: rgba(15, 89, 83, 0.8);
+  top: 5.5rem;
+  /* left: 10rem */
+}
+
+.static-components-dropdown > ul {
+  position: relative;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Staticselect-line {
+	width: 80%;
+  border: .1rem dashed white;
+}
+
+.Staticselect-option {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chartbox-body {
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+}

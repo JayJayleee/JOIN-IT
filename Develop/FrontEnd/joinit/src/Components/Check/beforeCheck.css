@@ -1,0 +1,75 @@
+.beforeCheck {
+  display: flex;
+  justify-content: center;
+}
+
+.beforeCheckdiv {
+  padding-top: 5rem;
+  padding-bottom: 8px;
+  width: 155rem;
+  height: 81rem;
+  display: flex;
+  background-color: #6c6b6b;
+}
+.beforeCheck_left {
+  margin-left: 10px;
+  margin-bottom: 10rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.beforeCheck_left_left {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  padding: 0px 5px 0px 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filterimg {
+  position: absolute;
+  z-index: 99;
+}
+.beforeCheck_right {
+  width: 42%;
+}
+.beforeCheck_right_right {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.beforeCheck_Btn {
+  width: 13rem;
+  height: 3rem;
+  background-color: #0f5953;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+.beforecheck_image {
+  width: 65rem;
+  height: 45rem;
+  margin-bottom: 1rem;
+}
+.beforeCheck_explain {
+  width: 63rem;
+  height: 20rem;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  font-size: 1.5rem;
+}
+.beforeCheck_explain > p {
+  margin-bottom: 1rem;
+}

@@ -1,9 +1,169 @@
 .findidpage {
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 10rem;
+  font-size: 1.6rem;
 }
 
 .findidLogoImg {
-  width: 500px;
+  width: 50rem;
+  margin-bottom: 6rem;
+  cursor: pointer;
+}
+
+.confirm-name {
+  width: 56.4rem;
+  margin-bottom: 3rem;
+}
+
+.confirm-name-input {
+  position: relative;
+  margin-top: 1.5rem;
+  width: 56.4rem;
+}
+
+.confirm-name-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
+}
+
+.confirm-name-input input:focus {
+  outline: 0.2rem solid #0F5953;
+}
+
+
+.confirm-email {
+  width: 56.4rem;
+  margin-bottom: 3rem;
+}
+
+.confirm-email-input {
+  position: relative;
+  margin-top: 1.5rem;
+  width: 56.4rem;
+}
+
+.confirm-email-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 0.5rem;
+  outline: 0.1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
+}
+
+.confirm-email-input input:focus {
+  outline: 0.2rem solid #0F5953;
+}
+
+.confirm-email-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 0.5rem;
+  background-color: #58867A;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 250;
+  width: 9rem;
+  height: 3rem;
+  top: 1.2rem;
+  right: 0rem;
+  cursor: pointer;
+}
+
+.confirm-authNumInput {
+  width: 56.4rem;
+  margin-bottom: 3rem;
+}
+
+.confirm-authNumInput-input {
+  position: relative;
+  width: 56.4rem;
+}
+
+.confirm-authNumInput-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 0.5rem;
+  outline: 0.1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.7rem;
+}
+
+.confirm-authNumInput-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 0.5rem;
+  background-color: #58867A;
+  color: white;
+  font-weight: 250;
+  width: 9rem;
+  height: 3rem;
+  top: -0.5rem;
+  right: 1.2rem;
+  cursor: pointer;
+}
+
+.confirm-submit-button {
+  border-radius: 0.5rem;
+  width: 57.6rem;
+  height: 5rem;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 4rem;
+  background: #58867a;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0,0,0,0.2), 0 0.5rem 1rem 0 rgba(0,0,0,0.19);
+}
+
+.confirm-submit-button.grey {
+  background: #858585;
+}
+
+.confirm-submit-button p {
+  margin: 1rem 0rem;
+  font-size: 2.3rem;
+  font-weight: lighter;
+  color: white;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.confirm-submit-button-inner {
+  width: 57.6rem;
+  height: 5rem;
+  top: -5rem;
+  background: #0f5953;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.confirm-submit-button-inner.grey {
+  background: #858585;
+}
+
+.confirm-submit-button:hover .confirm-submit-button-inner {
+  top: 0;
+}
+
+.confirm-submit-button:hover p {
+  color: white;
 }

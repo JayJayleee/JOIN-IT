@@ -1,0 +1,49 @@
+.Pnav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	width: 100%;
+	height: 100%;
+	color: white;
+	border-radius: 1rem;
+	background-color: #0f5953;
+	/* padding: 1rem 1rem 1rem 1rem; */
+}
+
+.Pnav-list {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.Pdivbtn {
+	width: 100%;
+	height: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.PselectedPagetab {
+	height: 4rem;
+	width: 80%;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	text-align: center;
+	margin-right: 0rem;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+.Ph_Line {
+	border-top: 1px solid white;
+	width: 70%;
+}
+
+p {
+	margin: 0rem;
+}

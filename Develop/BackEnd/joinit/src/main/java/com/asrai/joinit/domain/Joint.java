@@ -16,7 +16,7 @@ public class Joint {
 	@Column(name = "joint_id")
 	private int jointId;
 
-	@Column(name = "joint_name")
+	@Column(name = "joint_name", nullable = false)
 	private String jointName;
 
 //	@OneToMany(mappedBy = "joint")

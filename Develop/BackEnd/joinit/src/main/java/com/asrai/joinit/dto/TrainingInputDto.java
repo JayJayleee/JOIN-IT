@@ -14,7 +14,7 @@ public class TrainingInputDto {
 	private int endPoint;
 	private int difficulty;
 	private String description;
-	private int rom;
+	private double rom;
 	private int[] mappingIds;
 
 }

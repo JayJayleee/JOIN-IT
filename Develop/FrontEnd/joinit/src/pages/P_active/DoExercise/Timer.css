@@ -1,0 +1,30 @@
+.timer_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin-right: 10px;
+}
+.elapsed-time-title{
+    font-size: 2rem;
+    font-weight: 1000;
+}
+.elapsed-time-text{
+    width: 25rem;
+    font-size: 3.5rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+.timer_buttons{
+    width: 8rem;
+    height: 3.5rem;
+    text-align: center;
+    background-color: #0F5953;
+    margin: 3px;
+    color: white;
+    border-radius: 5px;
+
+
+}

@@ -1,0 +1,43 @@
+.miniProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: 10rem;
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.PatientImage {
+  width: 70rem;
+  margin-bottom: 2rem;
+}
+
+.PatientName {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+
+.Patientcarecode {
+  margin-top: .1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  background-color: #55CDAE;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 .4rem .8rem 0 rgba(0,0,0,0.2), 0 .5rem 1rem 0 rgba(0,0,0,0.19);
+}
+
+.Patientcarecode:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.05);
+}

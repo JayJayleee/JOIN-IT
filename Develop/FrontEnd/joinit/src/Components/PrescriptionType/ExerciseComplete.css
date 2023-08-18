@@ -1,0 +1,122 @@
+.exerciseComplete-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 42%;
+  background-color: #58867A;
+  color: black;
+  border-radius: 1rem;
+  margin-top: 1.2rem;
+  box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .5rem 1rem 0 rgba(0, 0, 0, 0.19);
+}
+
+.exerciseComplete-detail.done {
+  background-color: #858585;
+}
+
+.exerciseComplete-detail-image-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 11%;
+  height: 100%;
+  border-radius: 30%;
+}
+
+.exerciseComplete-detail-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.exerciseComplete-detail-text {
+  width: 89%;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.exerciseComplete-detail-text-title {
+  height: 50%;
+  padding: 1rem 2rem 0rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.exerciseComplete-detail-text-description {
+  height: 50%;
+  padding: 0rem 2rem 0rem 2rem;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+}
+
+.exerciseComplete-detail-button {
+  display: flex;
+  cursor: pointer;
+  height: 85%;
+  width: 45%;
+  background-color: #DBF2F1;
+  color: #0F5953;
+  font-weight: bold;
+  border-radius: .5rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  float: left;
+  box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .5rem 1rem 0 rgba(0, 0, 0, 0.19);
+}
+
+.exerciseComplete-detail-button p {
+  font-size: 1rem;
+  color: #0F5953;
+  font-weight: bold;
+  line-height: 5rem;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.exerciseComplete-detail-button-eff {
+  width: 100%;
+  height: 100%;
+  top: -5rem;
+  background: #0F5953;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.exerciseComplete-detail-button:hover .exerciseComplete-detail-button-eff {
+  top: 0;
+}
+
+.exerciseComplete-detail-button:hover p {
+  color: white;
+}
+
+.detail-joint-training-mapping-scroll::-webkit-scrollbar {
+  height: 1rem;
+}
+
+.detail-joint-training-mapping-scroll::-webkit-scrollbar-thumb {
+  background-color: #0F5953;
+  border-radius: 1rem;
+  background-clip: padding-box;
+  border: .2rem solid transparent;
+}
+
+.detail-joint-training-mapping-scroll::-webkit-scrollbar-tarck {
+  background-color: grey;
+  border-radius: 1rem;
+  box-shadow: inset 0rem 0rem .5rem white;
+}

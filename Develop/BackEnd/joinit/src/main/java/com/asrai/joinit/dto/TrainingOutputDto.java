@@ -1,5 +1,6 @@
 package com.asrai.joinit.dto;
 
+import jakarta.persistence.Column;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +16,13 @@ public class TrainingOutputDto {
 	private int endPoint;
 	private int difficulty;
 	private String description;
-	private int rom;
-	private List<JointNameAndTrainingType> jointNameAndTrainingTypeList;
+	private double rom;
+	private List<JointTrainingTypeMappingDto> jointTrainingTypeMappingDtoList;
+
+	private String thumbnailImgRoute;
+
+	private String filterImgRoute;
+
+	private String imageImgRoute;
 
 }

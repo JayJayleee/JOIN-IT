@@ -12,10 +12,19 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "EMAIL_CERT_CODE")
+@SequenceGenerator(name = "email_cert_code_seq", sequenceName = "email_cert_code_seq", allocationSize = 5)
 @Getter @Setter
 public class EmailCertCode {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public EmailCertCode() {
+    }
+
+    public EmailCertCode(String email, String emailCertCode) {
+        this.email = email;
+        this.emailCertCode = emailCertCode;
+    }
+
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "cert_id")
     private Integer certId;
 
@@ -24,6 +33,5 @@ public class EmailCertCode {
 
     @Column(name = "email_cert_code", length = 10)
     private String emailCertCode;
-
 
 }

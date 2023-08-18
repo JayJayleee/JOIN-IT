@@ -1,0 +1,17 @@
+/* Contains the video element, used to fix video letter-boxing */
+.streamComponent {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 640px;
+  border-radius: 10px;
+}
+
+.OvVideo_video1 {
+  display: none;
+}
+
+#OvVideo_toggleButton {
+  border: 1px solid black;
+}

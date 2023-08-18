@@ -1,0 +1,164 @@
+.top-white-board {
+  position: relative;
+  width: 95%;
+  height: 50rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 55rem;
+  top: 63rem;
+}
+
+.caredetail-title {
+  width: 95%;
+  justify-content: space-between;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.caredetail-title-name {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #0f5953;
+  margin-left: 2rem;
+}
+
+.caredetail-title-name-2 {
+  font-size: 2.5rem;
+  color: grey;
+  font-weight: 500;
+}
+
+.tboard-caredetail-button-2 {
+  border-radius: 1rem;
+  width: 17rem;
+  height: 5rem;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #58867a;
+  box-shadow: 0 .4rem .8rem 0 rgba(0,0,0,0.2), 0 .5rem 1rem 0 rgba(0,0,0,0.19);
+}
+
+.tboard-caredetail-button-2 p {
+  font-family: arial;
+  font-size: 1.6rem;
+  color: white;
+  line-height: 5rem;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.tboard-caredetail-eff-2 {
+  width: 100%;
+  height: 5rem;
+  top: -5rem;
+  background: #0f5953;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.tboard-caredetail-button-2:hover .tboard-caredetail-eff-2 {
+  top: 0;
+}
+
+.tboard-caredetail-button-2:hover p {
+  color: white;
+}
+
+.bottom-white-board {
+  position: relative;
+  width: 95%;
+  height: 130rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: white;
+  top: 65rem;
+  margin-bottom: 52rem;
+}
+
+.caredetail-patient-detail {
+  width: 80%;
+  margin-top: 5rem;
+}
+
+.caredetail-patient-detail-box {
+  width: 100%;
+  height: 20rem;
+  border-radius: .5rem;
+  border: .1rem solid grey;
+  box-shadow: 0 .4rem .8rem 0 rgba(0,0,0,0.2), 0 .5rem 1rem 0 rgba(0,0,0,0.19);
+  align-items: start;
+  justify-content: space-evenly;
+  font-size: 1.6rem;
+  margin-top: 3rem;
+}
+
+.caredetail-patient-detail-box-tag {
+  border-radius: 1rem;
+  background-color: #C7C7C7;
+  width: 67rem;
+  height: 4rem;
+  color: black;
+  align-items: center;
+  margin-left: 4rem;
+}
+
+.caredetail-patient-detail-box-tag-short{
+  border-radius: 1rem;
+  background-color: #C7C7C7;
+  width: 31.5rem;
+  height: 4rem;
+  color: black;
+  align-items: center;
+  margin-left: 4rem;
+}
+
+.divide_even {
+  width: 100%;
+}
+
+.caredetail-patient-detail-box-category {
+  border-radius: 1rem;
+  background-color: #0f5953;
+  width: 10rem;
+  height: 4rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3rem;
+  box-shadow: 0 .4rem .8rem 0 rgba(0,0,0,0.2), 0 .5rem 1rem 0 rgba(0,0,0,0.19);
+}
+
+.caredetail-patient-prescription-box {
+  width: 100%;
+  margin-top: 8rem;
+  align-items: center;
+}
+
+.caredetail-patient-prescription-title {
+  width: 80%;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.caredetail-patient-prescription-content {
+  width: 100%;
+  height: 30rem;
+}
+
+.caredetail-patient-prescription-pagination {
+  width: 80%;
+  align-items: flex-end;
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
+}
+
+.caredetail-patient-statistic-box {
+  width: 100%;
+}

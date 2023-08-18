@@ -1,0 +1,17 @@
+.WebCamdiv{
+    background-color: #6C6B6B;
+    width: 64rem;
+    height: 60rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.WebCam_OnOff_Btn{
+    background-color: #0F5953;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+    height: 3.5rem;
+    font-size: 1.3rem;
+}

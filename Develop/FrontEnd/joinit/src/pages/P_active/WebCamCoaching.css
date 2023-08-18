@@ -1,0 +1,60 @@
+.WebCamdiv2 {
+  background-color: #6c6b6b;
+  width: 64rem;
+  height: 49rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.WebCam_assistant {
+  top: 45rem;
+  left: 77rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+.WebCam_OnOff_Btn2 {
+  background-color: #0f5953;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  width: 8rem;
+  height: 3rem;
+  padding: 0.3rem;
+  font-size: 1.3rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.WebCam_OnOff_Btn3 {
+  background-color: #58867a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  width: 8rem;
+  height: 3rem;
+  padding: 0.3rem;
+  font-size: 1.3rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.WebCam_OnOff_Btn4 {
+  background-color: #585858;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  width: 8rem;
+  height: 3rem;
+  padding: 0.3rem;
+  font-size: 1.3rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

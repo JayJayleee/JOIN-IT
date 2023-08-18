@@ -3,6 +3,7 @@ package com.asrai.joinit.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -21,17 +22,17 @@ public class JointTrainingType {
 	@Column(name = "mapping_id")
 	private int mappingId;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 //	@JsonIgnore
-	@JoinColumn(name = "joint_id")
+	@JoinColumn(name = "joint_id", nullable = false)
 	private Joint joint;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JsonIgnore
-	@JoinColumn(name = "training_type_id")
+	@JoinColumn(name = "training_type_id", nullable = false)
 	private TrainingType trainingType;
 
-	private int count; // 트레이닝 수
+//	private int count; // 트레이닝 수
 
 //	@OneToMany(mappedBy = "jointTrainingType")
 //	private List<TrainingTypeTraining> trainingTypeTrainings = new ArrayList<>();

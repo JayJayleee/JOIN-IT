@@ -1,8 +1,11 @@
 import React from 'react'
 import "./Footer.css"
+import { useNavigate } from 'react-router-dom'
 
 
 function Footer() {
+  const navigate = useNavigate();
+
   return (
     <div className='footer'>
       <div className="inner">
@@ -11,7 +14,7 @@ function Footer() {
         <li><a href="#">영상정보처리기기 운영관리 방침</a></li>
         <li><a href="#">홈페이지 이용약관</a></li>
         <li><a href="#">데이터처리 이용약관</a></li>
-        <li><a href="#">윤리경영 핫라인</a></li>
+        <li onClick={() => navigate("/adlogin")}><a href="">관리자 페이지</a></li>
       </ul>
       <div className="info">
         <span>사업자등록번호 S09P12B203</span>

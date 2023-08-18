@@ -1,21 +1,11 @@
-.exerciseCard {
-  background-color: #d9d9d9;
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 270px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
 .preview {
-  width: 240px;
+  width: 26rem;
+  border-radius: 10px 10px 0px 0 px;
+  height: 20rem;
+  border-bottom: 1px solid #a2a2a2;
 }
 .level {
-  background-color: #58867a;
+  background-color: #82b7a9;
   border-radius: 5px;
   width: 50px;
   display: flex;
@@ -26,20 +16,54 @@
   height: 30px;
 }
 .exerciseName {
-  display: flex;
-  flex-direction: row;
+  padding-left: 5%;
+  /* display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: baseline;
-  margin-top: 7px;
+  justify-content: center; */
+  height: 20%;
 }
 .levelText {
   color: white;
   text-decoration: none;
 }
-a {
+
+.nameText {
+  color: white;
+}
+
+.exerciseCardSection {
+  /* margin: 1rem; */
+  width: 100%;
+  height: 30rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adexercise-name-box {
+  margin-right: 5%;
+  margin-top: 3%;
+  margin-bottom: 1%;
+  margin-left: 8%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80%;
   text-decoration: none;
 }
 
-.nameText {
-  color: black;
+.adlevelBox {
+  background-color: #58867a;
+  color: white;
+  border-radius: 3px;
+  padding: 4px 6px 6px 6px;
+  align-self: flex-start;
+  margin-left: 8%;
+  margin-top: 6%;
+  font-size: small;
+  text-align: center;
+  width: 3rem;
 }

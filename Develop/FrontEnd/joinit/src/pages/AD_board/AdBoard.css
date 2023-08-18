@@ -1,0 +1,78 @@
+.containboardforadboard {
+  width: 98vw;
+}
+
+.AD_nav {
+  width: 17vw;
+  background-color: #353535;
+  height: 100vh;
+}
+
+.flexcontainerforadboard {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigationforadboard {
+  position: fixed;
+  left: 0px;
+}
+.AD_nav > hr {
+  width: 100%;
+}
+
+.smallLogo {
+  width: 60%;
+  margin: 40px;
+}
+
+.ADfont {
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.marginfornav {
+  margin: 40px;
+}
+
+.spacefornav {
+  border-radius: 5px;
+  width: 80%;
+  align-self: baseline;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.icon {
+  width: 30px;
+  margin: 15px;
+}
+
+.flexing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.adboardcontainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.tabcontent {
+  margin-left: 40vw;
+  margin-right: 10%;
+  margin-top: 2%;
+}
+
+.spaceforupdown {
+  margin-top: 20px;
+}
+
+.spaceforleft {
+  margin-left: -30px;
+}

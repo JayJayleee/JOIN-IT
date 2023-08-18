@@ -1,7 +1,7 @@
 import React from "react";
 
 function PatientDetail() {
-  return <div>PatientDetail</div>;
+  return <div>추가 예정</div>;
 }
 
 export default PatientDetail;

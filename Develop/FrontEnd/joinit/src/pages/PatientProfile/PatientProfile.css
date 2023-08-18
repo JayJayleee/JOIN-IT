@@ -1,0 +1,14 @@
+.Pprofile-dashboardDivide_right {
+  position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+  border: 0.1rem solid #d9d9d9;
+  border-radius: 1rem;
+  left: 8.5vw;
+  top: 10rem;
+  z-index: 3;
+  height: 90%;
+  overflow-y: scroll;
+}

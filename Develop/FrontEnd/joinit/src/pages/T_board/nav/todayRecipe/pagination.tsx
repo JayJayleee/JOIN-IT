@@ -11,8 +11,10 @@ interface PaginationProps {
 
 function Pagination({itemsPerPage, totalPages, handlePageChange, currentPage}: PaginationProps) {
 
-  const pageNumber = Math.ceil(totalPages / itemsPerPage);
-
+  let pageNumber = Math.ceil(totalPages / itemsPerPage);
+  if (pageNumber === 0) {
+    pageNumber = 1;
+  }
 
   return (
     <ul className="row pagination">

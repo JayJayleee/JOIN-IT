@@ -13,8 +13,10 @@
 .addcontainer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  cursor: pointer;
+  margin-right: 1rem;
 }
 .exerciseLists {
   width: 65vw;
@@ -96,7 +98,7 @@
 .searchbar {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   height: 100px;
 }
@@ -108,4 +110,27 @@
 
 .exerciseList_container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  overflow: scroll;
+  height: 60vh;
+  /* justify-content: center; */
+  padding-left: 8rem;
+  padding-bottom: 8rem;
+}
+
+.exerciseList_container > div {
+  width: 26%;
+  overflow-x: hidden;
+}
+
+.select-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

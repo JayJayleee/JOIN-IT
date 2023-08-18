@@ -1,0 +1,217 @@
+.carelistbox {
+  margin-top: 2rem;
+  width: 93%;
+  height: 80rem;
+  background-color: white;
+  border-radius: .5rem;
+  align-items: center;
+  margin-top: 30rem;
+  margin-bottom: 2rem;
+  z-index: 1;
+  justify-content: space-evenly;
+}
+
+.carelist-header {
+  width: 85%;
+  height: 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.careselect-Dropdown {
+  width: 18%;
+  height: 50%;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: .5rem;
+  background-color: rgba(15, 89, 83, 0.4);
+  color: white;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.careselect-Dropdown:hover {
+  background-color: rgba(15, 89, 83, 1);
+  transition: background 0.2s ease-in-out;
+}
+
+.careselect-name {
+  margin-left: 1.2rem;
+}
+
+.carelist-pagination {
+  /* width: 80%; */
+  height: 100%;
+  justify-content: flex-end;
+  font-size: 1.7rem;
+}
+
+
+@keyframes slide-fade-in-dropdown-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-fade-in-dropdown {
+  overflow: hidden;
+}
+
+.slide-fade-in-dropdown > ul {
+  animation: slide-fade-in-dropdown-animation .5s ease;
+}
+
+/* fade out */
+
+@keyframes slide-fade-out-dropdown-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.slide-fade-out-dropdown {
+  overflow: hidden;
+}
+
+.slide-fade-out-dropdown > ul {
+  animation: slide-fade-out-dropdown-animation 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+.components-dropdown {
+  position: absolute;
+  width: 14.3%;
+  height: 15rem;
+  border-radius: .5rem;
+  background-color: rgba(15, 89, 83, 0.8);
+  top: 11rem
+}
+
+.components-dropdown > ul {
+  position: relative;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.carelist-content {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.careselect-line {
+	width: 80%;
+  border: .1rem dashed white;
+}
+
+.careselect-option {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.care-notcomplete {
+  background-color: #58867a;
+}
+
+.care-complete {
+  background-color: #858585;
+}
+
+.care-notcompleteBtn {
+  background-color: #0F5953;
+}
+
+.care-completeBtn {
+  background-color: #383838;
+}
+
+.carelist-empty {
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  color: #858585;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.carelist-detail {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 18%;
+  color: black;
+  border-radius: 1rem;
+  box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .5rem 1rem 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 1.9%;
+}
+
+.carelist-detail-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13%;
+  height: 90%;
+}
+
+.carelist-detail-text {
+  width: 87%;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.carelist-detail-text-title {
+  height: 40%;
+  margin: 1rem 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.3rem;
+}
+
+.carelist-detail-text-description {
+  width: 100%;
+  height: 40%;
+  margin: 0rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carelist-detail-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 3rem;
+  font-size: 1.3rem;
+  border-radius: .5rem;
+  height: 90%;
+  width: 18%;
+  box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .5rem 1rem 0 rgba(0, 0, 0, 0.19);
+}

@@ -1,9 +1,164 @@
 .changepwpage {
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 10rem;
+  font-size: 1.6rem;
 }
 
 .changepwLogoImg {
-  width: 500px;
+  width: 50rem;
+  margin-bottom: 6rem;
+  cursor: pointer;
+}
+
+.changepw-id {
+  width: 57.6rem;
+  margin-bottom: 3rem;
+}
+
+.changepw-id-input {
+  position: relative;
+  margin-top: 1.5rem;
+  width: 56.4rem;
+}
+
+.changepw-id-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
+}
+
+.changepw-id-input input:focus {
+  outline: .2rem solid #0F5953;
+}
+
+
+.changepw-email {
+  width: 57.6rem;
+  margin-bottom: 3rem;
+}
+
+.changepw-email-input {
+  position: relative;
+  margin-top: 1.5rem;
+  width: 56.4rem;
+}
+
+.changepw-email-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
+}
+
+.changepw-email-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: .5rem;
+  background-color: #58867A;
+  color: white;
+  font-weight: 250;
+  width: 9rem;
+  height: 3rem;
+  top: 1.2rem;
+  right: 0rem;
+  cursor: pointer;
+}
+
+.changepw-authNumInput {
+  width: 56.4rem;
+  margin-bottom: 3rem;
+}
+
+.changepw-authNumInput-input {
+  position: relative;
+  width: 56.4rem;
+}
+
+.changepw-authNumInput-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.7rem;
+}
+
+.changepw-authNumInput-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: .5rem;
+  background-color: #58867A;
+  color: white;
+  font-weight: 250;
+  width: 9rem;
+  height: 3rem;
+  top: -.5rem;
+  right: 1.2rem;
+  cursor: pointer;
+}
+
+.changepw-submit-button {
+  border-radius: .5rem;
+  width: 57.6rem;
+  height: 5rem;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 4rem;
+  background: #58867a;
+  box-shadow: 0 .4rem .8rem 0 rgba(0,0,0,0.2), 0 .5rem 1rem 0 rgba(0,0,0,0.19);
+}
+
+.changepw-submit-button.grey {
+  background: #858585;
+}
+
+.changepw-submit-button p {
+  margin: 1rem 0rem;
+  font-size: 2.3rem;
+  font-weight: lighter;
+  color: white;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.changepw-submit-button-inner {
+  width: 57.6rem;
+  height: 5rem;
+  top: -5rem;
+  background: #0f5953;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.changepw-submit-button-inner.grey {
+  background: #858585;
+}
+
+.changepw-submit-button:hover .changepw-submit-button-inner {
+  top: 0;
+}
+
+.changepw-submit-button:hover p {
+  color: white;
 }

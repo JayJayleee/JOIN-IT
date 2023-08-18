@@ -1,84 +1,145 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import Nav from "./Components/Nav/Nav";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import CareCreate from "./pages/T_care/careCreate";
 import Home from "./pages/Home";
+import NotFoundPage from "./pages/NotFoundPage";
 import CoachCreate from "./pages/T_recipe/coachCreate";
-import CoachDetail from "./pages/T_recipe/coachDetail";
 import CoachUpdate from "./pages/T_recipe/coachUpdate";
-import ExerciseDetail from "./pages/T_recipe/exerciseDetail";
 import ExerciseList from "./pages/T_recipe/exerciseList";
 import ExerciseSelect from "./pages/T_recipe/exerciseSelect";
 import ExerciseUpdate from "./pages/T_recipe/exerciseUpdate";
 import MeetCreate from "./pages/T_recipe/meetCreate";
-import MeetDetail from "./pages/T_recipe/meetDetail";
 import MeetUpdate from "./pages/T_recipe/meetUpdate";
 import RecipeSelect from "./pages/T_recipe/recipeSelect";
 import CareUpdate from "./pages/T_care/careUpdate";
-import AdBoard from "./pages/AD_board/AD_nav";
+import CareCreateSuccess from "./pages/T_care/careCreateSuccess";
+
+import AdBoard from "./pages/AdBoard";
 import ExerciseCreate from "./pages/AD_board/AD_exercise/exerciseCreate";
 import AdExerciseDetail from "./pages/AD_board/AD_exercise/exerciseDetail";
 import AdExerciseUpdate from "./pages/AD_board/AD_exercise/exerciseUpdate";
-import T_board from "./pages/T_board";
+import AdPatientList from "./pages/AD_board/AD_Patient/patientList";
+
+import TBoard from "./pages/TBoard";
 import Login from "./pages/Login";
 import FindId from "./pages/FindId";
 import ChangePw from "./pages/ChangePw";
 import SignUpSelect from "./pages/SignUpSelect";
-import T_signUp from "./pages/T_signUp";
-import P_signUp from "./pages/P_signUp";
-import { useLocation } from 'react-router'
+import TSignUp from "./pages/TSignUp";
+import PSignUp from "./pages/PSignUp";
+import AdLogin from "./pages/AdLogin";
+import PBoard from "./pages/PBoard";
+import UserWithdrawal from "./pages/UserWithdrawal";
+import TherapistProfile from "./pages/TherapistProfile";
+import CoachDetailPage from "./pages/CoachDetailPage";
+import ExerciseDetailPage from "./pages/ExerciseDetailPage";
+import PatientProfile from "./pages/PatientProfile";
 
+import PrivateRoute from "./routes/PrivateRoute";
+import TherapistRoute from "./routes/TherapistRoute";
+import PatientRoute from "./routes/PatientRoute";
+import AnyRoute from "./routes/AnyRoute";
+import PublicRoute from "./routes/PublicRoute";
+import AdminRoute from "./routes/AdminRoute";
 
-
-
+import DoCoachingToPatient from "./pages/P_active/DoCoachingToPatient";
+import DoCoachingToTherapist from "./pages/T_active/DoCoachingToTherapist";
+import DoExercise from "./pages/P_active/DoExercise";
+import BeforeCheck from "./Components/Check/beforeCheck";
 
 function App() {
-  // 특정 페이지에서 헤더 보이지 않도록 처리(ex 관리자)
-  const [ShowNavBar, ChangePageNavBar] = useState(true);
-  const { pathname } = useLocation();
-
-  const NotShowPageList = ['/carecreate', '/ad_board', '/careupdate', '/login', '/findid', '/changepw', '/signup/patient', ];
-
-  useEffect(() => {
-
-    const PathNameLower = pathname.toLowerCase()
-
-    if (NotShowPageList.includes(PathNameLower)) {
-      ChangePageNavBar(false)
-    } else {
-    }
-  }, [pathname]);
-
   return (
-    <div>
-      {!ShowNavBar ? <div /> : <Nav />}
-
+    <React.Fragment>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/CareCreate" element={<CareCreate />} />
-        <Route path="/CareUpdate" element={<CareUpdate />} />
-        <Route path="/CoachCreate" element={<CoachCreate />} />
-        <Route path="/CoachUpdate" element={<CoachUpdate />} />
-        <Route path="/CoachDetail" element={<CoachDetail />} />
-        <Route path="/ExerciseDetail" element={<ExerciseDetail />} />
-        <Route path="/ExerciseList" element={<ExerciseList />} />
-        <Route path="/ExerciseSelect" element={<ExerciseSelect />} />
-        <Route path="/ExerciseUpdate" element={<ExerciseUpdate />} />
-        <Route path="/RecipeSelect" element={<RecipeSelect />} />
-        <Route path="/MeetCreate" element={<MeetCreate />} />
-        <Route path="/MeetDetail" element={<MeetDetail />} />
-        <Route path="/MeetUpdate" element={<MeetUpdate />} />
-        <Route path="/AD_Board" element={<AD_Board />} />
-        <Route path="/Tboard" element={<T_board />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/FindId" element={<FindId />} />
-        <Route path="/ChangePw" element={<ChangePw />} />
-        <Route path="/SignUp" element={<SignUpSelect />} />
-        <Route path="/SignUp/therapist" element={<T_signUp />} />
-        <Route path="/SignUp/patient" element={<P_signUp />} />
+        {/* 로그인과 비로그인 상태 모두에서 접근 가능한 페이지 목록 */}
+        <Route element={<AnyRoute />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/*" element={<NotFoundPage />} />
+          <Route path="/ChangePw" element={<ChangePw />} />
+          <Route path="/AdLogin" element={<AdLogin />} />
+          <Route
+            path="/patient/coaching/:prescriptionId"
+            element={<DoCoachingToPatient />}
+          />
+          <Route
+            path="/therapist/coaching/:prescriptionId"
+            element={<DoCoachingToTherapist />}
+          />
+          <Route
+            path="/patient/exercise/:prescriptionId"
+            element={<DoExercise />}
+          />
+          <Route
+            path="/patient/survey/:type/:prescriptionId"
+            element={<BeforeCheck />}
+          />
+        </Route>
+        {/* 로그인 상태에서만 접근 가능한 페이지 목록 */}
+        <Route element={<PrivateRoute />}>
+          <Route path="/UserWithdrawal" element={<UserWithdrawal />} />
+          <Route
+            path="/CoachDetailPage/:prescriptionId"
+            element={<CoachDetailPage />}
+          />
+          <Route
+            path="/ExerciseDetailPage/:prescriptionId"
+            element={<ExerciseDetailPage />}
+          />
+        </Route>
+        {/* 로그인 상태(환자)에서만 접근 가능한 페이지 목록 */}
+        <Route element={<PatientRoute />}>
+          <Route path="/Pboard" element={<PBoard />} />
+          <Route path="/PProfile" element={<PatientProfile />} />
+        </Route>
+        {/* 로그인 상태(치료사)에서만 접근 가능한 페이지 목록 */}
+        <Route element={<TherapistRoute />}>
+          <Route path="/Tboard" element={<TBoard />} />
+
+          {/* <Route path="/CareCreateSuccess" element={<CareCreateSuccess />} /> */}
+          <Route path="/CareCreate" element={<CareCreate />} />
+          <Route path="/CareUpdate/:careId" element={<CareUpdate />} />
+          <Route path="/CoachCreate/:treatmentId" element={<CoachCreate />} />
+          <Route path="/CoachUpdate/:careId" element={<CoachUpdate />} />
+          <Route
+            path="/ExerciseSelect/:treatmentId"
+            element={<ExerciseSelect />}
+          />
+          <Route
+            path="/ExerciseUpdate/:PrescriptionId"
+            element={<ExerciseUpdate />}
+          />
+          <Route path="/RecipeSelect" element={<RecipeSelect />} />
+          <Route path="/MeetCreate/:treatmentId" element={<MeetCreate />} />
+          <Route path="/MeetUpdate/:PrescriptionId" element={<MeetUpdate />} />
+          <Route path="/TProfile" element={<TherapistProfile />} />
+          <Route path="/ExerciseList" element={<ExerciseList />} />
+        </Route>
+        {/* 비로그인 상태에서만 접근 가능한 페이지 목록 */}
+        <Route element={<PublicRoute />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/FindId" element={<FindId />} />
+          <Route path="/SignUp" element={<SignUpSelect />} />
+          <Route path="/SignUp/therapist" element={<TSignUp />} />
+          <Route path="/SignUp/patient" element={<PSignUp />} />
+        </Route>
+        {/* 관리자 계정 로그인으로 접근 가능한 페이지 목록 */}
+        <Route element={<AdminRoute />}>
+          <Route path="/AdExerciseCreate" element={<ExerciseCreate />} />
+          <Route path="/Adboard" element={<AdBoard />} />
+
+          <Route path="/adpatientlist" element={<AdPatientList />} />
+          <Route
+            path="/AdExerciseDetail/:trainingId"
+            element={<AdExerciseDetail />}
+          />
+          <Route
+            path="/AdExerciseUpdate/:trainingId"
+            element={<AdExerciseUpdate />}
+          />
+        </Route>
       </Routes>
-    </div>
+    </React.Fragment>
   );
 }
 

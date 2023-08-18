@@ -1,153 +1,149 @@
 .patient-signupPage {
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 5rem;
+  font-size: 1.6rem;
 }
 
 .patientLogoImg {
-  width: 400px;
+  width: 40rem;
+  cursor: pointer;
 }
 
 .patient-signupPage-first {
-  margin-top: 30px;
-  width: 30%;
+  margin-top: 3rem;
+  width: 57.6rem;
   justify-content: center;
   align-items: center;
 }
 
 .patient-signupPage-name {
-  width: 100%;
-  margin-bottom: 10px;
+  width: 57.6rem;
+  margin-bottom: 1rem;
 }
 
 .patient-signupPage-name-input {
   position: relative;
-  margin-top: 10px;
-  width: 564px;
+  margin-top: 1rem;
+  width: 56.4rem;
 }
 
 .patient-signupPage-name-input input {
   border: none;
   background-color: #F9F9F9;
-  border-radius: 5px;
-  outline: 1px solid #E6E6E6;
-  width: 100%;
-  height: 50px;
-  padding-left: 10px;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
 }
 
 .patient-signupPage-name-input input:focus {
-  outline: 2px solid #0F5953;
+  outline: .2rem solid #0F5953;
 }
-
-.patient-signupPage-id-check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  border-radius: 5px;
-  background-color: #58867A;
-  color: white;
-  font-weight: 250;
-  width: 90px;
-  height: 30px;
-  top: 10px;
-  right: 0px;
-  cursor: pointer;
-}
-
 
 .patient-signupPage-id {
-  width: 100%;
-  margin-bottom: 10px;
+  width: 57.6rem;
+  margin-bottom: 1rem;
 }
 
 .patient-signupPage-id-input {
   position: relative;
-  margin-top: 10px;
-  width: 564px;
+  margin-top: 1rem;
+  width: 56.4rem;
 }
 
 .patient-signupPage-id-input input {
   border: none;
   background-color: #F9F9F9;
-  border-radius: 5px;
-  outline: 1px solid #E6E6E6;
-  width: 100%;
-  height: 50px;
-  padding-left: 10px;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
 }
 
 .patient-signupPage-id-input input:focus {
-  outline: 2px solid #0F5953;
+  outline: .2rem solid #0F5953;
 }
+
+.idInputOln.green {
+  outline: .2rem solid #468fe1;
+}
+
+
+.idInputOln.red {
+  outline: .2rem solid red;
+}
+
 
 .patient-signupPage-id-check {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  border-radius: 5px;
+  border-radius: .5rem;
   background-color: #58867A;
   color: white;
   font-weight: 250;
-  width: 90px;
-  height: 30px;
-  top: 12px;
-  right: 0px;
+  width: 9rem;
+  height: 3rem;
+  top: 1.2rem;
+  right: 0rem;
   cursor: pointer;
+  font-size: 1.6rem;
 }
 
 .patient-signupPage-email {
-  width: 100%;
-  margin-bottom: 10px;
+  width: 57.6rem;
+  margin-bottom: 1rem;
 }
 
 .patient-signupPage-email-input {
   position: relative;
-  margin-top: 10px;
-  width: 564px;
+  margin-top: 1rem;
+  width: 56.4rem;
 }
 
 .patient-signupPage-email-input input {
   border: none;
   background-color: #F9F9F9;
-  border-radius: 5px;
-  outline: 1px solid #E6E6E6;
-  width: 100%;
-  height: 50px;
-  padding-left: 10px;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
 }
 
 .patient-signupPage-email-input input:focus {
-  outline: 2px solid #0F5953;
+  outline: .2rem solid #0F5953;
 }
 
 
 
 .patient-signupPage-phone {
-  width: 100%;
-  margin-bottom: 10px;
+  width: 57.6rem;
+  margin-bottom: 1rem;
 }
 
 .patient-signupPage-phone-input {
   position: relative;
-  margin-top: 10px;
-  width: 564px;
+  margin-top: 1rem;
+  width: 56.4rem;
 }
 
 .patient-signupPage-phone-input input {
   border: none;
   background-color: #F9F9F9;
-  border-radius: 5px;
-  outline: 1px solid #E6E6E6;
-  width: 100%;
-  height: 50px;
-  padding-left: 10px;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
 }
 
 .patient-signupPage-phone-input input:focus {
-  outline: 2px solid #0F5953;
+  outline: .2rem solid #0F5953;
 }
 
 .patient-signupPage-phone-check {
@@ -155,88 +151,166 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  border-radius: 5px;
+  border-radius: .5rem;
   background-color: #58867A;
   color: white;
   font-weight: 250;
-  width: 90px;
-  height: 30px;
-  top: 12px;
-  right: 0px;
+  width: 9rem;
+  height: 3rem;
+  top: 1.2rem;
+  right: 0rem;
   cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.patient-signupPage-authenticationNum {
+  width: 57.6rem;
+  margin-bottom: 1rem;
+}
+
+.patient-signupPage-authenticationNum-input {
+  position: relative;
+  margin-top: 1rem;
+  width: 56.4rem;
+}
+
+.patient-signupPage-authenticationNum-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
+}
+
+.patient-signupPage-authenticationNum-input input:focus {
+  outline: .2rem solid #0F5953;
+}
+
+.authenti-Input.green {
+  outline: .2rem solid #468fe1;
+}
+
+.authenti-Input.red {
+  outline: .2rem solid red;
+}
+
+
+.patient-signupPage-authenticationNum-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: .5rem;
+  background-color: #58867A;
+  color: white;
+  font-weight: 250;
+  width: 9rem;
+  height: 3rem;
+  top: 1.2rem;
+  right: 0rem;
+  cursor: pointer;
+  font-size: 1.6rem;
 }
 
 
 .patient-signupPage-pw {
-  width: 100%;
-  margin-bottom: 10px;
+  width: 57.6rem;
+  margin-bottom: 1rem;
 }
 
 .patient-signupPage-pw-input {
   position: relative;
-  margin-top: 10px;
-  width: 564px;
+  margin-top: 1rem;
+  width: 56.4rem;
 }
 
 .patient-signupPage-pw-input input {
   border: none;
   background-color: #F9F9F9;
-  border-radius: 5px;
-  outline: 1px solid #E6E6E6;
-  width: 100%;
-  height: 50px;
-  padding-left: 10px;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
 }
 
 .patient-signupPage-pw-input input:focus {
-  outline: 2px solid #0F5953;
+  outline: .2rem solid #0F5953;
 }
 
 
 .patient-signupPage-pw-input.green input:focus {
-  outline: 2px solid #0F5953;
+  outline: .2rem solid #0F5953;
 }
 
 
 .patient-signupPage-pw-input.red input:focus {
-  outline: 2px solid red;
+  outline: .2rem solid red;
 }
 
-.checklist-first {
-  width: 480px;
+
+.patient-signupPage-firstPw-comment {
+  font-size: 1.5rem;
+  margin-top: 1rem;
   justify-content: space-between;
-  margin-bottom: 12px;
+}
+
+
+#meter {
+  appearance: none;
+}
+#meter::-webkit-progress-bar {
+  background: #f0f0f0;
+  border-radius: 1rem;
+}
+#meter::-webkit-progress-value {
+  border-radius: 1rem;
+  background: var(--c, red);
+}
+#meter[value]::-webkit-progress-value {
+  transition: width 0.5s;
+}
+
+
+.checklist-first {
+  width: 48rem;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
 }
 
 .checklist-second {
-  width: 480px;
+  width: 48rem;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
 }
 
 .checkboxInner {
-  width: 43%;
+  width: 21.6rem;
   text-align: left;
+  font-size: 1.6rem;
 }
 
 .patient-signupPage-submit-button {
-  border-radius: 5px;
-  width: 100%;
-  height: 50px;
+  border-radius: .5rem;
+  width: 57.6rem;
+  height: 5rem;
   float: left;
   text-align: center;
   cursor: pointer;
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   background: #58867a;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 .4rem .8rem 0 rgba(0,0,0,0.2), 0 .5rem 1rem 0 rgba(0,0,0,0.19);
 }
 
 .patient-signupPage-submit-button p {
-  margin: 10px 0px;
-  font-size: 23px;
+  margin: 1rem 0rem;
+  font-size: 2.3rem;
   font-weight: lighter;
   color: white;
   transition: all 0.5s ease;
@@ -245,9 +319,9 @@
 }
 
 .patient-signupPage-submit-button-inner {
-  width: 100%;
-  height: 50px;
-  top: -50px;
+  width: 57.6rem;
+  height: 5rem;
+  top: -5rem;
   background: #0f5953;
   position: absolute;
   transition: all 0.5s ease;

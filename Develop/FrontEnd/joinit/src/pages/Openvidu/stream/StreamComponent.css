@@ -1,0 +1,9 @@
+/* Contains the video element, used to fix video letter-boxing */
+.streamComponent {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+

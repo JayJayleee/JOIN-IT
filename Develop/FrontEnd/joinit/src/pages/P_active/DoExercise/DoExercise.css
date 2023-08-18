@@ -1,0 +1,49 @@
+.DoExercise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.DoExercisediv {
+  padding-top: 12rem;
+  padding-bottom: 8px;
+  width: 155rem;
+  height: 97vh;
+  display: flex;
+  background-color: #6c6b6b;
+}
+
+.DoExercisediv_left {
+  width: 55%;
+  justify-content: center;
+  align-items: center;
+}
+.DoExercisediv_right {
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.DoExercisediv_Assistantdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Done_Exercise_Btn {
+  margin-left: 35px;
+  background-color: #e32121;
+  width: 10rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  color: white;
+}
+.Exercise_Youtube {
+  margin-top: 10px;
+  background-color: #d9d9d9;
+  padding: 10px;
+  border-radius: 10px;
+}

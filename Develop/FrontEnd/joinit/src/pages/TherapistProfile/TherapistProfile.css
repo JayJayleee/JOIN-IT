@@ -1,0 +1,30 @@
+.tprofile-dashboardDivide_right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 65%;
+  border: 0.1rem solid #d9d9d9;
+  border-radius: 1rem;
+  position: absolute;
+  right: 7.5%;
+  top: 15rem;
+  z-index: 1;
+  height: 78.7%;
+  overflow-y: scroll;
+}
+
+.tprofile-dashboardDivide_right::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+.tprofile-dashboardDivide_right::-webkit-scrollbar-thumb {
+  
+  background-color: #58867a;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+}
+
+.tprofile-dashboardDivide_right::-webkit-scrollbar-track {
+  border-radius: 1rem;
+}

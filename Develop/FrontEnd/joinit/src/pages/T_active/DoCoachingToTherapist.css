@@ -1,0 +1,182 @@
+.Docoach2 {
+  display: flex;
+  justify-content: center;
+}
+
+.DoCoachingdiv2 {
+  padding-top: 10rem;
+  padding-bottom: 8px;
+  width: 155rem;
+  height: 76rem;
+  display: flex;
+  background-color: #6c6b6b;
+}
+
+.DoCoachingdiv2_left {
+  width: 70%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.DoCoachingdiv2_right {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.DoCoachingdiv2_video {
+  width: 95.5rem;
+  height: 55rem;
+  border-radius: 10px;
+  background-color: #dde1e6;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+}
+.video_paitent2 {
+  /* overflow: hidden; */
+  scale: 1.5;
+}
+
+.DoCoachingdiv2_video2 {
+  width: 20rem;
+  position: absolute;
+  top: 12rem;
+  left: 8rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 1px #6c6b6b;
+}
+
+.video_therapist2 {
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
+  overflow: hidden;
+}
+.Chatdiv2 {
+  width: 40rem;
+  height: 30rem;
+}
+.ExerciseInfo2 {
+  width: 40rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.exerciseing {
+  width: 95%;
+  height: 95%;
+}
+.changeExercise {
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.Exercise_mapping {
+  background-color: white;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.Exercise_title {
+  width: 75%;
+  height: 3rem;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 18px;
+  border-radius: 10px;
+  color: white;
+}
+.Exercise_Btn {
+  width: 20%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  background-color: #0f5953;
+}
+.Auxiliary_tool {
+  width: 90%;
+  margin-bottom: 10px;
+}
+.Auxiliary_tool_left {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Auxiliary_tool_right {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Auxiliary_tool_Btn1 {
+  width: 10rem;
+  height: 3rem;
+  background-color: #0f5953;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+}
+
+.Auxiliary_tool_Btn2 {
+  width: 10rem;
+  height: 3rem;
+  background-color: #d9d9d9;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 1.3rem;
+}
+
+.Auxiliary_tool_Btn3 {
+  width: 10rem;
+  height: 3rem;
+  background-color: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 1.3rem;
+}
+.ScreenShotList {
+  background-color: #d9d9d9;
+  width: 90%;
+  height: 5.5rem;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ScreenShotimg {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 10px;
+}

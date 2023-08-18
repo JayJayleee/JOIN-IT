@@ -3,12 +3,23 @@ spring:
   datasource:
     # ip, username, password will change
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://asrai-app-backend-database.cwk2ukisdzzj.ap-northeast-2.rds.amazonaws.com:13386/joinit?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
-#    url: jdbc:mariadb://localhost:3306/joinit?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
-    username: adminasrai
-#    username: root
-    password: joinit!!asrai
-#    password: ssafy
+    #    url: jdbc:mariadb://i9b203.p.ssafy.io:13386/joinit?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
+    #    url: jdbc:mariadb://asrai-app-database.cwk2ukisdzzj.ap-northeast-2.rds.amazonaws.com:13386/joinit?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
+    url: jdbc:mariadb://localhost:3306/joinit?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
+    #    username: adminasrai
+    username: ssafy
+    #    password: joinit!!asrai
+    password: ssafy
+    hikari:
+      maximum-pool-size: 3
+
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+
+  profiles:
+    include: oauth
 
   jpa:
     # JPA query check
@@ -20,13 +31,42 @@ spring:
     properties:
       hibernate:
         format_sql: true
+      #        default_batch_fetch_size: 1000
       open-in-view: true
 
 server:
-  port: 80
+  port: 5000
   servlet:
-    context-path: /
+    context-path: /api
 
 logging:
   level:
     web: debug
+
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAU4GZXAS3IEEHANU5
+      secret-key: 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
+    s3:
+      bucket: asrai-bucket
+      dir:
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
+
+# openvidu server url 주소 변경 예정
+OPENVIDU_URL: https://www.openvidutesttest.p-e.kr:8443
+
+# openvidu server 비밀번호 변경 예정
+OPENVIDU_SECRET: MY_SECRET
+
+#SMS_API_KEY: NCSOM4TDZZ9NFGRO
+SMS_API_KEY: NCSGV4NSGSOCOA2Z
+#SMS_API_SECRET_KEY: KRHC4CPTH7IAJ9CXZRGYBZNTMATZZF28
+SMS_API_SECRET_KEY:  KWGEWJZKSTAOSHABXWWO8BV9CSIDULHO
+SMS_DOMAIN: https://api.coolsms.co.kr
+#CALLING_NUMBER: 01084910814
+CALLING_NUMBER: 01066662309

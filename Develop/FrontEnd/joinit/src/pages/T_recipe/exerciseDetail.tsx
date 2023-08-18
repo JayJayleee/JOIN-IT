@@ -1,8 +1,14 @@
 import React from "react";
 import Editor from "../T_care/Editor";
 import "./exercise.css";
+import { useState } from "react";
 
-function exerciseDetail() {
+function ExerciseDetail() {
+  const [editorData, setEditorData] = useState("");
+  const handleEditorChange = (inputdata: string) => {
+    setEditorData(inputdata);
+  };
+
   return (
     <div className="background">
       <div className="container">
@@ -29,7 +35,8 @@ function exerciseDetail() {
             <input className="input" type="text" />
           </div>
         </div>
-        <Editor />
+        <Editor data={editorData} onChange={handleEditorChange} />
+
         <div className="button-2">
           <div className="eff-2"></div>
           <a href="#"> 운동 등록하기 </a>
@@ -39,4 +46,4 @@ function exerciseDetail() {
   );
 }
 
-export default exerciseDetail;
+export default ExerciseDetail;

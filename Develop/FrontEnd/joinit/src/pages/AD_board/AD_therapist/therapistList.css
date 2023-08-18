@@ -1,0 +1,44 @@
+.therapistLists_title {
+  font-family: Pretendard-Bold;
+  font-size: 50px;
+}
+
+table {
+  width: 100%;
+  border-top: 1px solid #cccccc;
+  border-collapse: collapse;
+}
+th,
+td {
+  border-bottom: 1px solid #cccccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.7rem;
+
+  height: 3.5rem;
+}
+
+thead {
+  background-color: #0f5953;
+  font-size: 2rem;
+  color: white;
+}
+
+thead th {
+  font-size: 1.8rem;
+  height: 30px;
+}
+
+.paginationBtn {
+  border: none;
+  background-color: transparent;
+  color: #0f5953;
+  font-weight: bolder;
+}
+
+.paginationflex {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 4rem;
+}

@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -11,6 +12,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @AllArgsConstructor
+@RequiredArgsConstructor
 public class JointTrainingMappingDto {
 
 //    @Column(name = "mapping_id")

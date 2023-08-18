@@ -2,29 +2,21 @@ package com.asrai.joinit.admin;
 
 
 import com.asrai.joinit.domain.Admin;
+import com.asrai.joinit.domain.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import java.util.HashMap;
 import java.util.Map;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class AdminRepository {
+public interface AdminRepository extends JpaRepository<Admin, String> {
 
-	@PersistenceContext
-	private EntityManager em;
+	@Query("select a from Admin a where a.adminId = :adminId")
+	Admin findByAdminId(String adminId);
 
-	public boolean findAdminAccount(Admin admin){
-		Map<String, Object> map = new HashMap<>();
-		map.put("password", admin.getPassword());
-		Admin admin1 = em.find(Admin.class, admin.getAdminId(), map);
-		if(admin1 != null){
-			return true;
-		} else {
-			return false;
-		}
-	}
-	//관리자 로그인.. 일단 암호화 없이 row 데이터 입력
 
 
 }

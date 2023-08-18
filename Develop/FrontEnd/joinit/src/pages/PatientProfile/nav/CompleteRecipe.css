@@ -1,0 +1,36 @@
+.complete-ptodayRecipe {
+  width: 95%;
+  height: 19rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.complete-ptodayRecipe_title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.complete-nothing {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ptodayRecipe_title_text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.ptodayRecipe_content {
+  width: 90%;
+  border-radius: 10px;
+  background-color: white;
+}

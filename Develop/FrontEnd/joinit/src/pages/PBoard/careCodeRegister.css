@@ -1,0 +1,159 @@
+.carecoderegister-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.carecode-register-Page {
+  position: fixed;
+  top: 10%;
+  left: 30%;
+  width: 70rem;
+  height: 50rem;
+  z-index: 100;
+  overflow: hidden;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  padding: 5rem 0rem 3rem 0rem;
+}
+
+.carecodeLogoImg {
+  width: 40rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.carecode-name {
+  width: 56.4rem;
+  margin-bottom: 2rem;
+}
+
+.carecode-name-input {
+  position: relative;
+  margin-top: 1.5rem;
+  width: 56.4rem;
+}
+
+.carecode-name-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
+}
+
+.carecode-name-input input:focus {
+  outline: 0.2rem solid #0F5953;
+}
+
+.carecode-phone {
+  width: 56.4rem;
+  margin-bottom: 2rem;
+}
+
+.carecode-phone-input {
+  position: relative;
+  margin-top: 1.5rem;
+  width: 56.4rem;
+}
+
+.carecode-phone-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
+}
+
+.carecode-phone-input input:focus {
+  outline: 0.2rem solid #0F5953;
+}
+
+
+.carecode-authNumInput {
+  width: 56.4rem;
+  margin-bottom: 1rem;
+}
+
+.carecode-authNumInput-input {
+  position: relative;
+  width: 56.4rem;
+}
+
+.carecode-authNumInput-input input {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 0.5rem;
+  outline: 0.1rem solid #E6E6E6;
+  width: 56.4rem;
+  height: 5rem;
+  padding-left: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.7rem;
+}
+
+.carecode-authNumInput-input input:focus {
+  outline: 0.2rem solid #0F5953;
+}
+
+.carecode-submit-button {
+  border-radius: 0.5rem;
+  width: 57.6rem;
+  height: 5rem;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 4rem;
+  background: #58867a;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0,0,0,0.2), 0 0.5rem 1rem 0 rgba(0,0,0,0.19);
+}
+
+.carecode-submit-button.grey {
+  background: #858585;
+}
+
+.carecode-submit-button p {
+  margin: 1rem 0rem;
+  font-size: 2.3rem;
+  font-weight: lighter;
+  color: white;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.carecode-submit-button-inner {
+  width: 57.6rem;
+  height: 5rem;
+  top: -5rem;
+  background: #0f5953;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.carecode-submit-button-inner.grey {
+  background: #858585;
+}
+
+.carecode-submit-button:hover .carecode-submit-button-inner {
+  top: 0;
+}
+
+.carecode-submit-button:hover p {
+  color: white;
+}

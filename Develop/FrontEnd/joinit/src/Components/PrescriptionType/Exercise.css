@@ -1,0 +1,161 @@
+.exercise-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 42%;
+  background-color: #58867A;
+  color: black;
+  border-radius: 1rem;
+  margin-top: 1.2rem;
+  box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .5rem 1rem 0 rgba(0, 0, 0, 0.19);
+}
+
+.exercise-detail.done {
+  background-color: #858585;
+}
+
+.exercise-detail-image-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 11%;
+  height: 100%;
+  border-radius: 30%;
+}
+
+.detail-joint-training-mapping-scroll {
+  width: 60%;
+  overflow: auto;
+}
+
+.exercise-detail-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.exercise-detail-text {
+  width: 89%;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.exercise-detail-text-title {
+  height: 50%;
+  padding: 1rem 2rem 0rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.exercise-detail-text-description {
+  height: 50%;
+  padding: 0rem 2rem 0rem 2rem;
+  margin-bottom: 2.2rem;
+  justify-content: space-between;
+}
+
+.exercise-detail-button {
+  display: flex;
+  cursor: pointer;
+  height: 85%;
+  width: 45%;
+  background-color: #65a191;
+  font-weight: bold;
+  border-radius: .5rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  float: left;
+  /* top: 1.2rem; */
+  box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .5rem 1rem 0 rgba(0, 0, 0, 0.19);
+}
+
+.exercise-detail-text-description-button{
+  height: 50%;
+  justify-content: space-evenly;
+  margin-top: 0rem;
+}
+
+.exercise-detail-button p {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  line-height: 5rem;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.exercise-detail-button-eff {
+  width: 100%;
+  height: 100%;
+  top: -5rem;
+  background: #0F5953;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.exercise-detail-button:hover .exercise-detail-button-eff {
+  top: 0;
+}
+
+.exercise-detail-button:hover p {
+  color: white;
+}
+
+
+.exercise-prescription_updateBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+  width: 45%;
+  height: 85%;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #FF685B;
+  box-shadow: 0 .4rem .8rem 0 rgba(0,0,0,0.2), 0 .5rem 1rem 0 rgba(0,0,0,0.19);
+}
+
+.exercise-prescription_updateBtn p {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  line-height: 5rem;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.exercise-prescription_updateBtn-eff {
+  width: 100%;
+  height: 100%;
+  top: -5rem;
+  background: #E32121;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.exercise-prescription_updateBtn:hover .exercise-prescription_updateBtn-eff {
+  top: 0;
+}
+
+.exercise-prescription_updateBtn:hover p {
+  color: white;
+}

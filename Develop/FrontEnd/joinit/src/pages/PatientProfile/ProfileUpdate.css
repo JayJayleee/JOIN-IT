@@ -1,0 +1,135 @@
+.profile-update-box {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-top: 105rem;
+  margin-bottom: 40rem;
+}
+
+.change-userstate-box {
+  width: 100%;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.password-delete-btn {
+  margin-right: 9rem;
+  width: 12rem;
+  height: 4rem;
+  border-radius: .5rem;
+  color: white;
+  font-size: 1.6rem;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tprofile-update-introduce {
+  margin-top: 2rem;
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 30rem;
+  height: 150%;
+  text-align: center;
+}
+
+.tprofile-content-header {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #0f5953;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.update-btn {
+  align-items: center;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.tprofile-content-body {
+  margin-top: 3rem;
+  width: 100%;
+  border-top: .3rem solid #E1E1E1;
+  border-bottom: .3rem solid #E1E1E1;
+}
+
+.profile-content-line {
+  width: 100%;
+  height: 6rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.05rem solid #e1e1e1;
+}
+
+.tprofile-input-content-box {
+  width: 33rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.tprofile-update-content {
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: .5rem;
+  outline: .1rem solid #E6E6E6;
+  width: 30rem;
+  height: 60%;
+  padding-left: 1rem;
+  text-align: center;
+}
+
+.tprofile-input-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: .5rem;
+  background-color: #58867A;
+  color: white;
+  font-weight: 250;
+  width: 7rem;
+  height: 3rem;
+  right: 11rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.tprofile-update-content.green {
+  outline: .2rem solid #468fe1;
+}
+
+.tprofile-update-content.red {
+  outline: .2rem solid red;
+}
+
+.tprofile-footer {
+  align-items: end;
+  width: 80%;
+  margin-top: 10rem;
+}
+
+.tprofile-submitBtn {
+  width: 12rem;
+  height: 4rem;
+  border-radius: .5rem;
+  color: white;
+  font-size: 1.6rem;
+  background-color: #58867A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

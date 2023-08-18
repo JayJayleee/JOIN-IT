@@ -1,26 +1,26 @@
 .todayRecipe {
-  width: 100%;
+  width: 25rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .todayRecipe_title {
-  width: 80%;
+  width: 20rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .todayRecipe_title_text {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .todayRecipe_content {
   width: 90%;
-  height: 280px;
-  border-radius: 10px;
+  height: 28rem;
+  border-radius: 1rem;
   background-color: white;
 }
