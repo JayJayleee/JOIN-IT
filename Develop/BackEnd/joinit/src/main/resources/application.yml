@@ -3,13 +3,9 @@ spring:
   datasource:
     # ip, username, password will change
     driver-class-name: org.mariadb.jdbc.Driver
-    #    url: jdbc:mariadb://i9b203.p.ssafy.io:13386/joinit?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
-    url: jdbc:mariadb://asrai-app-database.cwk2ukisdzzj.ap-northeast-2.rds.amazonaws.com:13386/joinit?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
-#    url: jdbc:mariadb://localhost:3306/joinit?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
-    username: adminasrai
-#    username: ssafy
-    password: joinit!!asrai
-#    password: ssafy
+    url: 
+    username:  
+    password: 
     hikari:
       maximum-pool-size: 3
 
@@ -37,8 +33,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: thdqudgns9612@gmail.com
-    password: scefszpxkkxeivnf
+    username: 
+    password: 
     properties:
       mail:
         smtp:
@@ -58,9 +54,9 @@ spring:
         registration:
           naver:
             client-name: Naver
-            client-id: YjPpyBIwMWQl5UsSnpyz
-            client-secret: cwvnnKHPYE
-            redirect-uri: https://join-it.site/login/oauth2/code/naver
+            client-id: 
+            client-secret: 
+            redirect-uri: 
             authorization-grant-type: authorization_code
             scope:
               - account_email
@@ -71,9 +67,9 @@ spring:
           #            client-authentication-method: POST
           kakao:
             client-name: Kakao
-            client-id: d2a2898db9e81e4a2d9e33aa95ca8632 # <- TEST 계정 c2380a7a51e30110cd73bfcd47479c88 # Rest Api key
-            client-secret: 4rIX7if9Mv4n7f5jyrFxRGYGIqtpf8Ah  # <- TEST 계정
-            redirect-uri: https://join-it.site/api/login/oauth2/code/kakao
+            client-id: 
+            client-secret: 
+            redirect-uri: 
             authorization-grant-type: authorization_code
             scope:
               - account_email
@@ -83,9 +79,9 @@ spring:
               - phone_number
             client-authentication-method: POST
           google:
-            client-id: 560842495160-vhck9k0kru6ir70h43ile9oirq60uf0b.apps.googleusercontent.com
-            client-secret: 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
-            redirect-uri: https://join-it.site/login/oauth2/code/google
+            client-id: 
+            client-secret: 
+            redirect-uri: 
             authorization-grant-type: authorization_code
             scope:
 #              - account_email
@@ -119,10 +115,10 @@ logging:
 cloud:
   aws:
     credentials:
-      access-key: AKIAU4GZXAS3IEEHANU5
-      secret-key: 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
+      access-key: 
+      secret-key: 
     s3:
-      bucket: asrai-bucket
+      bucket: 
       dir:
     region:
       static: ap-northeast-2
@@ -130,21 +126,21 @@ cloud:
       auto: false
 
 # openvidu server url 주소 변경 예정
-OPENVIDU_URL: https://www.openvidutesttest.p-e.kr:8443
+OPENVIDU_URL: 
 
 # openvidu server 비밀번호 변경 예정
 OPENVIDU_SECRET: MY_SECRET
 
-#SMS_API_KEY: NCSOM4TDZZ9NFGRO
-SMS_API_KEY: NCSGV4NSGSOCOA2Z
-#SMS_API_SECRET_KEY: KRHC4CPTH7IAJ9CXZRGYBZNTMATZZF28
-SMS_API_SECRET_KEY:  KWGEWJZKSTAOSHABXWWO8BV9CSIDULHO
+#SMS_API_KEY: 
+SMS_API_KEY: 
+#SMS_API_SECRET_KEY: 
+SMS_API_SECRET_KEY:  
 SMS_DOMAIN: https://api.coolsms.co.kr
-#CALLING_NUMBER: 01084910814
-CALLING_NUMBER: 01066662309
+#CALLING_NUMBER: 
+CALLING_NUMBER: 
 
 jwt:
-  secretKey: eyJhbGciOiJIUzUxMiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY5MTU1OTUzOSwiaWF0IjoxNjkxNTU5NTM5fQ.EvaDuIElNyxuFd8m-8pGBrH31RQ9ghN5eX51zzhLKQ3jEi3xaNCn_ORATT-u0IBwVJCU19cGg5XX5_-hCrnRbw # 암호화 알고리즘으로 HS512를 사용할 것이기 때문에, 512비트(64바이트) 이상이 되어야 합니다.
+  secretKey: 
   access:
     expiration: 3600000 # ms, 60분
     header: Authorization # token 이 저장될 헤더 이름
